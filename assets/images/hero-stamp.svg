@@ -1,0 +1,29 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;display=swap');
+      .hand-text {
+        font-family: 'Caveat', cursive, sans-serif;
+        font-weight: 700;
+        fill: #fdfaf6;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Organic circular line -->
+  <circle cx="75" cy="75" r="66" stroke="#fdfaf6" stroke-width="1.4" opacity="0.8"/>
+  
+  <text class="hand-text" font-size="19" text-anchor="middle">
+    <tspan x="70" y="52">Handcrafted</tspan>
+    <tspan x="70" y="73">today</tspan>
+    <tspan x="68" y="93" font-size="16">for a cleaner</tspan>
+    <tspan x="68" y="112" font-size="17">tomorrow</tspan>
+  </text>
+  
+  <!-- Delicate leaf sketch on right side -->
+  <g transform="translate(112, 80) rotate(22) scale(0.9)" stroke="#fdfaf6" stroke-width="1.5" fill="none" opacity="0.95">
+    <path d="M0 26C14 20 23 5 21 -6C6 -3 -1 12 0 26Z"/>
+    <path d="M0 26C9 12 16 3 21 -6"/>
+  </g>
+</svg>
