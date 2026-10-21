@@ -39,14 +39,15 @@
           </p>
         </div>
 
-        <!-- Col 2: Our Work -->
+        <!-- Col 2: Our Work & Services -->
         <div class="col-6 col-lg-2">
           <h6 class="fw-bold mb-3" style="font-size: 13.5px; color: var(--primary-forest); text-transform: uppercase; letter-spacing: 1px;">Our Work</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 mb-0" style="font-size: 13px;">
+            <li><a href="index.php#services" class="text-secondary text-decoration-none">Services &amp; Advisory</a></li>
             <li><a href="capacity-building.php" class="text-secondary text-decoration-none">Capacity Building</a></li>
             <li><a href="capacity-building.php#recyclers" class="text-secondary text-decoration-none">Grassroot Recyclers</a></li>
             <li><a href="capacity-building.php#refugees" class="text-secondary text-decoration-none">Refugee Livelihoods</a></li>
-            <li><a href="advocacy-and-lobbying.php" class="text-secondary text-decoration-none">Advocacy &amp; Lobbying</a></li>
+            <li><a href="advocacy-and-lobbying.php" class="text-secondary text-decoration-none">Advocacy &amp; EPR</a></li>
             <li><a href="sustainable-research-development.php" class="text-secondary text-decoration-none">Sustainable R&amp;D</a></li>
             <li><a href="covid-relief-project-sahyog.php" class="text-secondary text-decoration-none">Project Sahyog</a></li>
           </ul>

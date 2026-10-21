@@ -79,6 +79,11 @@ if (!isset($current_page)) {
             </ul>
           </li>
 
+          <!-- Services Link -->
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link <?php echo ($current_page === 'services') ? 'active text-success fw-bold' : ''; ?>" href="index.php#services">Services</a>
+          </li>
+
           <!-- Buy Products Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'wholesale') ? 'active text-success fw-bold' : ''; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
