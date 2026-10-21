@@ -5,97 +5,111 @@ $current_page = "our-work";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-  <!-- Subpage Header Banner -->
-  <div class="page-banner">
+  <!-- Editorial Page Header -->
+  <header class="ed-page-header">
     <div class="container px-lg-4">
-      <div class="breadcrumb-conserve">
-        <a href="index.php">Home</a> <span>&bull;</span> Our Work <span>&bull;</span> Consulting &amp; Sensitization
-      </div>
-      <h1 class="page-banner-title">Consulting &amp; Sensitization</h1>
-      <p class="page-banner-desc">
-        Guiding corporations, educational institutions, and government bodies in building effective circular waste systems, CSR programs, and employee sustainability cultures.
+      <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.php">Home</a> <span>/</span> <a href="index.php#services">Services</a> <span>/</span> Consulting &amp; Advisory
+      </nav>
+      <span class="ed-section-tag">STRATEGIC ADVISORY</span>
+      <h1 class="ed-page-title">Sustainability Consulting &amp; Sensitization</h1>
+      <p class="ed-page-lead">
+        Assisting corporate leaders, academic institutions, and municipal bodies in designing closed-loop circular systems, fulfilling statutory EPR requirements, and cultivating grassroots social ROI.
       </p>
     </div>
-  </div>
+  </header>
 
-  <!-- Consulting Pillars Section -->
-  <section class="py-5 bg-white">
-    <div class="container px-lg-4 py-3">
+  <!-- Section 1: Strategy Overview -->
+  <section class="ed-content-section">
+    <div class="container px-lg-4">
       <div class="row align-items-center g-5 mb-5">
         <div class="col-lg-6">
-          <div class="approach-tag">STRATEGIC ADVISORY</div>
-          <h2 class="font-serif mb-4" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-            Transforming corporate waste streams into circular value
-          </h2>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            With over 25 years of hands-on experience in material science, waste picking logistics, and Fair Trade manufacturing, Conserve offers strategic advisory to businesses seeking to minimize their ecological footprint and maximize social ROI.
+          <span class="ed-section-tag">OPERATIONAL EXCELLENCE</span>
+          <h2 class="ed-section-title">Transforming Corporate Waste Streams into Verified Value</h2>
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            With more than 25 years of field experience in material science, municipal logistics, and certified Fair Trade manufacturing, Conserve offers pragmatic advisory to organizations aiming to minimize ecological leakage while maximizing social impact.
           </p>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            We don't just write reports—we implement end-to-end circular workflows, connecting corporate waste scrap with grassroots livelihoods and verifiable impact metrics.
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            We don't merely generate audit reports—we execute on-the-ground operational workflows, connecting corporate packaging waste directly with artisan livelihoods and transparent ESG compliance disclosures.
           </p>
+          <div class="pt-2">
+            <a href="contact-us.php" class="ed-btn-primary">
+              Book a Strategy Session &rarr;
+            </a>
+          </div>
         </div>
         <div class="col-lg-6">
-          <div class="hero-image-wrapper">
-            <img src="assets/images/circular-communities.jpg" alt="Consulting in field" class="hero-main-img">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3;">
+            <img src="assets/images/circular-communities.jpg" alt="Conserve India field waste audit and community mobilization" class="ed-media-img">
           </div>
         </div>
       </div>
 
-      <!-- 4 Advisory Services -->
-      <div class="row g-4 mt-2">
+      <!-- 4 Advisory Offerings -->
+      <div class="row g-4 pt-4">
+        <!-- Service 1 -->
         <div class="col-md-6">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-clipboard2-data text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">Waste Audits &amp; Circular System Design</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Comprehensive diagnostic assessments of corporate campuses, factories, and retail chains to identify waste leakage, eliminate single-use plastics, and set up source-segregation infrastructure.
+          <div class="ed-card">
+            <span class="ed-step-badge">SERVICE 01</span>
+            <h3 class="ed-work-title">Waste Audits &amp; Circular System Design</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 18px;">
+              Diagnostic assessments of corporate headquarters, industrial manufacturing plants, and retail distribution centers to identify material leakage, phase out single-use plastics, and establish decentralized source segregation.
             </p>
+            <ul class="ed-service-deliverables">
+              <li><i class="bi bi-check2"></i> Comprehensive campus waste stream diagnostic audits</li>
+              <li><i class="bi bi-check2"></i> Single-use plastic phaseout and segregation workflows</li>
+              <li><i class="bi bi-check2"></i> Verifiable material recovery audits for ESG reporting</li>
+            </ul>
           </div>
         </div>
 
+        <!-- Service 2 -->
         <div class="col-md-6">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-gear-wide-connected text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">EPR Strategy &amp; Verification</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Helping FMCG and packaging brands meet statutory Extended Producer Responsibility targets with end-to-end traceability, ethical waste recovery, and verified social compliance.
+          <div class="ed-card">
+            <span class="ed-step-badge">SERVICE 02</span>
+            <h3 class="ed-work-title">EPR Strategy &amp; Compliance Verification</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 18px;">
+              Assisting FMCG and consumer packaging brands in fulfilling statutory Extended Producer Responsibility (EPR) targets with verifiable chain-of-custody documentation, ethical waste recovery, and certified fair wage compliance.
             </p>
+            <ul class="ed-service-deliverables">
+              <li><i class="bi bi-check2"></i> Complete chain-of-custody documentation for regulatory filings</li>
+              <li><i class="bi bi-check2"></i> Verified integration of informal waste collectors with fair compensation</li>
+              <li><i class="bi bi-check2"></i> Social impact auditing for CSR disclosures</li>
+            </ul>
           </div>
         </div>
 
+        <!-- Service 3 -->
         <div class="col-md-6">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-people text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">CSR Livelihood Project Management</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Designing and operating grassroots skill development centers, women's self-help groups, and vocational tailoring programs funded by corporate CSR mandates.
+          <div class="ed-card">
+            <span class="ed-step-badge">SERVICE 03</span>
+            <h3 class="ed-work-title">CSR Livelihood Project Management</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 18px;">
+              Designing and operating turnkey community skill centers, women's self-help tailoring ateliers, and grassroots waste picker formalization programs financed by corporate CSR mandates.
             </p>
+            <ul class="ed-service-deliverables">
+              <li><i class="bi bi-check2"></i> Turnkey establishment of vocational training centers in urban clusters</li>
+              <li><i class="bi bi-check2"></i> Transparent milestone reporting and impact evaluation</li>
+              <li><i class="bi bi-check2"></i> Market linkage connecting finished products to retail buyers</li>
+            </ul>
           </div>
         </div>
 
+        <!-- Service 4 -->
         <div class="col-md-6">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-lightbulb text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">Employee &amp; School Sensitization</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Interactive workshops, zero-waste masterclasses, and hands-on upcycling sessions that inspire staff and students to embrace mindful consumption and eco-conscious habits.
+          <div class="ed-card">
+            <span class="ed-step-badge">SERVICE 04</span>
+            <h3 class="ed-work-title">Employee &amp; Institutional Sensitization</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 18px;">
+              Interactive workshops, zero-waste campus challenges, and field exposure visits that educate corporate employees, leadership teams, and students on sustainable consumption and waste realities.
             </p>
+            <ul class="ed-service-deliverables">
+              <li><i class="bi bi-check2"></i> Hands-on upcycling workshops and material masterclasses</li>
+              <li><i class="bi bi-check2"></i> Field exposure visits to community recycling facilities</li>
+              <li><i class="bi bi-check2"></i> Custom curriculum development for educational institutions</li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <div class="text-center mt-5">
-        <a href="contact-us.php" class="btn-primary-forest">
-          Book a Consulting Session &rarr;
-        </a>
       </div>
     </div>
   </section>

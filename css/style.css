@@ -1779,5 +1779,187 @@ h1, h2, h3, h4, h5, h6, .font-serif, .font-heading {
   margin-top: 4px;
 }
 
+/* ========================================================
+   EDITORIAL INNER PAGE SYSTEM
+   Used across About, Capacity Building, Sustainable R&D,
+   Trade, Consulting, Advocacy, COVID Relief, Wholesale,
+   Green Stories, and Contact.
+   ======================================================== */
+
+.ed-page-header {
+  padding: 68px 0 56px;
+  background-color: #f8f7f3;
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+}
+
+.ed-page-header-dark {
+  padding: 72px 0 60px;
+  background-color: #121815;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.ed-breadcrumbs {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ed-breadcrumbs a {
+  color: var(--primary-forest);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ed-breadcrumbs a:hover {
+  color: var(--primary-forest-hover);
+}
+
+.ed-page-header-dark .ed-breadcrumbs {
+  color: #8da396;
+}
+
+.ed-page-header-dark .ed-breadcrumbs a {
+  color: #a8cfb9;
+}
+
+.ed-breadcrumbs span {
+  margin: 0 8px;
+  color: #b5bfb8;
+}
+
+.ed-page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  margin-bottom: 14px;
+}
+
+.ed-page-header-dark .ed-page-title {
+  color: #ffffff;
+}
+
+.ed-page-lead {
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+.ed-page-header-dark .ed-page-lead {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Editorial Inner Sections */
+.ed-content-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.ed-content-section-muted {
+  padding: 80px 0;
+  background-color: #f8f7f3;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.ed-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 34px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ed-card:hover {
+  transform: translateY(-4px);
+  border-color: #c4d4ca;
+  box-shadow: 0 10px 24px -6px rgba(20, 25, 22, 0.07);
+}
+
+.ed-step-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 30px 26px;
+  height: 100%;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.ed-step-card:hover {
+  transform: translateY(-3px);
+  border-color: #c4d4ca;
+}
+
+.ed-step-badge {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 1px;
+  color: var(--primary-forest);
+  background-color: #edf2ef;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.ed-media-box {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0eee8;
+  border: 1px solid var(--border-light);
+}
+
+.ed-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ed-quote-banner {
+  background-color: #121815;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 48px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ed-quote-banner h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.ed-quote-banner p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 620px;
+  margin-bottom: 0;
+}
+
+
 
 

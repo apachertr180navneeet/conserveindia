@@ -5,76 +5,74 @@ $current_page = "our-work";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-  <!-- Subpage Header Banner -->
-  <div class="page-banner">
+  <!-- Editorial Page Header -->
+  <header class="ed-page-header">
     <div class="container px-lg-4">
-      <div class="breadcrumb-conserve">
-        <a href="index.php">Home</a> <span>&bull;</span> Our Work <span>&bull;</span> Advocacy &amp; Lobbying
-      </div>
-      <h1 class="page-banner-title">Advocacy, Lobbying &amp; Policy Reform</h1>
-      <p class="page-banner-desc">
-        Influencing systemic change by bridging grassroots environmental realities with governmental legislation and corporate accountability.
+      <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.php">Home</a> <span>/</span> <a href="index.php#our-work">Our Work</a> <span>/</span> Advocacy &amp; Policy
+      </nav>
+      <span class="ed-section-tag">POLICY &amp; RIGHTS</span>
+      <h1 class="ed-page-title">Advocacy, Lobbying &amp; Policy Reform</h1>
+      <p class="ed-page-lead">
+        Influencing systemic change by bridging on-the-ground environmental realities with legislative frameworks, municipal policy, and corporate accountability across India.
       </p>
     </div>
-  </div>
+  </header>
 
-  <!-- Main Advocacy Pillars -->
-  <section class="py-5 bg-white">
-    <div class="container px-lg-4 py-3">
+  <!-- Section 1: Grassroots to Policy -->
+  <section class="ed-content-section">
+    <div class="container px-lg-4">
       <div class="row align-items-center g-5 mb-5">
         <div class="col-lg-6">
-          <div class="approach-tag">LEGISLATIVE ENGAGEMENT</div>
-          <h2 class="font-serif mb-4" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-            From grassroots action to national policy impact
-          </h2>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            Conserve India was founded on advocacy. Before designing upcycled products, our team lobbied municipal governments in Delhi to mandate energy efficiency and implement proper civic waste segregation.
+          <span class="ed-section-tag">HISTORICAL ENGAGEMENT</span>
+          <h2 class="ed-section-title">From Grassroots Action to National Policy Impact</h2>
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            Conserve India was founded on advocacy. Before designing patented upcycled products, our founders actively lobbied Delhi state agencies to mandate commercial energy efficiency, implement solar water-heating incentives, and establish source waste segregation.
           </p>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            Over two and a half decades, we have continuously published whitepapers, mobilized civil society, and advised state agencies on waste management frameworks, plastic pollution controls, and labor equity for informal workers.
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            Over two and a half decades, we have continuously drafted policy whitepapers, mobilized civil society coalitions, and advised government bodies on sustainable plastic waste frameworks, Extended Producer Responsibility (EPR) enforcement, and social protections for informal recyclers.
           </p>
+          <div class="pt-2">
+            <a href="contact-us.php" class="ed-btn-primary">
+              Join Our Advocacy Network &rarr;
+            </a>
+          </div>
         </div>
         <div class="col-lg-6">
-          <div class="hero-image-wrapper">
-            <img src="assets/images/circular-communities.jpg" alt="Community waste initiative" class="hero-main-img">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3;">
+            <img src="assets/images/circular-communities.jpg" alt="Community waste advocacy initiative in New Delhi" class="ed-media-img">
           </div>
         </div>
       </div>
 
-      <!-- Core Advocacy Arenas -->
-      <div class="row g-4 mt-2">
+      <!-- 3 Key Policy Arenas -->
+      <div class="row g-4 pt-3">
         <div class="col-md-4">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-shield-check text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">Waste Picker Legal Recognition</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              India's millions of informal ragpickers manage over 70% of urban recyclables, yet work without legal protection, occupational safety, or healthcare. Conserve lobbies for municipal ID cards, social security benefits, and inclusion in city waste management contracts.
+          <div class="ed-card">
+            <span class="ed-step-badge">PILLAR 01</span>
+            <h3 class="ed-work-title">Waste Picker Legal Recognition</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 0;">
+              India's millions of informal ragpickers manage over 70% of urban recyclables yet work without occupational safety, health insurance, or legal standing. Conserve advocates for municipal occupational ID cards, access to social security pensions, and direct inclusion in municipal solid waste collection tenders.
             </p>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-file-earmark-text text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">Extended Producer Responsibility</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Advocating for strict corporate compliance with Extended Producer Responsibility (EPR) regulations. We partner with FMCG brands and manufacturers to ensure that post-consumer plastic collection actively funds the social welfare of waste pickers.
+          <div class="ed-card">
+            <span class="ed-step-badge">PILLAR 02</span>
+            <h3 class="ed-work-title">Extended Producer Responsibility</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 0;">
+              Lobbying for rigorous enforcement of Extended Producer Responsibility (EPR) mandates on FMCG corporations. We ensure corporate collection targets don't simply rely on incineration but actively direct capital to formalizing and funding the socio-economic welfare of informal collectors.
             </p>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-building text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">Decentralized Waste Frameworks</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Challenging outdated, polluting mega-incinerators by promoting decentralized neighborhood sorting stations, composting hubs, and community-led recycling infrastructure that preserves clean air and water.
+          <div class="ed-card">
+            <span class="ed-step-badge">PILLAR 03</span>
+            <h3 class="ed-work-title">Decentralized Waste Frameworks</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 0;">
+              Challenging polluting, capital-intensive mega-incinerators by promoting decentralized neighborhood sorting stations, organic composting hubs, and community-led recycling infrastructure that preserves urban air quality and creates local green jobs.
             </p>
           </div>
         </div>

@@ -5,76 +5,75 @@ $current_page = "our-work";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-  <!-- Subpage Header Banner -->
-  <div class="page-banner page-banner-dark">
+  <!-- Editorial Page Header -->
+  <header class="ed-page-header">
     <div class="container px-lg-4">
-      <div class="breadcrumb-conserve">
-        <a href="index.php" style="color: #8fa799;">Home</a> <span>&bull;</span> Our Work <span>&bull;</span> Project Sahyog
-      </div>
-      <h1 class="page-banner-title">COVID Relief Program: Project Sahyog</h1>
-      <p class="page-banner-desc">
-        Honored among India’s Top 50 Last-Mile COVID Relief Responders for mobilizing emergency food security, health essentials, and community kitchens across Delhi's most vulnerable settlements.
+      <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.php">Home</a> <span>/</span> <a href="index.php#our-work">Our Work</a> <span>/</span> Project Sahyog
+      </nav>
+      <span class="ed-section-tag">HUMANITARIAN ACTION</span>
+      <h1 class="ed-page-title">COVID-19 Relief Program: Project Sahyog</h1>
+      <p class="ed-page-lead">
+        Recognized among India's Top 50 Last-Mile COVID-19 Emergency Responders for mobilizing emergency food security, clean drinking water, and upcycled protective equipment across Delhi's most vulnerable settlements.
       </p>
     </div>
-  </div>
+  </header>
 
-  <!-- Relief Overview Section -->
-  <section class="py-5 bg-white">
-    <div class="container px-lg-4 py-3">
+  <!-- Section 1: Emergency Overview -->
+  <section class="ed-content-section">
+    <div class="container px-lg-4">
       <div class="row align-items-center g-5 mb-5">
         <div class="col-lg-6">
-          <div class="approach-tag">EMERGENCY MOBILIZATION</div>
-          <h2 class="font-serif mb-4" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-            Standing by informal workers in times of greatest crisis
-          </h2>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            When India went into nationwide lockdowns during the COVID-19 pandemic, daily-wage waste pickers and slum artisans were among the hardest hit. Without scrap yards open to buy collected materials, thousands of families faced immediate starvation.
+          <span class="ed-section-tag">RAPID MOBILIZATION</span>
+          <h2 class="ed-section-title">Standing by Informal Workers in Times of Extreme Crisis</h2>
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            When India implemented nationwide lockdowns during the COVID-19 pandemic, daily-wage waste collectors, ragpickers, and informal artisans were abruptly stripped of their livelihoods. With scrap markets shuttered, thousands of migrant families faced immediate hunger and medical distress.
           </p>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            Conserve immediately pivoted its logistics network and workshop facilities to launch <strong>Project Sahyog</strong> ("Cooperation"), connecting grassroots community kitchens, district administration bureaucrats, and generous individual donors to deliver life-saving relief.
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            Conserve immediately redirected its logistics fleets, administrative teams, and workshop facilities to launch <strong>Project Sahyog</strong> ("Cooperation"), connecting community kitchens, local district administration officers, and humanitarian donors to deliver last-mile life support.
           </p>
+          <div class="p-3 rounded-2 mt-4" style="background-color: #edf2ef; border-left: 3px solid var(--primary-forest);">
+            <strong style="color: var(--primary-forest); font-size: 14px;">National Recognition:</strong>
+            <span class="text-secondary small d-block mt-1">
+              Project Sahyog was independently evaluated and ranked among India's Top 50 Last-Mile Responders for agility, transparency, and grassroots reach.
+            </span>
+          </div>
         </div>
         <div class="col-lg-6">
-          <div class="hero-image-wrapper">
-            <img src="assets/images/circular-communities.jpg" alt="Relief and community mobilization" class="hero-main-img">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3;">
+            <img src="assets/images/circular-communities.jpg" alt="Project Sahyog community relief and food distribution" class="ed-media-img">
           </div>
         </div>
       </div>
 
-      <!-- 3 Key Pillars of Relief -->
-      <div class="row g-4 mt-2">
+      <!-- 3 Key Pillars -->
+      <div class="row g-4 pt-3">
         <div class="col-md-4">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-box2-heart text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">Ration Kits &amp; Community Kitchens</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Distributed comprehensive monthly nutrition kits (rice, pulses, flour, oil, spices) and served thousands of hot, nutritious meals directly to marginalized waste pickers, migrant laborers, and homeless families.
+          <div class="ed-card">
+            <span class="ed-step-badge">PILLAR 01</span>
+            <h3 class="ed-work-title">Ration Kits &amp; Community Kitchens</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 0;">
+              Distributed comprehensive monthly dry ration kits (wheat, rice, lentils, cooking oil, salt, spices) and operated community kitchens serving thousands of hot, nutritious meals directly to marginalized migrant families and daily wagers.
             </p>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-shield-shaded text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">Upcycled Cotton Protective Masks</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Employed local craftswomen to stitch hundreds of thousands of triple-layer, breathable washable masks using upcycled textile remnants, distributing them free to sanitation workers, ragpickers, and frontline personnel.
+          <div class="ed-card">
+            <span class="ed-step-badge">PILLAR 02</span>
+            <h3 class="ed-work-title">Upcycled Cotton Protective Masks</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 0;">
+              Employed local women artisans to manufacture hundreds of thousands of triple-layer, breathable, washable masks using clean factory cotton remnants, distributing them free to sanitation workers, municipal personnel, and slum residents.
             </p>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-3">
-              <i class="bi bi-diagram-3 text-success fs-4"></i>
-            </div>
-            <h4 class="font-serif mb-3" style="font-size: 21px;">Bureaucratic &amp; Medical Coordination</h4>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Served as an agile bridge between high-level government relief funds and unregistered slum pockets that standard municipal relief programs overlooked, ensuring no marginalized community was left behind.
+          <div class="ed-card">
+            <span class="ed-step-badge">PILLAR 03</span>
+            <h3 class="ed-work-title">Last-Mile Administrative Bridge</h3>
+            <p class="text-muted small" style="line-height: 1.6; margin-bottom: 0;">
+              Served as an agile bridge between municipal government welfare funds and unregistered slum clusters overlooked by standard municipal distribution lists, ensuring food and sanitary aid reached the most invisible communities.
             </p>
           </div>
         </div>

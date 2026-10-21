@@ -5,146 +5,148 @@ $current_page = "our-work";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-  <!-- Subpage Header Banner -->
-  <div class="page-banner">
+  <!-- Editorial Page Header -->
+  <header class="ed-page-header">
     <div class="container px-lg-4">
-      <div class="breadcrumb-conserve">
-        <a href="index.php">Home</a> <span>&bull;</span> Our Work <span>&bull;</span> Capacity Building
-      </div>
-      <h1 class="page-banner-title">Capacity Building &amp; Livelihood Training</h1>
-      <p class="page-banner-desc">
-        Over the years, we have developed a successful capacity building strategy—maximizing our social impact while keeping our buyers happy with timely deliveries of world-class upcycled products.
+      <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.php">Home</a> <span>/</span> <a href="index.php#our-work">Our Work</a> <span>/</span> Capacity Building
+      </nav>
+      <span class="ed-section-tag">HUMAN DIGNITY &amp; CRAFT</span>
+      <h1 class="ed-page-title">Artisan Capacity Building &amp; Livelihoods</h1>
+      <p class="ed-page-lead">
+        Maximizing socio-economic upliftment by transitioning informal ragpickers and refugee women into skilled craftswomen, backed by fair wages, technical education, and global market linkages.
       </p>
     </div>
-  </div>
+  </header>
 
   <!-- Overview Section -->
-  <section class="py-5 bg-white">
-    <div class="container px-lg-4 py-3">
+  <section class="ed-content-section">
+    <div class="container px-lg-4">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
-          <div class="approach-tag">OUR ROADMAP</div>
-          <h2 class="font-serif mb-4" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-            From vulnerable waste pickers to confident entrepreneurs
-          </h2>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            In order to build a sustainable enterprise, we begin by identifying motivated artisan groups with access to raw materials and providing a tailored mobilization roadmap.
+          <span class="ed-section-tag">OUR ROADMAP</span>
+          <h2 class="ed-section-title">From Vulnerable Waste Pickers to Confident Makers</h2>
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            To build sustainable artisan micro-enterprises, Conserve identifies motivated community groups living in informal settlements and provides a structured mobilization and training curriculum.
           </p>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            We train artisans, grassroots recyclers, and refugees in safe production techniques and business skills, backing them with our marketing and distribution channels. <strong>All profits from sales go directly toward capacity building workshops, training, and scaling.</strong>
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            We train individuals in safe plastic processing, pattern design, industrial sewing, and business literacy, backing them with our international wholesale distribution channels. <strong>All surplus generated from product sales directly finances artisan health insurance, equipment, and workshop scaling.</strong>
           </p>
+          <div class="pt-2">
+            <a href="contact-us.php" class="ed-btn-primary">
+              Partner on a Training Program &rarr;
+            </a>
+          </div>
         </div>
         <div class="col-lg-6">
-          <div class="hero-image-wrapper">
-            <img src="assets/images/artisan-livelihoods.jpg" alt="Artisan women weaving in workshop" class="hero-main-img">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3;">
+            <img src="assets/images/artisan-livelihoods.jpg" alt="Artisan women weaving and stitching in workshop" class="ed-media-img">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Three Stakeholder Pillars -->
-  <section class="py-5" style="background-color: #f7f5ed;">
-    <div class="container px-lg-4 py-3">
+  <!-- Three Beneficiary Programs -->
+  <section class="ed-content-section-muted">
+    <div class="container px-lg-4">
       <div class="text-center mb-5">
-        <div class="approach-tag">BENEFICIARY PROGRAMS</div>
-        <h2 class="font-serif mb-0" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-          Who We Empower
-        </h2>
+        <span class="ed-section-tag">BENEFICIARY GROUPS</span>
+        <h2 class="ed-section-title">Targeted Community Programs</h2>
+        <p class="ed-section-desc mx-auto">Providing long-term stability and social inclusion across three core vulnerable demographics.</p>
       </div>
 
       <div class="row g-4">
         <!-- Pillar 1: Local Artisans -->
         <div class="col-lg-4" id="artisans">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-4">
-              <i class="bi bi-palette text-success fs-4"></i>
+          <div class="ed-card">
+            <span class="ed-step-badge">PROGRAM 01</span>
+            <h3 class="ed-work-title">Local Craft Artisans</h3>
+            <p class="text-muted small" style="line-height: 1.6;">
+              Conserve trains local craftspeople in diverse traditional and modern handicrafts—including stitching, embroidery, loom weaving, crocheting, and hand-block printing.
+            </p>
+            <p class="text-muted small" style="line-height: 1.6;">
+              We provide formal education on Fair Trade labor policies, bank account operations, and design consistency, ensuring artisans earn living wages in safe, ergonomic ateliers.
+            </p>
+            <div class="mt-auto pt-3">
+              <a href="wholesale.php" class="ed-link-arrow">View Artisan Products &rarr;</a>
             </div>
-            <h3 class="font-serif mb-3" style="font-size: 22px;">Local Artisans</h3>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Over the last seven years, Conserve has trained local artisans in diverse traditional and modern handicrafts—including stitching, embroidery, weaving, crocheting, and block printing.
-            </p>
-            <p class="text-muted small" style="line-height: 1.6;">
-              We provide training on best business practices, Fair Trade principles, labor policies, accounting, and documentation. Additionally, our counseling support lends psychological security and social inclusivity to each artisan.
-            </p>
-            <a href="wholesale.php" class="product-link mt-3">View Artisan Products &rarr;</a>
           </div>
         </div>
 
         <!-- Pillar 2: Grassroot Recyclers -->
         <div class="col-lg-4" id="recyclers">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-4">
-              <i class="bi bi-recycle text-success fs-4"></i>
+          <div class="ed-card">
+            <span class="ed-step-badge">PROGRAM 02</span>
+            <h3 class="ed-work-title">Grassroots Waste Recyclers</h3>
+            <p class="text-muted small" style="line-height: 1.6;">
+              Informal waste pickers manage the bulk of India's recyclables yet face hazardous conditions and exploitation in urban landfills.
+            </p>
+            <p class="text-muted small" style="line-height: 1.6;">
+              For over 15 years, Conserve has provided up to two years of intensive training in our patented HRP technology, transforming ragpickers into skilled material technicians and workshop managers.
+            </p>
+            <div class="mt-auto pt-3">
+              <a href="sustainable-research-development.php" class="ed-link-arrow">Learn About HRP Tech &rarr;</a>
             </div>
-            <h3 class="font-serif mb-3" style="font-size: 22px;">Grassroot Recyclers</h3>
-            <p class="text-muted small" style="line-height: 1.6;">
-              Waste pickers remain an exploited class in India due to a lack of public amenities and hazardous working conditions in landfills.
-            </p>
-            <p class="text-muted small" style="line-height: 1.6;">
-              For more than 15 years, Conserve has worked alongside them, providing up to two years of intensive training in our patented technology: converting discarded single-use plastics into Handmade Recycled Plastic (HRP). We equip individuals with safe and humane collection, sanitization, and fabrication skills.
-            </p>
-            <a href="sustainable-research-development.php" class="product-link mt-3">Learn About HRP Tech &rarr;</a>
           </div>
         </div>
 
-        <!-- Pillar 3: Refugees -->
+        <!-- Pillar 3: Refugees (Akseer) -->
         <div class="col-lg-4" id="refugees">
-          <div class="content-card h-100">
-            <div class="pillar-icon-box mb-4">
-              <i class="bi bi-heart text-success fs-4"></i>
+          <div class="ed-card">
+            <span class="ed-step-badge">PROGRAM 03</span>
+            <h3 class="ed-work-title">Refugee Livelihoods (Akseer)</h3>
+            <p class="text-muted small" style="line-height: 1.6;">
+              In partnership with UNHCR's <em>Swavlamban</em> (Self-Reliance for Refugees) project, Conserve trained a cohort of 25 Afghani refugee women settled in low-income districts of Delhi.
+            </p>
+            <p class="text-muted small" style="line-height: 1.6;">
+              Equipped with tailoring and micro-enterprise skills, these women successfully launched their own brand, <strong>Akseer</strong>, creating bespoke pieces for North Indian fashion boutiques.
+            </p>
+            <div class="mt-auto pt-3">
+              <a href="wholesale.php#handmade" class="ed-link-arrow">Explore Akseer Products &rarr;</a>
             </div>
-            <h3 class="font-serif mb-3" style="font-size: 22px;">Refugees (Akseer)</h3>
-            <p class="text-muted small" style="line-height: 1.6;">
-              In partnership with UNHCR's <em>Swavlamban</em> (Self Reliance for Refugees) project, Conserve trained a cohort of 25 Afghani refugee women settled in low-income districts of Delhi.
-            </p>
-            <p class="text-muted small" style="line-height: 1.6;">
-              With training in stitching, crochet, and business operations, these women successfully launched their own manufacturing brand, <strong>Akseer</strong>, creating bespoke pieces for boutiques across North India and achieving economic independence.
-            </p>
-            <a href="wholesale.php#handmade" class="product-link mt-3">Explore Akseer Products &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4-Step Capacity Building Process -->
-  <section class="py-5 bg-white">
-    <div class="container px-lg-4 py-3">
+  <!-- 4-Step Process -->
+  <section class="ed-content-section">
+    <div class="container px-lg-4">
       <div class="text-center mb-5">
-        <div class="approach-tag">THE PROCESS</div>
-        <h2 class="font-serif mb-0" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-          How Our Training Model Works
-        </h2>
+        <span class="ed-section-tag">METHODOLOGY</span>
+        <h2 class="ed-section-title">How Our Training Model Works</h2>
+        <p class="ed-section-desc mx-auto">A proven, four-phase pathway from economic vulnerability to dignified vocational independence.</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <div class="process-step-card">
-            <div class="step-num">01</div>
-            <h5 class="fw-bold mb-2">Identification</h5>
+          <div class="ed-step-card">
+            <span class="ed-step-badge">PHASE 01</span>
+            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Identification</h3>
             <p class="text-muted small mb-0">Partnering with urban slum colonies and refugee settlements to identify motivated individuals seeking dignified work.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="process-step-card">
-            <div class="step-num">02</div>
-            <h5 class="fw-bold mb-2">Technical Skills</h5>
-            <p class="text-muted small mb-0">Hands-on mastery of plastic sorting, thermal lamination, precision pattern cutting, industrial sewing, and finishing.</p>
+          <div class="ed-step-card">
+            <span class="ed-step-badge">PHASE 02</span>
+            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Technical Mastery</h3>
+            <p class="text-muted small mb-0">Hands-on training in plastic washing, color sorting, thermal lamination, pattern cutting, and industrial stitching.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="process-step-card">
-            <div class="step-num">03</div>
-            <h5 class="fw-bold mb-2">Fair Trade &amp; Health</h5>
-            <p class="text-muted small mb-0">Education in fair wages, safe ergonomic working conditions, bank account setup, and family healthcare counseling.</p>
+          <div class="ed-step-card">
+            <span class="ed-step-badge">PHASE 03</span>
+            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Fair Trade &amp; Health</h3>
+            <p class="text-muted small mb-0">Financial literacy, bank account setup, fair wage guarantees, health insurance, and workplace safety protocols.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="process-step-card">
-            <div class="step-num">04</div>
-            <h5 class="fw-bold mb-2">Global Market Link</h5>
-            <p class="text-muted small mb-0">Connecting finished artisan goods directly with international retailers, B2B wholesale orders, and retail ecommerce.</p>
+          <div class="ed-step-card">
+            <span class="ed-step-badge">PHASE 04</span>
+            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Market Linkage</h3>
+            <p class="text-muted small mb-0">Connecting finished products to global department stores, boutique retailers, and corporate ESG procurement programs.</p>
           </div>
         </div>
       </div>

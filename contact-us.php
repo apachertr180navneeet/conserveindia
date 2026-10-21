@@ -5,31 +5,32 @@ $current_page = "contact";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-  <!-- Subpage Header Banner -->
-  <div class="page-banner">
+  <!-- Editorial Page Header -->
+  <header class="ed-page-header">
     <div class="container px-lg-4">
-      <div class="breadcrumb-conserve">
-        <a href="index.php">Home</a> <span>&bull;</span> Contact Us
-      </div>
-      <h1 class="page-banner-title">Let’s Work Together</h1>
-      <p class="page-banner-desc">
-        Whether you are an international buyer, corporate partner, researcher, or conscious consumer, we would love to collaborate with you.
+      <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.php">Home</a> <span>/</span> Contact
+      </nav>
+      <span class="ed-section-tag">CONNECT &amp; COLLABORATE</span>
+      <h1 class="ed-page-title">Let’s Work Together</h1>
+      <p class="ed-page-lead">
+        Whether you are seeking certified Fair Trade upcycled goods for international retail, planning corporate waste audits, or exploring community CSR initiatives, we welcome your inquiry.
       </p>
     </div>
-  </div>
+  </header>
 
-  <!-- Contact Form & Info Grid -->
-  <section class="py-5 bg-white">
-    <div class="container px-lg-4 py-3">
+  <!-- Contact Form & Info Section -->
+  <section class="ed-content-section">
+    <div class="container px-lg-4">
       <div class="row g-5">
         
-        <!-- Left: Contact Form -->
+        <!-- Left Column: Inquiry Form -->
         <div class="col-lg-7">
-          <div class="content-card mb-0 shadow-sm">
-            <div class="approach-tag">GET IN TOUCH</div>
-            <h2 class="font-serif mb-4" style="font-size: 28px;">Send Us a Message</h2>
+          <div class="ed-card p-4 p-md-5">
+            <span class="ed-section-tag">MESSAGE OUR TEAM</span>
+            <h2 class="ed-section-title" style="font-size: 24px; margin-bottom: 22px;">Send an Inquiry</h2>
 
-            <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to the Conserve India team. We will respond promptly.');">
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been received by Conserve India. Our team will review your inquiry and follow up promptly.');">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label small fw-semibold">Your Name *</label>
@@ -37,169 +38,100 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
                 <div class="col-md-6">
                   <label class="form-label small fw-semibold">Email Address *</label>
-                  <input type="email" class="form-control" placeholder="name@domain.com" required>
+                  <input type="email" class="form-control" placeholder="name@organization.com" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label small fw-semibold">Phone Number</label>
-                  <input type="tel" class="form-control" placeholder="+91 / International Phone">
+                  <label class="form-label small fw-semibold">Phone / WhatsApp</label>
+                  <input type="tel" class="form-control" placeholder="+91 / International number">
                 </div>
                 <div class="col-md-6">
                   <label class="form-label small fw-semibold">Organization / Company</label>
-                  <input type="text" class="form-control" placeholder="Organization Name">
+                  <input type="text" class="form-control" placeholder="Company or Organization">
                 </div>
                 <div class="col-12">
                   <label class="form-label small fw-semibold">Nature of Inquiry *</label>
                   <select class="form-select" required>
-                    <option value="" selected disabled>Select an inquiry category</option>
-                    <option value="wholesale">B2B Wholesale / Export Catalog</option>
-                    <option value="corporate">Corporate Gifting / CSR Collaboration</option>
-                    <option value="consulting">Sustainability Consulting &amp; Waste Audits</option>
+                    <option value="" selected disabled>Select an inquiry area</option>
+                    <option value="wholesale">B2B Wholesale &amp; International Export</option>
+                    <option value="corporate">Corporate Gifting &amp; Co-Branded Accessories</option>
+                    <option value="consulting">Sustainability Consulting, Waste Audits &amp; EPR</option>
+                    <option value="training">Artisan Capacity Building &amp; CSR Collaboration</option>
                     <option value="research">Academic / Environmental Research</option>
-                    <option value="general">General Feedback / Volunteer</option>
+                    <option value="general">General Inquiries &amp; Press</option>
                   </select>
                 </div>
                 <div class="col-12">
-                  <label class="form-label small fw-semibold">Your Message *</label>
-                  <textarea class="form-control" rows="5" placeholder="Share your project details, questions, or product interest..." required></textarea>
+                  <label class="form-label small fw-semibold">Project Details &amp; Message *</label>
+                  <textarea class="form-control" rows="5" placeholder="Please describe your project, volume expectations, delivery timeline, or questions..." required></textarea>
                 </div>
                 <div class="col-12 pt-2">
-                  <button type="submit" class="btn-primary-forest px-4">Send Message &rarr;</button>
+                  <button type="submit" class="ed-btn-primary">Send Inquiry &rarr;</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
 
-        <!-- Right: Office Details & Direct Info -->
+        <!-- Right Column: Direct Info & Office Details -->
         <div class="col-lg-5">
-          <div class="p-4 rounded-4 mb-4" style="background-color: #f7f5ed; border: 1px solid #eae5d6;">
-            <h4 class="font-serif mb-4" style="color: var(--primary-forest);">Conserve India Headquarters</h4>
+          <!-- Office Box -->
+          <div class="ed-card p-4 p-md-4 mb-4" style="background-color: #f8f7f3;">
+            <span class="ed-section-tag">HEADQUARTERS &amp; ATELIER</span>
+            <h3 class="fw-bold mb-3" style="font-size: 19px; font-family: var(--font-heading);">Conserve India</h3>
             
-            <div class="d-flex align-items-start gap-3 mb-4">
-              <div class="pillar-icon-box" style="width: 40px; height: 40px;">
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-start gap-3">
                 <i class="bi bi-geo-alt text-success fs-5"></i>
+                <div class="text-secondary small" style="line-height: 1.55;">
+                  <strong>Workshop &amp; Production Atelier:</strong><br>
+                  New Delhi / NCR, India<br>
+                  <span class="text-muted">Visits welcome by prior appointment</span>
+                </div>
               </div>
-              <div>
-                <strong class="d-block text-dark small">Head Office &amp; Design Studio</strong>
-                <span class="text-muted small">Conserve HRP, New Delhi, India</span>
-              </div>
-            </div>
 
-            <div class="d-flex align-items-start gap-3 mb-4">
-              <div class="pillar-icon-box" style="width: 40px; height: 40px;">
+              <div class="d-flex align-items-start gap-3">
                 <i class="bi bi-envelope text-success fs-5"></i>
+                <div class="text-secondary small">
+                  <strong>General &amp; Trade Inquiries:</strong><br>
+                  <a href="mailto:info@conserveindia.org" class="text-decoration-none text-success fw-semibold">info@conserveindia.org</a>
+                </div>
               </div>
-              <div>
-                <strong class="d-block text-dark small">Official Email</strong>
-                <a href="mailto:info@conserveindia.org" class="text-success text-decoration-none small">info@conserveindia.org</a>
-              </div>
-            </div>
 
-            <div class="d-flex align-items-start gap-3 mb-4">
-              <div class="pillar-icon-box" style="width: 40px; height: 40px;">
-                <i class="bi bi-shop text-success fs-5"></i>
-              </div>
-              <div>
-                <strong class="d-block text-dark small">Retail Consumer Store</strong>
-                <a href="https://www.lifaffa.com" target="_blank" rel="noopener" class="text-success text-decoration-none small">www.lifaffa.com &nearr;</a>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-start gap-3">
-              <div class="pillar-icon-box" style="width: 40px; height: 40px;">
+              <div class="d-flex align-items-start gap-3">
                 <i class="bi bi-clock text-success fs-5"></i>
+                <div class="text-secondary small">
+                  <strong>Operating Hours:</strong><br>
+                  Monday &ndash; Saturday: 9:30 AM &ndash; 6:30 PM IST
+                </div>
               </div>
-              <div>
-                <strong class="d-block text-dark small">Operating Hours</strong>
-                <span class="text-muted small">Monday – Saturday: 9:30 AM – 6:00 PM IST</span>
+            </div>
+
+            <div class="border-top pt-3" style="border-color: var(--border-light) !important;">
+              <span class="text-muted small d-block mb-2">Connect on social channels:</span>
+              <div class="d-flex align-items-center gap-2">
+                <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-btn-outline py-1 px-3" style="font-size: 12px;">
+                  <i class="bi bi-instagram me-1 text-danger"></i> Instagram
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ed-btn-outline py-1 px-3" style="font-size: 12px;">
+                  <i class="bi bi-linkedin me-1 text-primary"></i> LinkedIn
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Social Connect -->
-          <div class="p-4 rounded-4" style="background-color: #ffffff; border: 1px solid #eae5d6;">
-            <h5 class="fw-bold mb-3" style="font-size: 16px; color: var(--primary-forest);">Connect on Social Channels</h5>
-            <div class="d-flex gap-2">
-              <a href="https://facebook.com" class="social-circle-link" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-              <a href="https://instagram.com" class="social-circle-link" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-              <a href="https://linkedin.com" class="social-circle-link" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-              <a href="https://youtube.com" class="social-circle-link" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive FAQ Section -->
-  <section class="py-5" style="background-color: #f7f5ed;">
-    <div class="container px-lg-4 py-3">
-      <div class="text-center mb-5">
-        <div class="approach-tag justify-content-center">FREQUENTLY ASKED QUESTIONS</div>
-        <h2 class="font-serif mb-0" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-          Common Questions &amp; Answers
-        </h2>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="accordion accordion-flush bg-white rounded-4 p-4 border border-1 border-light-subtle shadow-sm" id="conserveFaqAccordion">
-            
-            <div class="accordion-item border-bottom">
-              <h2 class="accordion-header" id="faq1">
-                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                  How does Conserve source its discarded plastic raw materials?
-                </button>
-              </h2>
-              <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#conserveFaqAccordion">
-                <div class="accordion-body text-muted small" style="line-height: 1.6;">
-                  We purchase waste plastic bags and polythene films directly from informal waste pickers (ragpickers) in and around Delhi. We pay rates well above typical scrap brokers, providing steady, reliable income while reclaiming low-grade plastic that would otherwise be burned or landfilled.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item border-bottom">
-              <h2 class="accordion-header" id="faq2">
-                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                  What makes Handmade Recycled Plastic (HRP) distinct from virgin leather?
-                </button>
-              </h2>
-              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#conserveFaqAccordion">
-                <div class="accordion-body text-muted small" style="line-height: 1.6;">
-                  HRP is 100% cruelty-free, water-resistant, lightweight, and durable. Crucially, animal leather tanning is among the world's most chemical-intensive industries. By contrast, HRP uses zero toxic dyes, reusing the innate colors of recycled plastics through calibrated thermal compression.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item border-bottom">
-              <h2 class="accordion-header" id="faq3">
-                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                  Can corporations place custom orders with their own branding?
-                </button>
-              </h2>
-              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#conserveFaqAccordion">
-                <div class="accordion-body text-muted small" style="line-height: 1.6;">
-                  Yes! We regularly produce custom laptop sleeves, conference folders, tote bags, and corporate gifts with company logos debossed, embroidered, or printed. Each piece comes with a verifiable impact certificate detailing the kilograms of plastic diverted and artisan hours supported.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="faq4">
-                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                  Where can retail consumers purchase individual bags?
-                </button>
-              </h2>
-              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#conserveFaqAccordion">
-                <div class="accordion-body text-muted small" style="line-height: 1.6;">
-                  For retail and individual orders, you can shop directly through our dedicated retail platform at <a href="https://www.lifaffa.com" target="_blank" rel="noopener" class="text-success fw-bold">Lifaffa.com</a>, which ships across India and worldwide.
-                </div>
-              </div>
-            </div>
-
+          <!-- Retail Store Box -->
+          <div class="ed-card p-4">
+            <span class="ed-section-tag">CONSUMER RETAIL STORE</span>
+            <h4 class="fw-bold mb-2" style="font-size: 17px; font-family: var(--font-heading);">Lifaffa by Conserve</h4>
+            <p class="text-muted small mb-3" style="line-height: 1.6;">
+              Looking to purchase individual upcycled bags, lifestyle organizers, or home accessories for personal use? Visit our official direct-to-consumer store.
+            </p>
+            <a href="https://www.lifaffa.com" target="_blank" rel="noopener noreferrer" class="ed-link-arrow">
+              Visit Lifaffa.com &nearr;
+            </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>

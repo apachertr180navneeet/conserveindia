@@ -1,148 +1,128 @@
 <?php
-$page_title = "About Us — Conserve India | Our Mission, Founders & Journey";
-$page_description = "Learn about Conserve India's journey since 1997, our founders Anita & Shalabh Ahuja, patented HRP technology, and commitment to Fair Trade artisan livelihoods.";
+$page_title = "About Us — Conserve India | Our Mission, Founders & Heritage";
+$page_description = "Learn about Conserve India's journey since 1997, founders Anita & Shalabh Ahuja, patented HRP technology, and commitment to Fair Trade artisan livelihoods.";
 $current_page = "about";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-  <!-- Subpage Header Banner -->
-  <div class="page-banner">
+  <!-- Editorial Page Header -->
+  <header class="ed-page-header">
     <div class="container px-lg-4">
-      <div class="breadcrumb-conserve">
-        <a href="index.php">Home</a> <span>&bull;</span> About Us
-      </div>
-      <h1 class="page-banner-title">Our Story Since 1997</h1>
-      <p class="page-banner-desc">
-        At Conserve, we work towards environmental conservation while simultaneously creating socially uplifting conditions by empowering underprivileged individuals with employable opportunities.
+      <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.php">Home</a> <span>/</span> About Us
+      </nav>
+      <span class="ed-section-tag">ORGANIZATIONAL HERITAGE</span>
+      <h1 class="ed-page-title">Pioneering Circularity Since 1997</h1>
+      <p class="ed-page-lead">
+        Conserve India operates at the intersection of environmental conservation and social justice—diverting urban plastic waste while empowering marginalized waste pickers and refugee women with dignified, employable opportunities.
       </p>
     </div>
-  </div>
+  </header>
 
-  <!-- Origin & Founders Section -->
-  <section class="py-5 bg-white">
-    <div class="container px-lg-4 py-3">
+  <!-- Section 1: The Genesis & Founders -->
+  <section class="ed-content-section">
+    <div class="container px-lg-4">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
-          <div class="approach-tag">
-            THE GENESIS
-          </div>
-          <h2 class="font-serif mb-4" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-            From overflowing landfills to dignified livelihoods
-          </h2>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            In 1997, founders <strong>Anita Ahuja</strong> and <strong>Shalabh Ahuja</strong> set out on a mission to support sustainable development in India. Initially, we focused on lobbying for energy conservation and clean energy access. After impactful policy interventions, we turned our focus toward urban waste management.
+          <span class="ed-section-tag">THE FOUNDERS' VISION</span>
+          <h2 class="ed-section-title">From Overflowing Landfills to Dignified Livelihoods</h2>
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            In 1997, founders <strong>Anita Ahuja</strong> and <strong>Shalabh Ahuja</strong> set out to address urban ecological crises in Delhi. Initially focused on energy conservation and clean air lobbying, their field work quickly led them to the acute challenge of urban solid waste management.
           </p>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            At the time, Delhi's landfills were bursting with discarded polythene bags that choked waterways, harmed stray cattle, and poisoned the soil. In nearby informal settlements, thousands of ragpickers lived in extreme poverty, facing dangerous conditions and social exclusion.
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            At the time, Delhi's landfills were suffocating under mountains of discarded polythene bags that contaminated soil and choked drains. Meanwhile, in surrounding informal settlements, thousands of ragpickers lived in dangerous conditions without legal recognition or fair income.
           </p>
-          <p class="text-muted" style="line-height: 1.7; font-size: 15.5px;">
-            Anita envisioned a transformative solution: what if discarded plastic bags could become a premium raw material, and waste pickers could be trained as proud, skilled artisans?
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            Anita envisioned a transformative model: converting discarded plastic into a premium raw material, and training informal waste collectors into respected master artisans.
           </p>
         </div>
         <div class="col-lg-6">
-          <div class="hero-image-wrapper">
-            <img src="assets/images/hero-artisan.jpg" alt="Artisan crafting in workshop" class="hero-main-img">
-            <img src="assets/images/hero-stamp.svg" alt="Handcrafted today for a cleaner tomorrow" class="hero-badge-stamp">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3;">
+            <img src="assets/images/hero-artisan.jpg" alt="Conserve India artisan handcrafting in Delhi workshop" class="ed-media-img">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Patented HRP Material Innovation -->
-  <section class="py-5" style="background-color: #f7f5ed;">
-    <div class="container px-lg-4 py-3">
+  <!-- Section 2: Patented Breakthrough -->
+  <section class="ed-content-section-muted">
+    <div class="container px-lg-4">
       <div class="row align-items-center g-5">
-        <div class="col-lg-5 order-lg-2">
-          <div class="approach-tag">
-            PATENTED BREAKTHROUGH
-          </div>
-          <h2 class="font-serif mb-3" style="font-size: clamp(1.8rem, 3vw, 2.3rem);">
-            Handmade Recycled Plastic (HRP)
-          </h2>
-          <p class="text-muted" style="line-height: 1.65; font-size: 15px;">
-            After years of rigorous material research, Conserve engineered and patented <strong>Handmade Recycled Plastic (HRP)</strong> — a revolutionary material produced by washing, sorting, and thermocompressing discarded polythene bags without harmful dyes or toxic bonding agents.
+        <div class="col-lg-6 order-lg-2">
+          <span class="ed-section-tag">MATERIAL ENGINEERING</span>
+          <h2 class="ed-section-title">Patented Handmade Recycled Plastic (HRP)</h2>
+          <p class="text-secondary" style="line-height: 1.7; font-size: 15px;">
+            After years of hands-on material research, Conserve engineered and patented <strong>Handmade Recycled Plastic (HRP)</strong> — a revolutionary material produced by washing, sorting, and thermocompressing discarded polythene bags into durable, leather-like sheets.
           </p>
-          <ul class="feature-check-list mt-3">
-            <li>Diverts millions of single-use plastic bags from landfills</li>
-            <li>Durable, water-resistant leather alternative with distinct natural textures</li>
-            <li>Zero chemical dye pollution; color patterns emerge purely from original plastic blends</li>
-            <li>Certified Fair Trade supply chain empowering local women</li>
+          <ul class="ed-service-deliverables mt-4">
+            <li><i class="bi bi-check2"></i> <strong>Zero Chemical Dyes:</strong> Color patterns emerge solely from sorted plastic bags, preventing toxic wastewater runoff.</li>
+            <li><i class="bi bi-check2"></i> <strong>Durable &amp; Water-Resistant:</strong> High tensile strength engineered to substitute leather and virgin PVC.</li>
+            <li><i class="bi bi-check2"></i> <strong>Certified Fair Trade:</strong> Complete traceability with verified living wages for every artisan.</li>
           </ul>
         </div>
-        <div class="col-lg-7 order-lg-1">
-          <div class="hero-image-wrapper">
-            <img src="assets/images/upcycling-innovation.jpg" alt="Upcycled Bags and Products" class="hero-main-img" style="height: 380px;">
+        <div class="col-lg-6 order-lg-1">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3;">
+            <img src="assets/images/upcycling-innovation.jpg" alt="Patented HRP materials and upcycled tote bags" class="ed-media-img">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Journey Milestones Timeline -->
-  <section class="py-5 bg-white">
-    <div class="container px-lg-4 py-3">
+  <!-- Section 3: Milestones Timeline -->
+  <section class="ed-content-section">
+    <div class="container px-lg-4">
       <div class="text-center mb-5">
-        <div class="approach-tag">
-          OUR MILESTONES
-        </div>
-        <h2 class="font-serif mb-0" style="font-size: clamp(2rem, 3.2vw, 2.5rem);">
-          Over 25 Years of Groundbreaking Impact
-        </h2>
+        <span class="ed-section-tag">MILESTONES &amp; RECORD</span>
+        <h2 class="ed-section-title">Over 25 Years of Groundbreaking Impact</h2>
+        <p class="ed-section-desc mx-auto">Key turning points in our evolution from a civic advocacy initiative into an internationally recognized circular enterprise.</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <div class="process-step-card">
-            <div class="step-num">1997</div>
-            <h5 class="fw-bold mb-2">Foundation</h5>
-            <p class="text-muted small mb-0">Started environmental advocacy in Delhi, pioneering clean energy legislation and community environmental awareness.</p>
+          <div class="ed-step-card">
+            <span class="ed-step-badge">1997</span>
+            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Foundation</h3>
+            <p class="text-muted small mb-0">Established in New Delhi, pioneering energy conservation legislation and civic waste segregation programs.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="process-step-card">
-            <div class="step-num">2003</div>
-            <h5 class="fw-bold mb-2">HRP Invention</h5>
-            <p class="text-muted small mb-0">Patented Handmade Recycled Plastic (HRP), transforming urban ragpickers into skilled artisans creating high-fashion bags.</p>
+          <div class="ed-step-card">
+            <span class="ed-step-badge">2003</span>
+            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">HRP Invention</h3>
+            <p class="text-muted small mb-0">Patented Handmade Recycled Plastic (HRP), launching our first artisan training atelier for Delhi ragpickers.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="process-step-card">
-            <div class="step-num">2006</div>
-            <h5 class="fw-bold mb-2">Global Reach</h5>
-            <p class="text-muted small mb-0">Partnered with Whole Foods Market and over 1,000 independent retailers across the US, UK, and Europe.</p>
+          <div class="ed-step-card">
+            <span class="ed-step-badge">2006</span>
+            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Global Distribution</h3>
+            <p class="text-muted small mb-0">Formed distribution partnerships across the US (Whole Foods Market) and over 1,000 independent retailers across Europe.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="process-step-card">
-            <div class="step-num">2020</div>
-            <h5 class="fw-bold mb-2">Project Sahyog</h5>
-            <p class="text-muted small mb-0">Ranked in India's top 50 COVID-19 last-mile responders, providing community kitchens, food security, and protective equipment.</p>
+          <div class="ed-step-card">
+            <span class="ed-step-badge">2020</span>
+            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Project Sahyog</h3>
+            <p class="text-muted small mb-0">Ranked in India's top 50 COVID-19 last-mile emergency responders, providing food relief and community kitchens.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Core Belief Banner Callout -->
-  <section class="belief-banner-section">
-    <div class="container-fluid p-0">
-      <div class="belief-inner">
-        <img src="assets/images/dark-leaves.svg" alt="Foliage pattern" class="belief-leaves-bg" aria-hidden="true">
-        <div class="belief-text-col">
-          <div class="belief-tag">OUR COMMITMENT</div>
-          <h2 class="belief-headline">
-            Social upliftment is woven into the very fabric of Conserve.
-          </h2>
-          <div>
-            <a href="contact-us.php" class="belief-link">
+      <!-- Quote Banner -->
+      <div class="ed-quote-banner mt-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <span class="ed-section-tag" style="color: #a4ceb5;">OUR GUIDING PRINCIPLE</span>
+            <h3>When waste becomes a resource, communities become stronger.</h3>
+            <p>Every meter of upcycled material and every corporate collaboration directly finances dignified livelihoods for marginalized artisans.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="contact-us.php" class="ed-btn-primary" style="background-color: #ffffff; color: #141716; border-color: #ffffff;">
               Collaborate With Us &rarr;
             </a>
           </div>
-        </div>
-        <div class="belief-img-col">
-          <img src="assets/images/belief-sapling.jpg" alt="Hands holding green sapling" class="belief-img">
-          <img src="assets/images/belief-stamp.svg" alt="Cleaner Planet Brighter Futures" class="belief-badge-stamp">
         </div>
       </div>
     </div>
