@@ -22,17 +22,8 @@
       <div class="row g-4 py-3 mb-3">
         <!-- Col 1: Brand & Origin -->
         <div class="col-lg-4">
-          <a class="navbar-brand-conserve mb-3 d-inline-block" href="index.php">
-            <span class="brand-title" style="font-size: 22px;">
-              C<span class="brand-o">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="align-middle mx-1" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="9.5" stroke="#173829" stroke-width="2.5" fill="none"/>
-                  <path d="M7 16.5 C 7.5 10.5, 13.5 7.5, 17 8 C 16.5 14, 10.5 17, 7 16.5 Z" fill="#2f704b"/>
-                  <path d="M7 16.5 C 11 13.5, 14 10.5, 17 8" stroke="#ffffff" stroke-width="0.9" stroke-linecap="round"/>
-                </svg>
-              </span>NSERVE
-            </span>
-            <span class="brand-subtitle" style="font-size: 7.5px; letter-spacing: 2px;">PEOPLE &middot; PLANET &middot; POSSIBILITY</span>
+          <a class="navbar-brand-conserve mb-3 d-inline-block" href="index.php" aria-label="Conserve India - People, Planet, Products">
+            <img src="assets/images/conserve-logo.png" alt="Conserve - People, Planet, Products" class="brand-logo-footer" width="175" height="55">
           </a>
           <p class="text-muted" style="font-size: 13px; line-height: 1.65; max-width: 320px;">
             In 1997, we set out on a mission to support sustainable development in India. We renew the world from people to planet by pioneering patented plastic recycling and empowering underprivileged individuals with employable opportunities.

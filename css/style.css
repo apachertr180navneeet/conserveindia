@@ -57,8 +57,28 @@ h1, h2, h3, h4, h5, h6, .font-serif, .font-heading {
 .navbar-brand-conserve {
   text-decoration: none;
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.brand-logo-img {
+  height: 46px;
+  width: auto;
+  max-width: 175px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.02);
+}
+
+.brand-logo-footer {
+  height: 50px;
+  width: auto;
+  max-width: 185px;
+  object-fit: contain;
+  display: block;
 }
 
 .brand-title {
