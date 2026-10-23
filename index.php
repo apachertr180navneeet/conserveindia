@@ -251,7 +251,7 @@ require_once __DIR__ . '/includes/header.php';
               </ul>
             </div>
             <div>
-              <a href="consulting.php" class="ed-btn-outline">
+              <a href="services.php#consulting" class="ed-btn-outline">
                 Explore Advisory &rarr;
               </a>
             </div>
@@ -274,8 +274,8 @@ require_once __DIR__ . '/includes/header.php';
               </ul>
             </div>
             <div>
-              <a href="wholesale.php" class="ed-btn-outline">
-                Explore B2B Wholesale &rarr;
+              <a href="connect-with-us.php#partner" class="ed-btn-outline">
+                Explore B2B Partnerships &rarr;
               </a>
             </div>
           </div>
@@ -476,6 +476,109 @@ require_once __DIR__ . '/includes/header.php';
         <a href="contact-us.php" class="ed-link-arrow">
           Discuss a Corporate or Institutional Partnership &rarr;
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 5.5: WHERE WE HAVE WORKED
+       Whiteboard Architecture Requirement
+       Geographic presence across grassroots regions & global reach
+       ======================================================== -->
+  <section class="ed-content-section" id="where-we-work" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container px-lg-4">
+      <div class="text-center mb-5">
+        <span class="ed-section-tag">GEOGRAPHIC FOOTPRINT</span>
+        <h2 class="ed-section-title">Where We Have Worked</h2>
+        <p class="ed-section-desc mx-auto">
+          Over 25 years of grassroots field programs in urban informal settlements across Northern India, expanding to sustainable trade partnerships across 4 continents.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Region 1: Delhi-NCR -->
+        <div class="col-md-6 col-lg-3">
+          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div>
+                <h3 class="h5 fw-bold mb-0" style="color: var(--primary-forest);">Delhi-NCR</h3>
+                <span class="text-muted small">Hub &amp; Innovation Lab</span>
+              </div>
+            </div>
+            <p class="text-secondary small mb-3" style="line-height: 1.6;">
+              Flagship HRP material innovation atelier, Highbrow Crafts initiative, and Afghan refugee women training center (Akseer) in collaboration with UNHCR.
+            </p>
+            <div class="pt-2 border-top border-light-subtle">
+              <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">3,000+ Waste Collectors</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Region 2: Ghaziabad & Noida -->
+        <div class="col-md-6 col-lg-3">
+          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
+                <i class="bi bi-buildings-fill"></i>
+              </div>
+              <div>
+                <h3 class="h5 fw-bold mb-0" style="color: var(--primary-forest);">Ghaziabad &amp; Noida</h3>
+                <span class="text-muted small">Industrial &amp; Hub Centers</span>
+              </div>
+            </div>
+            <p class="text-secondary small mb-3" style="line-height: 1.6;">
+              Roosh Upcycle Project, Wastepreneurs training hub, material washing &amp; compression facilities, and community relief centers during Project Sahyog.
+            </p>
+            <div class="pt-2 border-top border-light-subtle">
+              <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">Wastepreneurs Hub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Region 3: Haryana & Grassroots Clusters -->
+        <div class="col-md-6 col-lg-3">
+          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <div>
+                <h3 class="h5 fw-bold mb-0" style="color: var(--primary-forest);">Haryana Clusters</h3>
+                <span class="text-muted small">Faridabad &amp; Gurugram</span>
+              </div>
+            </div>
+            <p class="text-secondary small mb-3" style="line-height: 1.6;">
+              Footprints Project empowering grassroots waste pickers, health checkups, sanitation workshops, and financial literacy training for women recyclers.
+            </p>
+            <div class="pt-2 border-top border-light-subtle">
+              <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">100+ Women Recyclers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Region 4: Global Distribution -->
+        <div class="col-md-6 col-lg-3">
+          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
+                <i class="bi bi-globe2"></i>
+              </div>
+              <div>
+                <h3 class="h5 fw-bold mb-0" style="color: var(--primary-forest);">Global Reach</h3>
+                <span class="text-muted small">USA, UK &amp; Europe</span>
+              </div>
+            </div>
+            <p class="text-secondary small mb-3" style="line-height: 1.6;">
+              Certified Fair Trade upcycled fashion and accessories exported to Whole Foods Market nationwide in the USA and over 1,000 eco-design retail boutiques.
+            </p>
+            <div class="pt-2 border-top border-light-subtle">
+              <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">1,000+ Retail Outlets</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

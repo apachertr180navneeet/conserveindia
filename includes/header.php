@@ -57,67 +57,102 @@ if (!isset($current_page)) {
 
       <!-- Nav Links & Dropdowns -->
       <div class="collapse navbar-collapse" id="conserveNavbar">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          
+          <!-- 1. Home Page -->
           <li class="nav-item">
-            <a class="nav-link custom-nav-link <?php echo ($current_page === 'about') ? 'active text-success fw-bold' : ''; ?>" href="about-us.php">About Us</a>
+            <a class="nav-link custom-nav-link <?php echo ($current_page === 'home') ? 'active text-success fw-bold' : ''; ?>" href="index.php">Home Page</a>
+          </li>
+
+          <!-- 2. About US Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'about') ? 'active text-success fw-bold' : ''; ?>" href="about-us.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About US
+            </a>
+            <ul class="dropdown-menu dropdown-menu-conserve shadow">
+              <li><a class="dropdown-item fw-semibold" href="about-us.php">About Us Overview</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="about-us.php#mission-vision">Mission &amp; Vision</a></li>
+              <li><a class="dropdown-item" href="about-us.php#values">Core Values</a></li>
+              <li><a class="dropdown-item" href="about-us.php#impact">Impact Numbers</a></li>
+              <li><a class="dropdown-item" href="about-us.php#paradigms">Supporting Paradigms</a></li>
+              <li><a class="dropdown-item" href="about-us.php#thematic-areas">Thematic Areas</a></li>
+              <li><a class="dropdown-item" href="about-us.php#social-enterprise">Redesigning Social Enterprise</a></li>
+              <li><a class="dropdown-item" href="about-us.php#team">Meet The Team (Core Team)</a></li>
+              <li><a class="dropdown-item" href="about-us.php#milestones">Milestones &amp; Heritage</a></li>
+            </ul>
           </li>
           
-          <!-- Our Work Dropdown -->
+          <!-- 3. Our Work Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'our-work') ? 'active text-success fw-bold' : ''; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'our-work') ? 'active text-success fw-bold' : ''; ?>" href="our-work.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Our Work
             </a>
             <ul class="dropdown-menu dropdown-menu-conserve shadow">
-              <li><a class="dropdown-item" href="capacity-building.php">Capacity Building</a></li>
-              <li><a class="dropdown-item" href="capacity-building.php#recyclers">Grassroot Recyclers</a></li>
+              <li><a class="dropdown-item fw-semibold" href="our-work.php">Our Work Overview</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="capacity-building.php">Circular Livelihoods &amp; Artisans</a></li>
+              <li><a class="dropdown-item" href="capacity-building.php#recyclers">Grassroot Recyclers Training</a></li>
               <li><a class="dropdown-item" href="capacity-building.php#refugees">Refugee Livelihoods (Akseer)</a></li>
-              <li><a class="dropdown-item" href="advocacy-and-lobbying.php">Advocacy + Lobbying</a></li>
-              <li><a class="dropdown-item" href="sustainable-research-development.php">Sustainable R&amp;D (Patented HRP)</a></li>
-              <li><a class="dropdown-item" href="sustainable-trade.php">Sustainable Trade</a></li>
-              <li><a class="dropdown-item" href="consulting.php">Consulting &amp; Sensitization</a></li>
-              <li><a class="dropdown-item" href="covid-relief-project-sahyog.php">COVID Relief (Project Sahyog)</a></li>
+              <li><a class="dropdown-item" href="sustainable-research-development.php">Research &amp; Informed Making (Patented HRP)</a></li>
+              <li><a class="dropdown-item" href="advocacy-and-lobbying.php">Events &amp; Policy Advocacy</a></li>
+              <li><a class="dropdown-item" href="our-work.php#zero-waste">Zero Waste Communities</a></li>
+              <li><a class="dropdown-item" href="sustainable-trade.php">Sustainable Trade &amp; B2B</a></li>
+              <li><a class="dropdown-item" href="covid-relief-project-sahyog.php">Community Relief (Project Sahyog)</a></li>
             </ul>
           </li>
 
-          <!-- Services Link -->
-          <li class="nav-item">
-            <a class="nav-link custom-nav-link <?php echo ($current_page === 'services') ? 'active text-success fw-bold' : ''; ?>" href="index.php#services">Services</a>
-          </li>
-
-          <!-- Buy Products Dropdown -->
+          <!-- 4. Our Services Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'wholesale') ? 'active text-success fw-bold' : ''; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Buy Our Products
+            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'services') ? 'active text-success fw-bold' : ''; ?>" href="services.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Services
             </a>
             <ul class="dropdown-menu dropdown-menu-conserve shadow">
-              <li><a class="dropdown-item" href="wholesale.php">Wholesale Catalog</a></li>
-              <li><a class="dropdown-item" href="wholesale.php#bags">Bags &amp; Pouches (Upcycled Goodness)</a></li>
-              <li><a class="dropdown-item" href="wholesale.php#handmade">Organically Handmade</a></li>
-              <li><a class="dropdown-item" href="wholesale.php#aprons">Aprons &amp; Scarves</a></li>
+              <li><a class="dropdown-item fw-semibold" href="services.php">Services Overview</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-success fw-semibold" href="https://www.lifaffa.com" target="_blank" rel="noopener">Retail Store (Lifaffa.com) &nearr;</a></li>
+              <li><a class="dropdown-item" href="services.php#consulting">Consulting &amp; Advisory</a></li>
+              <li><a class="dropdown-item" href="services.php#events-outreach">Events and Outreach</a></li>
+              <li><a class="dropdown-item" href="services.php#education-training">Education and Training (Incubator)</a></li>
+              <li><a class="dropdown-item" href="services.php#immersion-tours">Stay &amp; Learn: Immersion Tours</a></li>
             </ul>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link custom-nav-link <?php echo ($current_page === 'impact') ? 'active text-success fw-bold' : ''; ?>" href="index.php#impact">Our Impact</a>
+          <!-- 5. Lastest Updates Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'updates') ? 'active text-success fw-bold' : ''; ?>" href="latest-updates.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Lastest Updates
+            </a>
+            <ul class="dropdown-menu dropdown-menu-conserve shadow">
+              <li><a class="dropdown-item fw-semibold" href="latest-updates.php">Updates Overview</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="latest-updates.php#awards">Awards &amp; Accolades</a></li>
+              <li><a class="dropdown-item" href="green-stories.php">Blog &amp; Green Stories</a></li>
+              <li><a class="dropdown-item" href="latest-updates.php#publications">Annual Reports &amp; Publications</a></li>
+            </ul>
           </li>
+
+          <!-- 6. Gallery Pages -->
           <li class="nav-item">
-            <a class="nav-link custom-nav-link <?php echo ($current_page === 'stories') ? 'active text-success fw-bold' : ''; ?>" href="green-stories.php">Green Stories</a>
+            <a class="nav-link custom-nav-link <?php echo ($current_page === 'gallery') ? 'active text-success fw-bold' : ''; ?>" href="gallery.php">
+              Gallery Pages
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link custom-nav-link <?php echo ($current_page === 'contact') ? 'active text-success fw-bold' : ''; ?>" href="contact-us.php">Contact</a>
+
+          <!-- 7. Connect With US Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'connect') ? 'active text-success fw-bold' : ''; ?>" href="connect-with-us.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Connect With US
+            </a>
+            <ul class="dropdown-menu dropdown-menu-conserve shadow dropdown-menu-end">
+              <li><a class="dropdown-item fw-semibold" href="connect-with-us.php">Connect Overview</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="contact-us.php">Contact Us</a></li>
+              <li><a class="dropdown-item" href="connect-with-us.php#volunteer">Volunteer With Us</a></li>
+              <li><a class="dropdown-item" href="connect-with-us.php#partner">Partner With Us</a></li>
+              <li><a class="dropdown-item text-success fw-semibold" href="connect-with-us.php#donate">Donate &amp; Support &hearts;</a></li>
+            </ul>
           </li>
         </ul>
-
-        <div class="d-flex align-items-center mt-3 mt-lg-0">
-          <a href="contact-us.php" class="btn-primary-forest">
-            Partner With Us 
-            <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
-              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-            </svg>
-          </a>
-        </div>
       </div>
     </div>
   </nav>

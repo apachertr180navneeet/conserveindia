@@ -1,7 +1,7 @@
 <?php
 $page_title = "Contact Us — Conserve India | Partner, Wholesale & Inquiries";
 $page_description = "Get in touch with Conserve India for wholesale orders, corporate CSR collaborations, research partnerships, or general inquiries in New Delhi.";
-$current_page = "contact";
+$current_page = "connect";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
@@ -9,7 +9,7 @@ require_once __DIR__ . '/includes/header.php';
   <header class="ed-page-header">
     <div class="container px-lg-4">
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
-        <a href="index.php">Home</a> <span>/</span> Contact
+        <a href="index.php">Home</a> <span>/</span> <a href="connect-with-us.php">Connect With Us</a> <span>/</span> Contact
       </nav>
       <span class="ed-section-tag">CONNECT &amp; COLLABORATE</span>
       <h1 class="ed-page-title">Let’s Work Together</h1>

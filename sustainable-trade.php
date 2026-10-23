@@ -88,8 +88,8 @@ require_once __DIR__ . '/includes/header.php';
             In the United States, our products were distributed nationwide through <strong>Whole Foods Market</strong> and hundreds of conscious lifestyle retailers, demonstrating that grassroots circular products can compete and thrive in rigorous international retail markets.
           </p>
           <div class="pt-2">
-            <a href="wholesale.php" class="ed-btn-primary">
-              Explore Wholesale Catalog &rarr;
+            <a href="connect-with-us.php#partner" class="ed-btn-primary">
+              Partner For Wholesale &amp; Export &rarr;
             </a>
           </div>
         </div>

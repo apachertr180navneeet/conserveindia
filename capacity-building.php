@@ -69,7 +69,7 @@ require_once __DIR__ . '/includes/header.php';
               We provide formal education on Fair Trade labor policies, bank account operations, and design consistency, ensuring artisans earn living wages in safe, ergonomic ateliers.
             </p>
             <div class="mt-auto pt-3">
-              <a href="wholesale.php" class="ed-link-arrow">View Artisan Products &rarr;</a>
+              <a href="gallery.php" class="ed-link-arrow">View Artisan Projects &rarr;</a>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@ require_once __DIR__ . '/includes/header.php';
               Equipped with tailoring and micro-enterprise skills, these women successfully launched their own brand, <strong>Akseer</strong>, creating bespoke pieces for North Indian fashion boutiques.
             </p>
             <div class="mt-auto pt-3">
-              <a href="wholesale.php#handmade" class="ed-link-arrow">Explore Akseer Products &rarr;</a>
+              <a href="gallery.php" class="ed-link-arrow">Explore Akseer in Gallery &rarr;</a>
             </div>
           </div>
         </div>
