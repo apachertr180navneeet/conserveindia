@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" aria-label="Fair Trade Forum India">
+  <g>
+    <!-- FTF-I Emblem -->
+    <rect x="6" y="8" width="44" height="44" rx="10" fill="#e76f51"/>
+    <!-- Stylized Tree of Life / Fair Trade Network Motif -->
+    <path d="M28 42 L28 26 M28 32 C23 28 20 22 23 18 C27 20 28 25 28 26 C28 25 29 20 33 18 C36 22 33 28 28 32 Z" 
+          stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff"/>
+    <circle cx="28" cy="17" r="2.5" fill="#f4a261"/>
+    
+    <!-- Wordmark -->
+    <text x="60" y="27" font-family="'Manrope', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="800" letter-spacing="0.5" fill="#264653">FAIR TRADE FORUM</text>
+    <text x="60" y="42" font-family="'Inter', Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.5" fill="#e76f51">INDIA (FTF-I)</text>
+  </g>
+</svg>

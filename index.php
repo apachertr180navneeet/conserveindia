@@ -8,7 +8,7 @@ require_once __DIR__ . '/includes/header.php';
   <!-- ========================================================
        SECTION 1: HERO SLIDER
        Reference: Patagonia Activism (patagonia.com/activism)
-       Full-width editorial image slider, max 3 slides
+       Full-width editorial image slider with standout CTA and improved headline typography
        ======================================================== -->
   <section class="ed-hero-section" id="hero" aria-label="Conserve India Mission & Work">
     <div id="heroCarousel" class="carousel slide carousel-fade ed-hero-slider" data-bs-ride="carousel" data-bs-interval="6500" data-bs-pause="hover">
@@ -29,14 +29,14 @@ require_once __DIR__ . '/includes/header.php';
             <div class="row">
               <div class="col-lg-8 col-xl-7">
                 <span class="ed-hero-tag">PEOPLE &middot; PLANET &middot; POSSIBILITY</span>
-                <h1 class="ed-hero-headline">Turning Landfill Plastic into Opportunity</h1>
+                <h1 class="ed-hero-headline"><span class="text-accent">Turning Landfill Plastic</span> into Opportunity</h1>
                 <p class="ed-hero-lead">
                   For over 25 years, Conserve India has pioneered patented material upcycling and dignified artisan livelihoods, diverting thousands of tons of plastic waste across India.
                 </p>
                 <div>
-                  <a href="#our-work" class="ed-btn-primary">
+                  <a href="#our-work" class="ed-hero-cta">
                     Explore Our Work
-                    <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg>
                   </a>
@@ -54,14 +54,14 @@ require_once __DIR__ . '/includes/header.php';
             <div class="row">
               <div class="col-lg-8 col-xl-7">
                 <span class="ed-hero-tag">ARTISAN LIVELIHOODS &amp; DIGNITY</span>
-                <h2 class="ed-hero-headline">Empowering Hands. Transforming Futures.</h2>
+                <h2 class="ed-hero-headline"><span class="text-accent">Empowering Hands.</span> Transforming Futures.</h2>
                 <p class="ed-hero-lead">
                   Partnering with Delhi's grassroots recyclers and UNHCR refugee women, providing certified Fair Trade training, dignified living wages, and long-term financial self-reliance.
                 </p>
                 <div>
-                  <a href="capacity-building.php" class="ed-btn-primary">
+                  <a href="capacity-building.php" class="ed-hero-cta">
                     Artisan Programs
-                    <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg>
                   </a>
@@ -79,14 +79,14 @@ require_once __DIR__ . '/includes/header.php';
             <div class="row">
               <div class="col-lg-8 col-xl-7">
                 <span class="ed-hero-tag">CIRCULAR INNOVATION &amp; SUSTAINABLE TRADE</span>
-                <h2 class="ed-hero-headline">Patented Innovation for a Circular Economy</h2>
+                <h2 class="ed-hero-headline"><span class="text-accent">Patented Innovation</span> for a Circular Economy</h2>
                 <p class="ed-hero-lead">
                   Transforming single-use polythene bags and vinyl into high-fashion materials distributed nationwide in the US via Whole Foods Market and over 1,000 global retailers.
                 </p>
                 <div>
-                  <a href="contact-us.php" class="ed-btn-primary">
+                  <a href="#contact-section" class="ed-hero-cta">
                     Partner With Us
-                    <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg>
                   </a>
@@ -112,7 +112,7 @@ require_once __DIR__ . '/includes/header.php';
   <!-- ========================================================
        SECTION 2: OUR WORK
        Reference: Harajeevan Projects (harajeevan.org/projects)
-       3–4 featured project cards in clean, consistent grid
+       4 featured project cards in clean, consistent grid
        ======================================================== -->
   <section class="ed-work-section" id="our-work">
     <div class="container px-lg-4">
@@ -220,118 +220,7 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================
-       SECTION 3: SERVICES
-       Reference: Charity:Water (charitywater.org)
-       Four text-led service cards with clear typography
-       ======================================================== -->
-  <section class="ed-services-section" id="services">
-    <div class="container px-lg-4">
-      <div class="text-center mb-5">
-        <span class="ed-section-tag">SERVICES &amp; ADVISORY</span>
-        <h2 class="ed-section-title">Circular Strategy &amp; Partnership Solutions</h2>
-        <p class="ed-section-desc mx-auto">
-          Collaborating with corporations, institutional buyers, and development agencies to engineer circular value, CSR alignment, and measurable ESG outcomes.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <!-- Service 1: Circular Economy Research & Strategy -->
-        <div class="col-md-6">
-          <div class="ed-service-card">
-            <div>
-              <span class="ed-service-index">SERVICE 01</span>
-              <h3 class="ed-service-title">Circular Economy Research &amp; Strategy</h3>
-              <p class="ed-service-desc">
-                Diagnostic corporate waste stream audits, material lifecycle mapping, and tailored operational roadmaps to eliminate single-use plastics and establish closed-loop recycling.
-              </p>
-              <ul class="ed-service-deliverables">
-                <li><i class="bi bi-check2"></i> Comprehensive campus and factory waste diagnostics</li>
-                <li><i class="bi bi-check2"></i> Single-use plastic phaseout and segregation workflows</li>
-                <li><i class="bi bi-check2"></i> Verifiable material recovery audits for ESG reporting</li>
-              </ul>
-            </div>
-            <div>
-              <a href="services.php#consulting" class="ed-btn-outline">
-                Explore Advisory &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 2: Sustainable Production & Value-Chain Development -->
-        <div class="col-md-6">
-          <div class="ed-service-card">
-            <div>
-              <span class="ed-service-index">SERVICE 02</span>
-              <h3 class="ed-service-title">Sustainable Production &amp; Value-Chain Development</h3>
-              <p class="ed-service-desc">
-                B2B supply of patented Handmade Recycled Plastic (HRP) sheets, bespoke upcycled lifestyle goods, and certified Fair Trade merchandise for corporate events and retail collections.
-              </p>
-              <ul class="ed-service-deliverables">
-                <li><i class="bi bi-check2"></i> Patented HRP material development for B2B applications</li>
-                <li><i class="bi bi-check2"></i> Custom-branded corporate gifting and conference accessories</li>
-                <li><i class="bi bi-check2"></i> Certified Fair Trade production adhering to ethical living wages</li>
-              </ul>
-            </div>
-            <div>
-              <a href="connect-with-us.php#partner" class="ed-btn-outline">
-                Explore B2B Partnerships &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 3: Capacity Building & Artisan Livelihoods -->
-        <div class="col-md-6">
-          <div class="ed-service-card">
-            <div>
-              <span class="ed-service-index">SERVICE 03</span>
-              <h3 class="ed-service-title">Capacity Building &amp; Artisan Livelihoods</h3>
-              <p class="ed-service-desc">
-                Field-tested vocational curricula designed for CSR funders, NGOs, and municipal councils seeking to transition informal ragpickers and refugee women into skilled craft livelihoods.
-              </p>
-              <ul class="ed-service-deliverables">
-                <li><i class="bi bi-check2"></i> 6–12 month master stitching, weaving, and sorting modules</li>
-                <li><i class="bi bi-check2"></i> Fair Trade labor rights, financial literacy, and health insurance</li>
-                <li><i class="bi bi-check2"></i> Proven micro-enterprise incubation (e.g. Akseer brand)</li>
-              </ul>
-            </div>
-            <div>
-              <a href="capacity-building.php" class="ed-btn-outline">
-                Explore Training Programs &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 4: Education, Awareness & Stakeholder Engagement -->
-        <div class="col-md-6">
-          <div class="ed-service-card">
-            <div>
-              <span class="ed-service-index">SERVICE 04</span>
-              <h3 class="ed-service-title">Education, Awareness &amp; Stakeholder Engagement</h3>
-              <p class="ed-service-desc">
-                Hands-on corporate sensitization workshops, academic partnerships, and Extended Producer Responsibility (EPR) advisory aligning brand commitments with grassroots reality.
-              </p>
-              <ul class="ed-service-deliverables">
-                <li><i class="bi bi-check2"></i> Corporate employee sustainability workshops and field visits</li>
-                <li><i class="bi bi-check2"></i> Ethical Extended Producer Responsibility (EPR) compliance models</li>
-                <li><i class="bi bi-check2"></i> Community environmental campaigns and educational sessions</li>
-              </ul>
-            </div>
-            <div>
-              <a href="contact-us.php" class="ed-btn-outline">
-                Discuss a Partnership &rarr;
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================
-       SECTION 4: IMPACT
+       SECTION 3: IMPACT
        Reference: Charity:Water (charitywater.org)
        Verified numerical metrics with clear labels and reporting periods
        ======================================================== -->
@@ -390,9 +279,9 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================
-       SECTION 5: PARTNER LOGOS
+       SECTION 4: GLOBAL PARTNERS
        Reference: Kiva Partner With Us (kiva.org/about/partner-with-us)
-       Clean partner-logo strip on light neutral background
+       Clean partner-logo strip with official partner & company logos
        ======================================================== -->
   <section class="ed-partners-section" id="partners">
     <div class="container px-lg-4">
@@ -400,7 +289,7 @@ require_once __DIR__ . '/includes/header.php';
         <span class="ed-section-tag">GLOBAL PARTNERS</span>
         <h2 class="ed-section-title">Trusted by International Organizations &amp; Retailers</h2>
         <p class="ed-section-desc mx-auto">
-          Collaborating across ethical supply chains, humanitarian relief, and responsible retail distribution worldwide.
+          Collaborating across ethical supply chains, humanitarian refugee relief, and responsible retail distribution worldwide.
         </p>
       </div>
 
@@ -408,8 +297,8 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Partner 1: Whole Foods Market -->
         <div class="col-6 col-md-4 col-lg-2">
           <div class="ed-partner-card">
-            <div class="ed-partner-icon">
-              <i class="bi bi-cart4"></i>
+            <div class="ed-partner-logo-box">
+              <img src="assets/images/partners/whole-foods.svg" alt="Whole Foods Market Logo" class="ed-partner-logo" loading="lazy">
             </div>
             <div class="ed-partner-name">Whole Foods Market</div>
             <div class="ed-partner-sub">US Nationwide Distribution</div>
@@ -419,8 +308,8 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Partner 2: UNHCR -->
         <div class="col-6 col-md-4 col-lg-2">
           <div class="ed-partner-card">
-            <div class="ed-partner-icon">
-              <i class="bi bi-globe-americas"></i>
+            <div class="ed-partner-logo-box">
+              <img src="assets/images/partners/unhcr.svg" alt="UNHCR The UN Refugee Agency Logo" class="ed-partner-logo" loading="lazy">
             </div>
             <div class="ed-partner-name">UNHCR</div>
             <div class="ed-partner-sub">Refugee Livelihoods Partner</div>
@@ -430,8 +319,8 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Partner 3: WFTO -->
         <div class="col-6 col-md-4 col-lg-2">
           <div class="ed-partner-card">
-            <div class="ed-partner-icon">
-              <i class="bi bi-patch-check"></i>
+            <div class="ed-partner-logo-box">
+              <img src="assets/images/partners/wfto.svg" alt="World Fair Trade Organization Member Logo" class="ed-partner-logo" loading="lazy">
             </div>
             <div class="ed-partner-name">WFTO Member</div>
             <div class="ed-partner-sub">World Fair Trade Org</div>
@@ -441,8 +330,8 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Partner 4: Fair Trade Forum India -->
         <div class="col-6 col-md-4 col-lg-2">
           <div class="ed-partner-card">
-            <div class="ed-partner-icon">
-              <i class="bi bi-flower1"></i>
+            <div class="ed-partner-logo-box">
+              <img src="assets/images/partners/fair-trade-forum.svg" alt="Fair Trade Forum India Logo" class="ed-partner-logo" loading="lazy">
             </div>
             <div class="ed-partner-name">Fair Trade Forum</div>
             <div class="ed-partner-sub">FTF-I National Network</div>
@@ -452,8 +341,8 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Partner 5: Lifaffa -->
         <div class="col-6 col-md-4 col-lg-2">
           <div class="ed-partner-card">
-            <div class="ed-partner-icon">
-              <i class="bi bi-handbag"></i>
+            <div class="ed-partner-logo-box">
+              <img src="assets/images/partners/lifaffa.svg" alt="Lifaffa by Conserve Logo" class="ed-partner-logo" loading="lazy">
             </div>
             <div class="ed-partner-name">Lifaffa</div>
             <div class="ed-partner-sub">Sustainable Retail Brand</div>
@@ -463,8 +352,8 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Partner 6: 1,000+ Global Retailers -->
         <div class="col-6 col-md-4 col-lg-2">
           <div class="ed-partner-card">
-            <div class="ed-partner-icon">
-              <i class="bi bi-shop-window"></i>
+            <div class="ed-partner-logo-box">
+              <img src="assets/images/partners/global-retailers.svg" alt="1,000+ Retailers Network Logo" class="ed-partner-logo" loading="lazy">
             </div>
             <div class="ed-partner-name">1,000+ Retailers</div>
             <div class="ed-partner-sub">US, UK &amp; Europe Boutiques</div>
@@ -473,7 +362,7 @@ require_once __DIR__ . '/includes/header.php';
       </div>
 
       <div class="text-center mt-4 pt-2">
-        <a href="contact-us.php" class="ed-link-arrow">
+        <a href="#contact-section" class="ed-link-arrow">
           Discuss a Corporate or Institutional Partnership &rarr;
         </a>
       </div>
@@ -481,9 +370,142 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================
-       SECTION 5.5: WHERE WE HAVE WORKED
-       Whiteboard Architecture Requirement
-       Geographic presence across grassroots regions & global reach
+       SECTION 5: OUR SERVICES (REORDERED IMMEDIATELY AFTER GLOBAL PARTNERS)
+       Updated with relevant images, deliverables, and responsive card design
+       ======================================================== -->
+  <section class="ed-services-section" id="services">
+    <div class="container px-lg-4">
+      <div class="text-center mb-5">
+        <span class="ed-section-tag">SERVICES &amp; ADVISORY</span>
+        <h2 class="ed-section-title">Circular Strategy &amp; Partnership Solutions</h2>
+        <p class="ed-section-desc mx-auto">
+          Collaborating with corporations, institutional buyers, and development agencies to engineer circular value, CSR alignment, and measurable ESG outcomes.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1: Circular Economy Research & Strategy -->
+        <div class="col-md-6">
+          <div class="ed-service-card">
+            <div class="ed-service-img-box">
+              <img src="assets/images/plastic-bottles-sorting.jpg" alt="Diagnostic corporate waste stream audits and plastic segregation" class="ed-service-img" loading="lazy">
+              <span class="ed-service-badge-overlay">SERVICE 01</span>
+            </div>
+            <div class="ed-service-body">
+              <div>
+                <span class="ed-service-index">STRATEGY &amp; AUDITS</span>
+                <h3 class="ed-service-title">Circular Economy Research &amp; Strategy</h3>
+                <p class="ed-service-desc">
+                  Diagnostic corporate waste stream audits, material lifecycle mapping, and tailored operational roadmaps to eliminate single-use plastics and establish closed-loop recycling.
+                </p>
+                <ul class="ed-service-deliverables">
+                  <li><i class="bi bi-check2-circle"></i> Comprehensive campus and factory waste diagnostics</li>
+                  <li><i class="bi bi-check2-circle"></i> Single-use plastic phaseout and segregation workflows</li>
+                  <li><i class="bi bi-check2-circle"></i> Verifiable material recovery audits for ESG reporting</li>
+                </ul>
+              </div>
+              <div class="pt-2">
+                <a href="services.php#consulting" class="ed-btn-outline">
+                  Explore Advisory &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Sustainable Production & Value-Chain Development -->
+        <div class="col-md-6">
+          <div class="ed-service-card">
+            <div class="ed-service-img-box">
+              <img src="assets/images/upcycling-innovation.jpg" alt="Patented Handmade Recycled Plastic material and B2B goods" class="ed-service-img" loading="lazy">
+              <span class="ed-service-badge-overlay">SERVICE 02</span>
+            </div>
+            <div class="ed-service-body">
+              <div>
+                <span class="ed-service-index">B2B &amp; MATERIAL SCIENCE</span>
+                <h3 class="ed-service-title">Sustainable Production &amp; Value-Chain Development</h3>
+                <p class="ed-service-desc">
+                  B2B supply of patented Handmade Recycled Plastic (HRP) sheets, bespoke upcycled lifestyle goods, and certified Fair Trade merchandise for corporate events and retail collections.
+                </p>
+                <ul class="ed-service-deliverables">
+                  <li><i class="bi bi-check2-circle"></i> Patented HRP material development for B2B applications</li>
+                  <li><i class="bi bi-check2-circle"></i> Custom-branded corporate gifting and conference accessories</li>
+                  <li><i class="bi bi-check2-circle"></i> Certified Fair Trade production adhering to ethical living wages</li>
+                </ul>
+              </div>
+              <div class="pt-2">
+                <a href="connect-with-us.php#partner" class="ed-btn-outline">
+                  Explore B2B Partnerships &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Capacity Building & Artisan Livelihoods -->
+        <div class="col-md-6">
+          <div class="ed-service-card">
+            <div class="ed-service-img-box">
+              <img src="assets/images/artisan-livelihoods.jpg" alt="Artisan capacity building and refugee women stitching training" class="ed-service-img" loading="lazy">
+              <span class="ed-service-badge-overlay">SERVICE 03</span>
+            </div>
+            <div class="ed-service-body">
+              <div>
+                <span class="ed-service-index">LIVELIHOODS &amp; VOCATIONAL</span>
+                <h3 class="ed-service-title">Capacity Building &amp; Artisan Livelihoods</h3>
+                <p class="ed-service-desc">
+                  Field-tested vocational curricula designed for CSR funders, NGOs, and municipal councils seeking to transition informal ragpickers and refugee women into skilled craft livelihoods.
+                </p>
+                <ul class="ed-service-deliverables">
+                  <li><i class="bi bi-check2-circle"></i> 6–12 month master stitching, weaving, and sorting modules</li>
+                  <li><i class="bi bi-check2-circle"></i> Fair Trade labor rights, financial literacy, and health insurance</li>
+                  <li><i class="bi bi-check2-circle"></i> Proven micro-enterprise incubation (e.g. Akseer brand)</li>
+                </ul>
+              </div>
+              <div class="pt-2">
+                <a href="capacity-building.php" class="ed-btn-outline">
+                  Explore Training Programs &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Education, Awareness & Stakeholder Engagement -->
+        <div class="col-md-6">
+          <div class="ed-service-card">
+            <div class="ed-service-img-box">
+              <img src="assets/images/belief-sapling.jpg" alt="Environmental education, corporate workshops and advocacy" class="ed-service-img" loading="lazy">
+              <span class="ed-service-badge-overlay">SERVICE 04</span>
+            </div>
+            <div class="ed-service-body">
+              <div>
+                <span class="ed-service-index">EDUCATION &amp; EPR</span>
+                <h3 class="ed-service-title">Education, Awareness &amp; Stakeholder Engagement</h3>
+                <p class="ed-service-desc">
+                  Hands-on corporate sensitization workshops, academic partnerships, and Extended Producer Responsibility (EPR) advisory aligning brand commitments with grassroots reality.
+                </p>
+                <ul class="ed-service-deliverables">
+                  <li><i class="bi bi-check2-circle"></i> Corporate employee sustainability workshops and field visits</li>
+                  <li><i class="bi bi-check2-circle"></i> Ethical Extended Producer Responsibility (EPR) compliance models</li>
+                  <li><i class="bi bi-check2-circle"></i> Community environmental campaigns and educational sessions</li>
+                </ul>
+              </div>
+              <div class="pt-2">
+                <a href="#contact-section" class="ed-btn-outline">
+                  Discuss a Partnership &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 6: GEOGRAPHICAL FOOTPRINT / WHERE WE HAVE WORKED
+       Interactive Leaflet map displaying verified project locations
        ======================================================== -->
   <section class="ed-content-section" id="where-we-work" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
     <div class="container px-lg-4">
@@ -495,52 +517,71 @@ require_once __DIR__ . '/includes/header.php';
         </p>
       </div>
 
-      <div class="row g-4">
+      <!-- Interactive Map Wrapper -->
+      <div class="ed-map-wrapper">
+        <div class="ed-map-header">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-geo-alt-fill text-success fs-5"></i>
+            <span class="fw-bold small" style="color: var(--primary-forest);">Interactive Footprint Navigator</span>
+          </div>
+          <div class="ed-map-filter-group">
+            <button type="button" class="ed-map-filter-btn active" data-filter="all">All Locations</button>
+            <button type="button" class="ed-map-filter-btn" data-filter="india">India Grassroots Hubs</button>
+            <button type="button" class="ed-map-filter-btn" data-filter="global">Global Retail Network</button>
+          </div>
+        </div>
+        <div id="conserveInteractiveMap"></div>
+      </div>
+
+      <!-- Regional Detail Cards (Click to pan on map) -->
+      <div class="row g-4 mt-2">
         <!-- Region 1: Delhi-NCR -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div class="ed-work-card ed-region-card h-100 p-4 bg-white" data-region="delhi" style="border: 1px solid var(--border-light); border-radius: 12px;">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-geo-alt-fill"></i>
               </div>
               <div>
                 <h3 class="h5 fw-bold mb-0" style="color: var(--primary-forest);">Delhi-NCR</h3>
-                <span class="text-muted small">Hub &amp; Innovation Lab</span>
+                <span class="text-muted small">Central Innovation Hub</span>
               </div>
             </div>
             <p class="text-secondary small mb-3" style="line-height: 1.6;">
               Flagship HRP material innovation atelier, Highbrow Crafts initiative, and Afghan refugee women training center (Akseer) in collaboration with UNHCR.
             </p>
-            <div class="pt-2 border-top border-light-subtle">
+            <div class="pt-2 border-top border-light-subtle d-flex justify-content-between align-items-center">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">3,000+ Waste Collectors</span>
+              <span class="text-muted small"><i class="bi bi-cursor-fill me-1"></i>View Pin</span>
             </div>
           </div>
         </div>
 
         <!-- Region 2: Ghaziabad & Noida -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div class="ed-work-card ed-region-card h-100 p-4 bg-white" data-region="noida" style="border: 1px solid var(--border-light); border-radius: 12px;">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-buildings-fill"></i>
               </div>
               <div>
                 <h3 class="h5 fw-bold mb-0" style="color: var(--primary-forest);">Ghaziabad &amp; Noida</h3>
-                <span class="text-muted small">Industrial &amp; Hub Centers</span>
+                <span class="text-muted small">Upcycling &amp; Relief Hub</span>
               </div>
             </div>
             <p class="text-secondary small mb-3" style="line-height: 1.6;">
-              Roosh Upcycle Project, Wastepreneurs training hub, material washing &amp; compression facilities, and community relief centers during Project Sahyog.
+              Roosh Upcycle Project, Wastepreneurs training hub, material washing &amp; compression facilities, and emergency kitchens during Project Sahyog.
             </p>
-            <div class="pt-2 border-top border-light-subtle">
+            <div class="pt-2 border-top border-light-subtle d-flex justify-content-between align-items-center">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">Wastepreneurs Hub</span>
+              <span class="text-muted small"><i class="bi bi-cursor-fill me-1"></i>View Pin</span>
             </div>
           </div>
         </div>
 
         <!-- Region 3: Haryana & Grassroots Clusters -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div class="ed-work-card ed-region-card h-100 p-4 bg-white" data-region="haryana" style="border: 1px solid var(--border-light); border-radius: 12px;">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-people-fill"></i>
@@ -553,15 +594,16 @@ require_once __DIR__ . '/includes/header.php';
             <p class="text-secondary small mb-3" style="line-height: 1.6;">
               Footprints Project empowering grassroots waste pickers, health checkups, sanitation workshops, and financial literacy training for women recyclers.
             </p>
-            <div class="pt-2 border-top border-light-subtle">
+            <div class="pt-2 border-top border-light-subtle d-flex justify-content-between align-items-center">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">100+ Women Recyclers</span>
+              <span class="text-muted small"><i class="bi bi-cursor-fill me-1"></i>View Pin</span>
             </div>
           </div>
         </div>
 
         <!-- Region 4: Global Distribution -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div class="ed-work-card ed-region-card h-100 p-4 bg-white" data-region="global" style="border: 1px solid var(--border-light); border-radius: 12px;">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-globe2"></i>
@@ -572,10 +614,11 @@ require_once __DIR__ . '/includes/header.php';
               </div>
             </div>
             <p class="text-secondary small mb-3" style="line-height: 1.6;">
-              Certified Fair Trade upcycled fashion and accessories exported to Whole Foods Market nationwide in the USA and over 1,000 eco-design retail boutiques.
+              Certified Fair Trade upcycled fashion exported to Whole Foods Market nationwide in the USA and over 1,000 independent eco-design retail boutiques.
             </p>
-            <div class="pt-2 border-top border-light-subtle">
+            <div class="pt-2 border-top border-light-subtle d-flex justify-content-between align-items-center">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">1,000+ Retail Outlets</span>
+              <span class="text-muted small"><i class="bi bi-cursor-fill me-1"></i>View Pin</span>
             </div>
           </div>
         </div>
@@ -584,9 +627,9 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================
-       SECTION 6: TESTIMONIALS
+       SECTION 7: TESTIMONIALS
        Reference: Acumen (acumen.co.in)
-       Modern, clean, lightweight cards with generous whitespace
+       Integrated with partner & organization logos
        ======================================================== -->
   <section class="ed-testimonials-section" id="testimonials">
     <div class="container px-lg-4">
@@ -606,10 +649,15 @@ require_once __DIR__ . '/includes/header.php';
               &ldquo;I have known the team at Conserve India since 2006 and have the utmost respect for their creativity and dedication to solving both environmental and social problems for society. Together, we have been able to sell their products nationwide in the US through corporate partners including Whole Foods Market and to over 1,000 independent retailers.&rdquo;
             </p>
             <div class="ed-testimonial-author">
-              <div class="ed-testimonial-name">US Distribution Partner</div>
-              <div class="ed-testimonial-role">Corporate Wholesale &amp; Retail Network</div>
-              <div class="ed-testimonial-badge">
-                <i class="bi bi-check-circle-fill"></i> Whole Foods Market Distribution
+              <div class="ed-testimonial-author-info">
+                <div class="ed-testimonial-name">US Distribution Partner</div>
+                <div class="ed-testimonial-role">Corporate Wholesale &amp; Retail Network</div>
+                <div class="ed-testimonial-badge">
+                  <i class="bi bi-check-circle-fill"></i> Whole Foods Market Distribution
+                </div>
+              </div>
+              <div class="ed-testimonial-logo-box">
+                <img src="assets/images/partners/whole-foods.svg" alt="Whole Foods Market Logo" class="ed-testimonial-logo" loading="lazy">
               </div>
             </div>
           </div>
@@ -622,10 +670,15 @@ require_once __DIR__ . '/includes/header.php';
               &ldquo;Conserve is at the forefront of bringing positive change in India to tackle the problem of plastic waste. They are doing an excellent job bridging grassroot collectors with global markets through patented material science and transparent fair wages.&rdquo;
             </p>
             <div class="ed-testimonial-author">
-              <div class="ed-testimonial-name">Environmental Conservation Council</div>
-              <div class="ed-testimonial-role">Sustainable Trade &amp; Policy Partner</div>
-              <div class="ed-testimonial-badge">
-                <i class="bi bi-check-circle-fill"></i> Verified Policy Partner
+              <div class="ed-testimonial-author-info">
+                <div class="ed-testimonial-name">Environmental Conservation Council</div>
+                <div class="ed-testimonial-role">Sustainable Trade &amp; Policy Partner</div>
+                <div class="ed-testimonial-badge">
+                  <i class="bi bi-check-circle-fill"></i> Verified Policy Partner
+                </div>
+              </div>
+              <div class="ed-testimonial-logo-box">
+                <img src="assets/images/partners/eco-council.svg" alt="Environmental Conservation Council Logo" class="ed-testimonial-logo" loading="lazy">
               </div>
             </div>
           </div>
@@ -638,10 +691,15 @@ require_once __DIR__ . '/includes/header.php';
               &ldquo;Conserve India has made a significant difference in the lives of marginalized waste pickers and refugee women as well as in preserving our environment. We wholeheartedly support them in their ongoing circular economy and relief endeavours!&rdquo;
             </p>
             <div class="ed-testimonial-author">
-              <div class="ed-testimonial-name">Community Leadership Alliance</div>
-              <div class="ed-testimonial-role">Social Development &amp; Artisan Network</div>
-              <div class="ed-testimonial-badge">
-                <i class="bi bi-check-circle-fill"></i> Verified Community Partner
+              <div class="ed-testimonial-author-info">
+                <div class="ed-testimonial-name">Community Leadership Alliance</div>
+                <div class="ed-testimonial-role">Social Development &amp; Artisan Network</div>
+                <div class="ed-testimonial-badge">
+                  <i class="bi bi-check-circle-fill"></i> Verified Community Partner
+                </div>
+              </div>
+              <div class="ed-testimonial-logo-box">
+                <img src="assets/images/partners/community-alliance.svg" alt="Community Leadership Alliance Logo" class="ed-testimonial-logo" loading="lazy">
               </div>
             </div>
           </div>
@@ -651,114 +709,376 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================
-       SECTION 7: INSTAGRAM FEED
-       Reference: Patagonia Stories (patagonia.com/stories)
-       Clean image-led grid of 6 recent workshop & field posts
+       SECTION 8: CONTACT SECTION (REPLACES THE LAST INSTAGRAM SECTION)
+       Divided into two responsive columns:
+       - Left column: Social media icons and official profile links
+       - Right column: Interactive contact and enquiry form
        ======================================================== -->
-  <section class="ed-insta-section" id="instagram">
+  <section class="ed-contact-home-section" id="contact-section">
     <div class="container px-lg-4">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
-        <div>
-          <span class="ed-section-tag">DISPATCHES &amp; FIELD STORIES</span>
-          <h2 class="ed-section-title">Field Notes &amp; Workshop Dispatches</h2>
-          <p class="ed-section-desc">
-            Authentic moments from our Delhi artisan ateliers, material laboratories, and community circular programs.
-          </p>
-        </div>
-        <div class="mt-3 mt-md-0">
-          <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-link-arrow">
-            Follow us on Instagram &rarr;
-          </a>
-        </div>
-      </div>
+      <div class="row g-5 align-items-stretch">
+        
+        <!-- Left Column: Official Social Media Profiles & Organization Information -->
+        <div class="col-lg-5">
+          <div class="ed-contact-card d-flex flex-column justify-content-between">
+            <div>
+              <span class="ed-section-tag">GET IN TOUCH</span>
+              <h2 class="ed-section-title" style="font-size: 28px; line-height: 1.25; margin-bottom: 14px;">Connect With Conserve India</h2>
+              <p class="text-secondary small" style="line-height: 1.65; margin-bottom: 20px;">
+                Whether you represent an international retail brand seeking certified Fair Trade merchandise, a corporation exploring Extended Producer Responsibility (EPR) advisory, or an institution interested in circular research, our team is eager to collaborate.
+              </p>
 
-      <!-- 6-post Grid (Aspect Ratio 1:1) -->
-      <div class="row g-3 g-md-4">
-        <!-- Post 1 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-insta-card" aria-label="View on Instagram: Patented HRP Upcycling">
-            <img src="assets/images/upcycling-innovation.jpg" alt="Patented Handmade Recycled Plastic material testing in Delhi atelier" class="ed-insta-img" loading="lazy">
-            <div class="ed-insta-overlay">
-              <i class="bi bi-instagram ed-insta-icon"></i>
-              <div>
-                <p class="ed-insta-caption">Turning discarded plastic bags into patented HRP fashion textiles.</p>
-                <span class="ed-insta-tag">#PatentedHRP</span>
+              <!-- Official Social Media Links -->
+              <span class="text-muted small fw-bold text-uppercase" style="letter-spacing: 1px; font-size: 11px;">Official Social Channels</span>
+              <div class="ed-social-list">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on Instagram">
+                  <div class="ed-social-icon-box" style="color: #e1306c;">
+                    <i class="bi bi-instagram"></i>
+                  </div>
+                  <div>
+                    <div class="ed-social-item-name">Instagram</div>
+                    <div class="ed-social-item-handle">@conserveindia &middot; Workshop &amp; Stories</div>
+                  </div>
+                  <i class="bi bi-arrow-up-right ed-social-item-arrow"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/conserve-india/" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on LinkedIn">
+                  <div class="ed-social-icon-box" style="color: #0a66c2;">
+                    <i class="bi bi-linkedin"></i>
+                  </div>
+                  <div>
+                    <div class="ed-social-item-name">LinkedIn</div>
+                    <div class="ed-social-item-handle">Conserve India &middot; Corporate &amp; Research</div>
+                  </div>
+                  <i class="bi bi-arrow-up-right ed-social-item-arrow"></i>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/conserveindia" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on Facebook">
+                  <div class="ed-social-icon-box" style="color: #1877f2;">
+                    <i class="bi bi-facebook"></i>
+                  </div>
+                  <div>
+                    <div class="ed-social-item-name">Facebook</div>
+                    <div class="ed-social-item-handle">@conserveindia &middot; Community Outreach</div>
+                  </div>
+                  <i class="bi bi-arrow-up-right ed-social-item-arrow"></i>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/user/conserveindia" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on YouTube">
+                  <div class="ed-social-icon-box" style="color: #ff0000;">
+                    <i class="bi bi-youtube"></i>
+                  </div>
+                  <div>
+                    <div class="ed-social-item-name">YouTube</div>
+                    <div class="ed-social-item-handle">Conserve India &middot; Documentaries &amp; Craft</div>
+                  </div>
+                  <i class="bi bi-arrow-up-right ed-social-item-arrow"></i>
+                </a>
               </div>
             </div>
-          </a>
-        </div>
 
-        <!-- Post 2 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-insta-card" aria-label="View on Instagram: Artisan Loom Weaving">
-            <img src="assets/images/hero-artisan.jpg" alt="Master artisan weaving recycled plastic on loom" class="ed-insta-img" loading="lazy">
-            <div class="ed-insta-overlay">
-              <i class="bi bi-instagram ed-insta-icon"></i>
-              <div>
-                <p class="ed-insta-caption">Master artisan weaving on the loom. Preserving heritage craft.</p>
-                <span class="ed-insta-tag">#FairTradeArtisans</span>
+            <!-- Direct Contact Info -->
+            <div class="ed-contact-info-list">
+              <div class="ed-contact-info-row">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div>
+                  <strong>Production Atelier &amp; Lab:</strong><br>
+                  New Delhi / NCR, India &middot; <span class="text-muted">Visits by appointment</span>
+                </div>
+              </div>
+              <div class="ed-contact-info-row">
+                <i class="bi bi-envelope-fill"></i>
+                <div>
+                  <strong>Direct Email Inquiries:</strong><br>
+                  <a href="mailto:info@conserveindia.org" class="text-success text-decoration-none fw-semibold">info@conserveindia.org</a>
+                </div>
+              </div>
+              <div class="ed-contact-info-row">
+                <i class="bi bi-clock-fill"></i>
+                <div>
+                  <strong>Hours of Operation:</strong><br>
+                  Monday &ndash; Saturday: 9:30 AM &ndash; 6:30 PM IST
+                </div>
               </div>
             </div>
-          </a>
+          </div>
         </div>
 
-        <!-- Post 3 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-insta-card" aria-label="View on Instagram: Women Empowerment">
-            <img src="assets/images/artisan-livelihoods.jpg" alt="Artisan women stitching in Delhi workshop" class="ed-insta-img" loading="lazy">
-            <div class="ed-insta-overlay">
-              <i class="bi bi-instagram ed-insta-icon"></i>
-              <div>
-                <p class="ed-insta-caption">Empowering waste pickers and refugee women with dignified income.</p>
-                <span class="ed-insta-tag">#WomenEmpowerment</span>
+        <!-- Right Column: Interactive Enquiry Form -->
+        <div class="col-lg-7">
+          <div class="ed-contact-card">
+            <span class="ed-section-tag">ONLINE INQUIRY</span>
+            <h3 class="ed-section-title" style="font-size: 24px; margin-bottom: 8px;">Send an Inquiry to Our Team</h3>
+            <p class="text-secondary small mb-4" style="line-height: 1.6;">
+              Please complete the form below. We typically respond within 24 to 48 business hours with verified information and proposal specifications.
+            </p>
+
+            <form id="homepageContactForm" class="ed-contact-form" onsubmit="handleHomepageContactSubmit(event)">
+              <div class="row g-3">
+                <!-- Name -->
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label">Full Name *</label>
+                  <input type="text" class="form-control" id="contactName" name="name" placeholder="Anita Sharma" required>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" id="contactEmail" name="email" placeholder="name@company.com" required>
+                </div>
+
+                <!-- Organization -->
+                <div class="col-md-6">
+                  <label for="contactOrganization" class="form-label">Organization / Company</label>
+                  <input type="text" class="form-control" id="contactOrganization" name="organization" placeholder="Enterprise or Brand Name">
+                </div>
+
+                <!-- Subject / Nature of Inquiry -->
+                <div class="col-md-6">
+                  <label for="contactSubject" class="form-label">Subject / Inquiry Area *</label>
+                  <select class="form-select" id="contactSubject" name="subject" required>
+                    <option value="" selected disabled>Select an inquiry area</option>
+                    <option value="wholesale">B2B Wholesale &amp; Retail Supply</option>
+                    <option value="corporate-gifting">Corporate Sustainable Gifting</option>
+                    <option value="consulting">Circularity Audits &amp; EPR Compliance</option>
+                    <option value="artisan-csr">Artisan Livelihoods &amp; CSR Project</option>
+                    <option value="research">Academic &amp; Material Science Research</option>
+                    <option value="general">General Media &amp; Partnerships</option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label">Project Details &amp; Message *</label>
+                  <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Please outline your objectives, product requirements, estimated volume, or collaboration ideas..." required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 pt-2">
+                  <button type="submit" id="contactSubmitBtn" class="ed-btn-primary" style="padding: 13px 32px; font-size: 14.5px;">
+                    <span class="btn-text">Send Inquiry &rarr;</span>
+                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
               </div>
-            </div>
-          </a>
+
+              <!-- Success / Feedback Alert Box -->
+              <div id="contactFormFeedback" class="ed-form-feedback alert alert-success" role="alert">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-check-circle-fill fs-5"></i>
+                  <div>
+                    <strong>Thank you! Your inquiry has been successfully sent.</strong><br>
+                    A representative from Conserve India will review your project details and follow up promptly.
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
 
-        <!-- Post 4 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-insta-card" aria-label="View on Instagram: Plastic Recovery">
-            <img src="assets/images/plastic-bottles-sorting.jpg" alt="Sorting post-consumer plastic waste in community facility" class="ed-insta-img" loading="lazy">
-            <div class="ed-insta-overlay">
-              <i class="bi bi-instagram ed-insta-icon"></i>
-              <div>
-                <p class="ed-insta-caption">Recovering single-use plastics from urban landfills for circular reuse.</p>
-                <span class="ed-insta-tag">#CircularEconomy</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Post 5 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-insta-card" aria-label="View on Instagram: Zero Waste Textiles">
-            <img src="assets/images/product-apron.jpg" alt="Upcycled organic cotton aprons and textiles" class="ed-insta-img" loading="lazy">
-            <div class="ed-insta-overlay">
-              <i class="bi bi-instagram ed-insta-icon"></i>
-              <div>
-                <p class="ed-insta-caption">Zero-waste kitchen textiles made from rescued factory cotton remnants.</p>
-                <span class="ed-insta-tag">#ZeroWaste</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Post 6 -->
-        <div class="col-6 col-md-4 col-lg-2">
-          <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-insta-card" aria-label="View on Instagram: Community Relief">
-            <img src="assets/images/circular-communities.jpg" alt="Project Sahyog community relief program" class="ed-insta-img" loading="lazy">
-            <div class="ed-insta-overlay">
-              <i class="bi bi-instagram ed-insta-icon"></i>
-              <div>
-                <p class="ed-insta-caption">Project Sahyog: Providing food relief, sanitation, and community care.</p>
-                <span class="ed-insta-tag">#ProjectSahyog</span>
-              </div>
-            </div>
-          </a>
-        </div>
       </div>
     </div>
   </section>
+
+  <!-- Interactive Map & Contact Form Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Initialize Interactive Map
+      var mapElement = document.getElementById('conserveInteractiveMap');
+      if (mapElement && typeof L !== 'undefined') {
+        var map = L.map('conserveInteractiveMap', {
+          center: [26.5, 55.0],
+          zoom: 3,
+          minZoom: 2,
+          maxZoom: 12,
+          scrollWheelZoom: false
+        });
+
+        // Use CartoDB Positron Subtle Map Tiles
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          subdomains: 'abcd',
+          maxZoom: 19
+        }).addTo(map);
+
+        // Verified Location Data
+        var locations = [
+          {
+            id: 'delhi',
+            type: 'india',
+            title: 'Delhi-NCR Innovation Hub',
+            tag: 'HQ & Atelier',
+            coords: [28.6139, 77.2090],
+            desc: 'Central HRP material research atelier and Afghan refugee women training center (Akseer with UNHCR).',
+            stat: '3,000+ Waste Collectors &bull; 25+ Master Artisans',
+            isHub: true
+          },
+          {
+            id: 'noida',
+            type: 'india',
+            title: 'Ghaziabad & Noida',
+            tag: 'Upcycling & Relief',
+            coords: [28.6692, 77.4538],
+            desc: 'Roosh Upcycle Project, Wastepreneurs training hub, material sorting facilities, and Project Sahyog kitchen relief.',
+            stat: 'Wastepreneurs Hub &bull; 500+ Tons Plastic',
+            isHub: false
+          },
+          {
+            id: 'haryana',
+            type: 'india',
+            title: 'Haryana Grassroots Clusters',
+            tag: 'Faridabad & Gurugram',
+            coords: [28.4089, 77.3178],
+            desc: 'Footprints Project for grassroots informal recyclers, hygiene workshops, and women financial literacy.',
+            stat: '100+ Women Recyclers Trained',
+            isHub: false
+          },
+          {
+            id: 'usa',
+            type: 'global',
+            title: 'United States (Nationwide)',
+            tag: 'Retail Partner',
+            coords: [39.0458, -76.6413],
+            desc: 'Nationwide retail distribution partner across Whole Foods Market stores and eco-lifestyle retailers.',
+            stat: 'Whole Foods Market Nationwide Supply',
+            isHub: false
+          },
+          {
+            id: 'uk',
+            type: 'global',
+            title: 'United Kingdom (London)',
+            tag: 'Fair Trade Retail',
+            coords: [51.5074, -0.1278],
+            desc: 'Fair Trade retail partners, conscious boutique stockists, and sustainable design exhibitions.',
+            stat: 'Certified Fair Trade Distribution',
+            isHub: false
+          },
+          {
+            id: 'europe',
+            type: 'global',
+            title: 'Continental Europe',
+            tag: 'Global Distribution',
+            coords: [50.1109, 8.6821],
+            desc: 'Over 1,000 independent design boutiques across Germany, France, and Netherlands stocking upcycled HRP.',
+            stat: '1,000+ Independent Boutiques',
+            isHub: false
+          }
+        ];
+
+        var markers = [];
+
+        locations.forEach(function(loc) {
+          var pinIcon = L.divIcon({
+            className: 'custom-div-icon',
+            html: '<div class="ed-map-marker-pin ' + (loc.isHub ? 'is-hub' : '') + '"><i class="bi bi-geo-alt-fill"></i></div>',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16],
+            popupAnchor: [0, -18]
+          });
+
+          var popupContent = '<div class="ed-popup-header">' +
+            '<span class="ed-popup-tag">' + loc.tag + '</span>' +
+            '</div>' +
+            '<h4 class="ed-popup-title">' + loc.title + '</h4>' +
+            '<p class="ed-popup-desc">' + loc.desc + '</p>' +
+            '<div class="ed-popup-stat">' + loc.stat + '</div>';
+
+          var marker = L.marker(loc.coords, { icon: pinIcon }).addTo(map);
+          marker.bindPopup(popupContent);
+          marker.locationData = loc;
+          markers.push(marker);
+        });
+
+        // Map Filter Buttons
+        var filterButtons = document.querySelectorAll('.ed-map-filter-btn');
+        filterButtons.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            filterButtons.forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            var filter = this.getAttribute('data-filter');
+
+            if (filter === 'all') {
+              map.flyTo([26.5, 55.0], 3, { duration: 1.5 });
+              markers.forEach(function(m) { m.addTo(map); });
+            } else if (filter === 'india') {
+              map.flyTo([28.55, 77.25], 9, { duration: 1.5 });
+              markers.forEach(function(m) {
+                if (m.locationData.type === 'india') {
+                  m.addTo(map);
+                } else {
+                  map.removeLayer(m);
+                }
+              });
+            } else if (filter === 'global') {
+              map.flyTo([45.0, -20.0], 3, { duration: 1.5 });
+              markers.forEach(function(m) {
+                if (m.locationData.type === 'global') {
+                  m.addTo(map);
+                } else {
+                  map.removeLayer(m);
+                }
+              });
+            }
+          });
+        });
+
+        // Click on Region Cards to highlight marker
+        var regionCards = document.querySelectorAll('.ed-region-card');
+        regionCards.forEach(function(card) {
+          card.addEventListener('click', function() {
+            regionCards.forEach(function(c) { c.classList.remove('active-region'); });
+            this.classList.add('active-region');
+            var regionKey = this.getAttribute('data-region');
+
+            if (regionKey === 'delhi') {
+              map.flyTo([28.6139, 77.2090], 11, { duration: 1.2 });
+              markers[0].openPopup();
+            } else if (regionKey === 'noida') {
+              map.flyTo([28.6692, 77.4538], 11, { duration: 1.2 });
+              markers[1].openPopup();
+            } else if (regionKey === 'haryana') {
+              map.flyTo([28.4089, 77.3178], 11, { duration: 1.2 });
+              markers[2].openPopup();
+            } else if (regionKey === 'global') {
+              map.flyTo([42.0, -35.0], 3, { duration: 1.2 });
+              markers[3].openPopup();
+            }
+          });
+        });
+      }
+    });
+
+    // 2. Homepage Contact Form Handler
+    function handleHomepageContactSubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('homepageContactForm');
+      var submitBtn = document.getElementById('contactSubmitBtn');
+      var feedback = document.getElementById('contactFormFeedback');
+
+      // Visual loading state
+      var btnText = submitBtn.querySelector('.btn-text');
+      var spinner = submitBtn.querySelector('.spinner-border');
+      
+      btnText.textContent = 'Sending...';
+      spinner.classList.remove('d-none');
+      submitBtn.disabled = true;
+
+      setTimeout(function() {
+        btnText.textContent = 'Inquiry Sent!';
+        spinner.classList.add('d-none');
+        feedback.style.display = 'block';
+        form.reset();
+
+        setTimeout(function() {
+          btnText.textContent = 'Send Inquiry →';
+          submitBtn.disabled = false;
+        }, 3500);
+      }, 700);
+    }
+  </script>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

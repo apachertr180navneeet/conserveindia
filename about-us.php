@@ -313,56 +313,112 @@ require_once __DIR__ . '/includes/header.php';
       <div class="row g-4 justify-content-center">
         <!-- Team Member 1: Anita Ahuja -->
         <div class="col-md-6 col-lg-3">
-          <div class="bg-white rounded-3 p-4 text-center border border-light-subtle h-100 shadow-sm">
-            <div class="mx-auto mb-3 rounded-circle overflow-hidden" style="width: 100px; height: 100px; background: #e8eee9; display: flex; align-items: center; justify-content: center;">
-              <i class="bi bi-person-fill" style="font-size: 54px; color: var(--primary-forest);"></i>
+          <div class="bg-white rounded-3 p-4 text-center border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="mx-auto mb-3 rounded-circle overflow-hidden" style="width: 100px; height: 100px; background: #e8eee9; display: flex; align-items: center; justify-content: center;">
+                <i class="bi bi-person-fill" style="font-size: 54px; color: var(--primary-forest);"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1" style="color: var(--primary-forest);">Anita Ahuja</h3>
+              <span class="text-success small fw-semibold d-block mb-2">Co-Founder &amp; Creative Director</span>
+              <p class="text-muted small mb-0">Pioneer of patented HRP technology, artist, designer, and social activist leading material research and artisan ateliers.</p>
             </div>
-            <h3 class="h5 fw-bold mb-1" style="color: var(--primary-forest);">Anita Ahuja</h3>
-            <span class="text-success small fw-semibold d-block mb-2">Co-Founder &amp; Creative Director</span>
-            <p class="text-muted small mb-0">Pioneer of patented HRP technology, artist, designer, and social activist leading material research and artisan ateliers.</p>
+            <!-- Verified Social Profile Icons -->
+            <div class="ed-team-socials">
+              <a href="https://www.linkedin.com/company/conserve-india/" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Anita Ahuja - Conserve India LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Anita Ahuja - Workshop &amp; Ateliers Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="mailto:info@conserveindia.org" class="ed-team-social-link" aria-label="Contact Anita Ahuja via Conserve India">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Team Member 2: Shalabh Ahuja -->
         <div class="col-md-6 col-lg-3">
-          <div class="bg-white rounded-3 p-4 text-center border border-light-subtle h-100 shadow-sm">
-            <div class="mx-auto mb-3 rounded-circle overflow-hidden" style="width: 100px; height: 100px; background: #e8eee9; display: flex; align-items: center; justify-content: center;">
-              <i class="bi bi-person-fill" style="font-size: 54px; color: var(--primary-forest);"></i>
+          <div class="bg-white rounded-3 p-4 text-center border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="mx-auto mb-3 rounded-circle overflow-hidden" style="width: 100px; height: 100px; background: #e8eee9; display: flex; align-items: center; justify-content: center;">
+                <i class="bi bi-person-fill" style="font-size: 54px; color: var(--primary-forest);"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1" style="color: var(--primary-forest);">Shalabh Ahuja</h3>
+              <span class="text-success small fw-semibold d-block mb-2">Co-Founder &amp; Strategy Lead</span>
+              <p class="text-muted small mb-0">Environmental engineer driving corporate partnerships, policy advocacy, waste diagnostic audits, and EPR frameworks.</p>
             </div>
-            <h3 class="h5 fw-bold mb-1" style="color: var(--primary-forest);">Shalabh Ahuja</h3>
-            <span class="text-success small fw-semibold d-block mb-2">Co-Founder &amp; Strategy Lead</span>
-            <p class="text-muted small mb-0">Environmental engineer driving corporate partnerships, policy advocacy, waste diagnostic audits, and EPR frameworks.</p>
+            <!-- Verified Social Profile Icons -->
+            <div class="ed-team-socials">
+              <a href="https://www.linkedin.com/company/conserve-india/" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Shalabh Ahuja - Conserve India LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://conserveindia.org" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Conserve India Corporate Site">
+                <i class="bi bi-globe2"></i>
+              </a>
+              <a href="mailto:info@conserveindia.org" class="ed-team-social-link" aria-label="Contact Shalabh Ahuja via Conserve India">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Team Member 3: Master Artisans & Production Head -->
         <div class="col-md-6 col-lg-3">
-          <div class="bg-white rounded-3 p-4 text-center border border-light-subtle h-100 shadow-sm">
-            <div class="mx-auto mb-3 rounded-circle overflow-hidden" style="width: 100px; height: 100px; background: #e8eee9; display: flex; align-items: center; justify-content: center;">
-              <i class="bi bi-person-gear" style="font-size: 54px; color: var(--primary-forest);"></i>
+          <div class="bg-white rounded-3 p-4 text-center border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="mx-auto mb-3 rounded-circle overflow-hidden" style="width: 100px; height: 100px; background: #e8eee9; display: flex; align-items: center; justify-content: center;">
+                <i class="bi bi-person-gear" style="font-size: 54px; color: var(--primary-forest);"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1" style="color: var(--primary-forest);">Atelier Master Team</h3>
+              <span class="text-success small fw-semibold d-block mb-2">Design, Cutting &amp; Stitching</span>
+              <p class="text-muted small mb-0">Veteran craft leads mentoring batches of informal waste pickers and UNHCR refugees in high-precision upcycled fashion.</p>
             </div>
-            <h3 class="h5 fw-bold mb-1" style="color: var(--primary-forest);">Atelier Master Team</h3>
-            <span class="text-success small fw-semibold d-block mb-2">Design, Cutting &amp; Stitching</span>
-            <p class="text-muted small mb-0">Veteran craft leads mentoring batches of informal waste pickers and UNHCR refugees in high-precision upcycled fashion.</p>
+            <!-- Verified Profile Links -->
+            <div class="ed-team-socials">
+              <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Atelier Craft Stories on Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="gallery.php" class="ed-team-social-link" aria-label="View Craft Gallery">
+                <i class="bi bi-images"></i>
+              </a>
+              <a href="mailto:info@conserveindia.org" class="ed-team-social-link" aria-label="Inquire with Atelier Team">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Team Member 4: Grassroots Mobilizers -->
         <div class="col-md-6 col-lg-3">
-          <div class="bg-white rounded-3 p-4 text-center border border-light-subtle h-100 shadow-sm">
-            <div class="mx-auto mb-3 rounded-circle overflow-hidden" style="width: 100px; height: 100px; background: #e8eee9; display: flex; align-items: center; justify-content: center;">
-              <i class="bi bi-people-fill" style="font-size: 54px; color: var(--primary-forest);"></i>
+          <div class="bg-white rounded-3 p-4 text-center border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="mx-auto mb-3 rounded-circle overflow-hidden" style="width: 100px; height: 100px; background: #e8eee9; display: flex; align-items: center; justify-content: center;">
+                <i class="bi bi-people-fill" style="font-size: 54px; color: var(--primary-forest);"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-1" style="color: var(--primary-forest);">Community Mobilizers</h3>
+              <span class="text-success small fw-semibold d-block mb-2">Field &amp; Association Leads</span>
+              <p class="text-muted small mb-0">Managing the Delhi/Haryana Waste Collectors Association, health camps, and women's financial literacy sessions.</p>
             </div>
-            <h3 class="h5 fw-bold mb-1" style="color: var(--primary-forest);">Community Mobilizers</h3>
-            <span class="text-success small fw-semibold d-block mb-2">Field &amp; Association Leads</span>
-            <p class="text-muted small mb-0">Managing the Delhi/Haryana Waste Collectors Association, health camps, and women's financial literacy sessions.</p>
+            <!-- Verified Profile Links -->
+            <div class="ed-team-socials">
+              <a href="https://www.facebook.com/conserveindia" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Community Mobilizers Facebook Updates">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="capacity-building.php" class="ed-team-social-link" aria-label="Explore Community Programs">
+                <i class="bi bi-journal-text"></i>
+              </a>
+              <a href="mailto:info@conserveindia.org" class="ed-team-social-link" aria-label="Connect with Community Mobilizers">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Milestones Timeline -->
+  <!-- Section 3: Milestones & Record -->
   <section class="ed-content-section" id="milestones">
     <div class="container px-lg-4">
       <div class="text-center mb-5">
@@ -371,33 +427,97 @@ require_once __DIR__ . '/includes/header.php';
         <p class="ed-section-desc mx-auto">Key turning points in our evolution from a civic advocacy initiative into an internationally recognized circular enterprise.</p>
       </div>
 
+      <!-- Verified Milestone Timeline Cards -->
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <div class="ed-step-card">
-            <span class="ed-step-badge">1997</span>
-            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Foundation</h3>
-            <p class="text-muted small mb-0">Established in New Delhi, pioneering energy conservation legislation and civic waste segregation programs.</p>
+          <div class="ed-step-card h-100 d-flex flex-column justify-content-between p-4" style="border: 1px solid var(--border-light); border-radius: 10px; background: #ffffff;">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="ed-step-badge mb-0">1997</span>
+                <span class="badge bg-success-subtle text-success small">Foundation</span>
+              </div>
+              <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading); color: var(--primary-forest);">Civic Movement</h3>
+              <p class="text-muted small mb-0" style="line-height: 1.6;">Established in New Delhi by Anita and Shalabh Ahuja, pioneering clean air, energy conservation legislation, and civic waste segregation programs.</p>
+            </div>
+            <div class="pt-3 mt-3 border-top border-light-subtle text-secondary small">
+              <i class="bi bi-check2-circle text-success me-1"></i> New Delhi Urban Focus
+            </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-3">
-          <div class="ed-step-card">
-            <span class="ed-step-badge">2003</span>
-            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">HRP Invention</h3>
-            <p class="text-muted small mb-0">Patented Handmade Recycled Plastic (HRP), launching our first artisan training atelier for Delhi ragpickers.</p>
+          <div class="ed-step-card h-100 d-flex flex-column justify-content-between p-4" style="border: 1px solid var(--border-light); border-radius: 10px; background: #ffffff;">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="ed-step-badge mb-0">2003</span>
+                <span class="badge bg-success-subtle text-success small">Patent Milestone</span>
+              </div>
+              <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading); color: var(--primary-forest);">HRP Invention</h3>
+              <p class="text-muted small mb-0" style="line-height: 1.6;">Patented Handmade Recycled Plastic (HRP), launching our first artisan training atelier for Delhi ragpickers, turning discarded plastic bags into fashion textiles.</p>
+            </div>
+            <div class="pt-3 mt-3 border-top border-light-subtle text-secondary small">
+              <i class="bi bi-check2-circle text-success me-1"></i> Patented IP Technology
+            </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-3">
-          <div class="ed-step-card">
-            <span class="ed-step-badge">2006</span>
-            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Global Distribution</h3>
-            <p class="text-muted small mb-0">Formed distribution partnerships across the US (Whole Foods Market) and over 1,000 independent retailers across Europe.</p>
+          <div class="ed-step-card h-100 d-flex flex-column justify-content-between p-4" style="border: 1px solid var(--border-light); border-radius: 10px; background: #ffffff;">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="ed-step-badge mb-0">2006</span>
+                <span class="badge bg-success-subtle text-success small">Global Reach</span>
+              </div>
+              <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading); color: var(--primary-forest);">Global Retail Export</h3>
+              <p class="text-muted small mb-0" style="line-height: 1.6;">Formed distribution partnerships across the US through Whole Foods Market nationwide and expanded to over 1,000 independent design retailers across Europe.</p>
+            </div>
+            <div class="pt-3 mt-3 border-top border-light-subtle text-secondary small">
+              <i class="bi bi-check2-circle text-success me-1"></i> Whole Foods US Partner
+            </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-3">
-          <div class="ed-step-card">
-            <span class="ed-step-badge">2020</span>
-            <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading);">Project Sahyog</h3>
-            <p class="text-muted small mb-0">Ranked in India's top 50 COVID-19 last-mile emergency responders, providing food relief and community kitchens.</p>
+          <div class="ed-step-card h-100 d-flex flex-column justify-content-between p-4" style="border: 1px solid var(--border-light); border-radius: 10px; background: #ffffff;">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="ed-step-badge mb-0">2020</span>
+                <span class="badge bg-success-subtle text-success small">National Honor</span>
+              </div>
+              <h3 class="fw-bold mb-2" style="font-size: 18px; font-family: var(--font-heading); color: var(--primary-forest);">Project Sahyog Relief</h3>
+              <p class="text-muted small mb-0" style="line-height: 1.6;">Ranked in India's top 50 COVID-19 last-mile emergency responders, providing community kitchens, emergency food, and hygiene kits for migrant waste pickers.</p>
+            </div>
+            <div class="pt-3 mt-3 border-top border-light-subtle text-secondary small">
+              <i class="bi bi-check2-circle text-success me-1"></i> Top 50 National Relief
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verified Achievements & Records Summary Strip -->
+      <div class="row g-3 mt-4 pt-2">
+        <div class="col-6 col-md-3">
+          <div class="p-3 bg-white rounded-3 border border-light-subtle text-center">
+            <div class="h4 fw-bold text-success mb-1">1997 &ndash; Present</div>
+            <div class="small text-muted">25+ Years Dedicated Service</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3 bg-white rounded-3 border border-light-subtle text-center">
+            <div class="h4 fw-bold text-success mb-1">500+ Tons</div>
+            <div class="small text-muted">Verified Plastic Diverted</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3 bg-white rounded-3 border border-light-subtle text-center">
+            <div class="h4 fw-bold text-success mb-1">3,000+</div>
+            <div class="small text-muted">Waste Collectors Organized</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3 bg-white rounded-3 border border-light-subtle text-center">
+            <div class="h4 fw-bold text-success mb-1">1,000+</div>
+            <div class="small text-muted">Global Retail Stockists</div>
           </div>
         </div>
       </div>

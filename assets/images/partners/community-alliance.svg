@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" aria-label="Community Leadership Alliance">
+  <g>
+    <!-- People in Circle Badge -->
+    <circle cx="28" cy="30" r="22" fill="#bc6c25"/>
+    <circle cx="28" cy="22" r="4" fill="#fefae0"/>
+    <path d="M21 36 C21 30 35 30 35 36 Z" fill="#fefae0"/>
+    <circle cx="18" cy="24" r="3" fill="#dda15e"/>
+    <path d="M12 37 C12 32 23 32 23 37 Z" fill="#dda15e"/>
+    <circle cx="38" cy="24" r="3" fill="#dda15e"/>
+    <path d="M33 37 C33 32 44 32 44 37 Z" fill="#dda15e"/>
+    
+    <!-- Wordmark -->
+    <text x="60" y="27" font-family="'Manrope', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="800" letter-spacing="0.5" fill="#283618">COMMUNITY</text>
+    <text x="60" y="42" font-family="'Inter', Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#bc6c25">LEADERSHIP ALLIANCE</text>
+  </g>
+</svg>
