@@ -26,8 +26,8 @@ require_once __DIR__ . '/includes/header.php';
           <img src="assets/images/hero-artisan.jpg" alt="Conserve India artisan hand-weaving recycled plastic textile" class="ed-hero-bg">
           <div class="ed-hero-scrim"></div>
           <div class="container px-lg-4 ed-hero-content-wrap">
-            <div class="row">
-              <div class="col-lg-8 col-xl-7">
+            <div class="row w-100">
+              <div class="col-12 col-xl-11">
                 <span class="ed-hero-tag">PEOPLE &middot; PLANET &middot; POSSIBILITY</span>
                 <h1 class="ed-hero-headline"><span class="text-accent">Turning Landfill Plastic</span> into Opportunity</h1>
                 <p class="ed-hero-lead">
@@ -51,8 +51,8 @@ require_once __DIR__ . '/includes/header.php';
           <img src="assets/images/artisan-livelihoods.jpg" alt="Conserve India craftswomen stitching in Fair Trade workshop" class="ed-hero-bg">
           <div class="ed-hero-scrim"></div>
           <div class="container px-lg-4 ed-hero-content-wrap">
-            <div class="row">
-              <div class="col-lg-8 col-xl-7">
+            <div class="row w-100">
+              <div class="col-12 col-xl-11">
                 <span class="ed-hero-tag">ARTISAN LIVELIHOODS &amp; DIGNITY</span>
                 <h2 class="ed-hero-headline"><span class="text-accent">Empowering Hands.</span> Transforming Futures.</h2>
                 <p class="ed-hero-lead">
@@ -76,8 +76,8 @@ require_once __DIR__ . '/includes/header.php';
           <img src="assets/images/upcycling-innovation.jpg" alt="Patented Handmade Recycled Plastic bags and accessories" class="ed-hero-bg">
           <div class="ed-hero-scrim"></div>
           <div class="container px-lg-4 ed-hero-content-wrap">
-            <div class="row">
-              <div class="col-lg-8 col-xl-7">
+            <div class="row w-100">
+              <div class="col-12 col-xl-11">
                 <span class="ed-hero-tag">CIRCULAR INNOVATION &amp; SUSTAINABLE TRADE</span>
                 <h2 class="ed-hero-headline"><span class="text-accent">Patented Innovation</span> for a Circular Economy</h2>
                 <p class="ed-hero-lead">
@@ -296,75 +296,57 @@ require_once __DIR__ . '/includes/header.php';
       <div class="row g-3 g-md-4 justify-content-center">
         <!-- Partner 1: Whole Foods Market -->
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="ed-partner-card">
+          <div class="ed-partner-card" title="Whole Foods Market — US Nationwide Distribution">
             <div class="ed-partner-logo-box">
-              <img src="assets/images/partners/whole-foods.svg" alt="Whole Foods Market Logo" class="ed-partner-logo" loading="lazy">
+              <img src="assets/images/partners/whole-foods.svg" alt="Whole Foods Market" class="ed-partner-logo" loading="lazy">
             </div>
-            <div class="ed-partner-name">Whole Foods Market</div>
-            <div class="ed-partner-sub">US Nationwide Distribution</div>
           </div>
         </div>
 
         <!-- Partner 2: UNHCR -->
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="ed-partner-card">
+          <div class="ed-partner-card" title="UNHCR — Refugee Livelihoods Partner">
             <div class="ed-partner-logo-box">
-              <img src="assets/images/partners/unhcr.svg" alt="UNHCR The UN Refugee Agency Logo" class="ed-partner-logo" loading="lazy">
+              <img src="assets/images/partners/unhcr.svg" alt="UNHCR The UN Refugee Agency" class="ed-partner-logo" loading="lazy">
             </div>
-            <div class="ed-partner-name">UNHCR</div>
-            <div class="ed-partner-sub">Refugee Livelihoods Partner</div>
           </div>
         </div>
 
         <!-- Partner 3: WFTO -->
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="ed-partner-card">
+          <div class="ed-partner-card" title="WFTO Member — World Fair Trade Organization">
             <div class="ed-partner-logo-box">
-              <img src="assets/images/partners/wfto.svg" alt="World Fair Trade Organization Member Logo" class="ed-partner-logo" loading="lazy">
+              <img src="assets/images/partners/wfto.svg" alt="World Fair Trade Organization Member" class="ed-partner-logo" loading="lazy">
             </div>
-            <div class="ed-partner-name">WFTO Member</div>
-            <div class="ed-partner-sub">World Fair Trade Org</div>
           </div>
         </div>
 
         <!-- Partner 4: Fair Trade Forum India -->
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="ed-partner-card">
+          <div class="ed-partner-card" title="Fair Trade Forum — FTF-I National Network">
             <div class="ed-partner-logo-box">
-              <img src="assets/images/partners/fair-trade-forum.svg" alt="Fair Trade Forum India Logo" class="ed-partner-logo" loading="lazy">
+              <img src="assets/images/partners/fair-trade-forum.svg" alt="Fair Trade Forum India" class="ed-partner-logo" loading="lazy">
             </div>
-            <div class="ed-partner-name">Fair Trade Forum</div>
-            <div class="ed-partner-sub">FTF-I National Network</div>
           </div>
         </div>
 
         <!-- Partner 5: Lifaffa -->
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="ed-partner-card">
+          <div class="ed-partner-card" title="Lifaffa — Sustainable Retail Brand">
             <div class="ed-partner-logo-box">
-              <img src="assets/images/partners/lifaffa.svg" alt="Lifaffa by Conserve Logo" class="ed-partner-logo" loading="lazy">
+              <img src="assets/images/partners/lifaffa.svg" alt="Lifaffa by Conserve" class="ed-partner-logo" loading="lazy">
             </div>
-            <div class="ed-partner-name">Lifaffa</div>
-            <div class="ed-partner-sub">Sustainable Retail Brand</div>
           </div>
         </div>
 
         <!-- Partner 6: 1,000+ Global Retailers -->
         <div class="col-6 col-md-4 col-lg-2">
-          <div class="ed-partner-card">
+          <div class="ed-partner-card" title="1,000+ Retailers — US, UK & Europe Boutiques">
             <div class="ed-partner-logo-box">
-              <img src="assets/images/partners/global-retailers.svg" alt="1,000+ Retailers Network Logo" class="ed-partner-logo" loading="lazy">
+              <img src="assets/images/partners/global-retailers.svg" alt="1,000+ Retailers Network" class="ed-partner-logo" loading="lazy">
             </div>
-            <div class="ed-partner-name">1,000+ Retailers</div>
-            <div class="ed-partner-sub">US, UK &amp; Europe Boutiques</div>
           </div>
         </div>
-      </div>
-
-      <div class="text-center mt-4 pt-2">
-        <a href="#contact-section" class="ed-link-arrow">
-          Discuss a Corporate or Institutional Partnership &rarr;
-        </a>
       </div>
     </div>
   </section>
@@ -517,27 +499,11 @@ require_once __DIR__ . '/includes/header.php';
         </p>
       </div>
 
-      <!-- Interactive Map Wrapper -->
-      <div class="ed-map-wrapper">
-        <div class="ed-map-header">
-          <div class="d-flex align-items-center gap-2">
-            <i class="bi bi-geo-alt-fill text-success fs-5"></i>
-            <span class="fw-bold small" style="color: var(--primary-forest);">Interactive Footprint Navigator</span>
-          </div>
-          <div class="ed-map-filter-group">
-            <button type="button" class="ed-map-filter-btn active" data-filter="all">All Locations</button>
-            <button type="button" class="ed-map-filter-btn" data-filter="india">India Grassroots Hubs</button>
-            <button type="button" class="ed-map-filter-btn" data-filter="global">Global Retail Network</button>
-          </div>
-        </div>
-        <div id="conserveInteractiveMap"></div>
-      </div>
-
-      <!-- Regional Detail Cards (Click to pan on map) -->
-      <div class="row g-4 mt-2">
+      <!-- Regional Detail Cards -->
+      <div class="row g-4">
         <!-- Region 1: Delhi-NCR -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card ed-region-card h-100 p-4 bg-white" data-region="delhi" style="border: 1px solid var(--border-light); border-radius: 12px;">
+          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-geo-alt-fill"></i>
@@ -550,16 +516,15 @@ require_once __DIR__ . '/includes/header.php';
             <p class="text-secondary small mb-3" style="line-height: 1.6;">
               Flagship HRP material innovation atelier, Highbrow Crafts initiative, and Afghan refugee women training center (Akseer) in collaboration with UNHCR.
             </p>
-            <div class="pt-2 border-top border-light-subtle d-flex justify-content-between align-items-center">
+            <div class="pt-2 border-top border-light-subtle">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">3,000+ Waste Collectors</span>
-              <span class="text-muted small"><i class="bi bi-cursor-fill me-1"></i>View Pin</span>
             </div>
           </div>
         </div>
 
         <!-- Region 2: Ghaziabad & Noida -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card ed-region-card h-100 p-4 bg-white" data-region="noida" style="border: 1px solid var(--border-light); border-radius: 12px;">
+          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-buildings-fill"></i>
@@ -572,16 +537,15 @@ require_once __DIR__ . '/includes/header.php';
             <p class="text-secondary small mb-3" style="line-height: 1.6;">
               Roosh Upcycle Project, Wastepreneurs training hub, material washing &amp; compression facilities, and emergency kitchens during Project Sahyog.
             </p>
-            <div class="pt-2 border-top border-light-subtle d-flex justify-content-between align-items-center">
+            <div class="pt-2 border-top border-light-subtle">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">Wastepreneurs Hub</span>
-              <span class="text-muted small"><i class="bi bi-cursor-fill me-1"></i>View Pin</span>
             </div>
           </div>
         </div>
 
         <!-- Region 3: Haryana & Grassroots Clusters -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card ed-region-card h-100 p-4 bg-white" data-region="haryana" style="border: 1px solid var(--border-light); border-radius: 12px;">
+          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-people-fill"></i>
@@ -594,16 +558,15 @@ require_once __DIR__ . '/includes/header.php';
             <p class="text-secondary small mb-3" style="line-height: 1.6;">
               Footprints Project empowering grassroots waste pickers, health checkups, sanitation workshops, and financial literacy training for women recyclers.
             </p>
-            <div class="pt-2 border-top border-light-subtle d-flex justify-content-between align-items-center">
+            <div class="pt-2 border-top border-light-subtle">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">100+ Women Recyclers</span>
-              <span class="text-muted small"><i class="bi bi-cursor-fill me-1"></i>View Pin</span>
             </div>
           </div>
         </div>
 
         <!-- Region 4: Global Distribution -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card ed-region-card h-100 p-4 bg-white" data-region="global" style="border: 1px solid var(--border-light); border-radius: 12px;">
+          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-globe2"></i>
@@ -616,9 +579,8 @@ require_once __DIR__ . '/includes/header.php';
             <p class="text-secondary small mb-3" style="line-height: 1.6;">
               Certified Fair Trade upcycled fashion exported to Whole Foods Market nationwide in the USA and over 1,000 independent eco-design retail boutiques.
             </p>
-            <div class="pt-2 border-top border-light-subtle d-flex justify-content-between align-items-center">
+            <div class="pt-2 border-top border-light-subtle">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">1,000+ Retail Outlets</span>
-              <span class="text-muted small"><i class="bi bi-cursor-fill me-1"></i>View Pin</span>
             </div>
           </div>
         </div>
@@ -884,175 +846,8 @@ require_once __DIR__ . '/includes/header.php';
     </div>
   </section>
 
-  <!-- Interactive Map & Contact Form Script -->
+  <!-- Homepage Contact Form Script -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Initialize Interactive Map
-      var mapElement = document.getElementById('conserveInteractiveMap');
-      if (mapElement && typeof L !== 'undefined') {
-        var map = L.map('conserveInteractiveMap', {
-          center: [26.5, 55.0],
-          zoom: 3,
-          minZoom: 2,
-          maxZoom: 12,
-          scrollWheelZoom: false
-        });
-
-        // Use CartoDB Positron Subtle Map Tiles
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-          subdomains: 'abcd',
-          maxZoom: 19
-        }).addTo(map);
-
-        // Verified Location Data
-        var locations = [
-          {
-            id: 'delhi',
-            type: 'india',
-            title: 'Delhi-NCR Innovation Hub',
-            tag: 'HQ & Atelier',
-            coords: [28.6139, 77.2090],
-            desc: 'Central HRP material research atelier and Afghan refugee women training center (Akseer with UNHCR).',
-            stat: '3,000+ Waste Collectors &bull; 25+ Master Artisans',
-            isHub: true
-          },
-          {
-            id: 'noida',
-            type: 'india',
-            title: 'Ghaziabad & Noida',
-            tag: 'Upcycling & Relief',
-            coords: [28.6692, 77.4538],
-            desc: 'Roosh Upcycle Project, Wastepreneurs training hub, material sorting facilities, and Project Sahyog kitchen relief.',
-            stat: 'Wastepreneurs Hub &bull; 500+ Tons Plastic',
-            isHub: false
-          },
-          {
-            id: 'haryana',
-            type: 'india',
-            title: 'Haryana Grassroots Clusters',
-            tag: 'Faridabad & Gurugram',
-            coords: [28.4089, 77.3178],
-            desc: 'Footprints Project for grassroots informal recyclers, hygiene workshops, and women financial literacy.',
-            stat: '100+ Women Recyclers Trained',
-            isHub: false
-          },
-          {
-            id: 'usa',
-            type: 'global',
-            title: 'United States (Nationwide)',
-            tag: 'Retail Partner',
-            coords: [39.0458, -76.6413],
-            desc: 'Nationwide retail distribution partner across Whole Foods Market stores and eco-lifestyle retailers.',
-            stat: 'Whole Foods Market Nationwide Supply',
-            isHub: false
-          },
-          {
-            id: 'uk',
-            type: 'global',
-            title: 'United Kingdom (London)',
-            tag: 'Fair Trade Retail',
-            coords: [51.5074, -0.1278],
-            desc: 'Fair Trade retail partners, conscious boutique stockists, and sustainable design exhibitions.',
-            stat: 'Certified Fair Trade Distribution',
-            isHub: false
-          },
-          {
-            id: 'europe',
-            type: 'global',
-            title: 'Continental Europe',
-            tag: 'Global Distribution',
-            coords: [50.1109, 8.6821],
-            desc: 'Over 1,000 independent design boutiques across Germany, France, and Netherlands stocking upcycled HRP.',
-            stat: '1,000+ Independent Boutiques',
-            isHub: false
-          }
-        ];
-
-        var markers = [];
-
-        locations.forEach(function(loc) {
-          var pinIcon = L.divIcon({
-            className: 'custom-div-icon',
-            html: '<div class="ed-map-marker-pin ' + (loc.isHub ? 'is-hub' : '') + '"><i class="bi bi-geo-alt-fill"></i></div>',
-            iconSize: [32, 32],
-            iconAnchor: [16, 16],
-            popupAnchor: [0, -18]
-          });
-
-          var popupContent = '<div class="ed-popup-header">' +
-            '<span class="ed-popup-tag">' + loc.tag + '</span>' +
-            '</div>' +
-            '<h4 class="ed-popup-title">' + loc.title + '</h4>' +
-            '<p class="ed-popup-desc">' + loc.desc + '</p>' +
-            '<div class="ed-popup-stat">' + loc.stat + '</div>';
-
-          var marker = L.marker(loc.coords, { icon: pinIcon }).addTo(map);
-          marker.bindPopup(popupContent);
-          marker.locationData = loc;
-          markers.push(marker);
-        });
-
-        // Map Filter Buttons
-        var filterButtons = document.querySelectorAll('.ed-map-filter-btn');
-        filterButtons.forEach(function(btn) {
-          btn.addEventListener('click', function() {
-            filterButtons.forEach(function(b) { b.classList.remove('active'); });
-            this.classList.add('active');
-            var filter = this.getAttribute('data-filter');
-
-            if (filter === 'all') {
-              map.flyTo([26.5, 55.0], 3, { duration: 1.5 });
-              markers.forEach(function(m) { m.addTo(map); });
-            } else if (filter === 'india') {
-              map.flyTo([28.55, 77.25], 9, { duration: 1.5 });
-              markers.forEach(function(m) {
-                if (m.locationData.type === 'india') {
-                  m.addTo(map);
-                } else {
-                  map.removeLayer(m);
-                }
-              });
-            } else if (filter === 'global') {
-              map.flyTo([45.0, -20.0], 3, { duration: 1.5 });
-              markers.forEach(function(m) {
-                if (m.locationData.type === 'global') {
-                  m.addTo(map);
-                } else {
-                  map.removeLayer(m);
-                }
-              });
-            }
-          });
-        });
-
-        // Click on Region Cards to highlight marker
-        var regionCards = document.querySelectorAll('.ed-region-card');
-        regionCards.forEach(function(card) {
-          card.addEventListener('click', function() {
-            regionCards.forEach(function(c) { c.classList.remove('active-region'); });
-            this.classList.add('active-region');
-            var regionKey = this.getAttribute('data-region');
-
-            if (regionKey === 'delhi') {
-              map.flyTo([28.6139, 77.2090], 11, { duration: 1.2 });
-              markers[0].openPopup();
-            } else if (regionKey === 'noida') {
-              map.flyTo([28.6692, 77.4538], 11, { duration: 1.2 });
-              markers[1].openPopup();
-            } else if (regionKey === 'haryana') {
-              map.flyTo([28.4089, 77.3178], 11, { duration: 1.2 });
-              markers[2].openPopup();
-            } else if (regionKey === 'global') {
-              map.flyTo([42.0, -35.0], 3, { duration: 1.2 });
-              markers[3].openPopup();
-            }
-          });
-        });
-      }
-    });
-
-    // 2. Homepage Contact Form Handler
     function handleHomepageContactSubmit(e) {
       e.preventDefault();
       var form = document.getElementById('homepageContactForm');

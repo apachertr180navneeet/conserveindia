@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/header.php';
       <div class="row g-4 mb-5">
         
         <!-- Pathway 1: Contact -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-4">
           <div class="p-4 rounded-3 border border-light-subtle h-100 bg-light d-flex flex-column justify-content-between text-center">
             <div>
               <div class="mx-auto mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 12px; background: rgba(28, 59, 45, 0.1); color: var(--primary-forest); font-size: 24px;">
@@ -39,7 +39,7 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <!-- Pathway 2: Volunteer -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-4">
           <div class="p-4 rounded-3 border border-light-subtle h-100 bg-light d-flex flex-column justify-content-between text-center">
             <div>
               <div class="mx-auto mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 12px; background: rgba(28, 59, 45, 0.1); color: var(--primary-forest); font-size: 24px;">
@@ -53,7 +53,7 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <!-- Pathway 3: Partner -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-4">
           <div class="p-4 rounded-3 border border-light-subtle h-100 bg-light d-flex flex-column justify-content-between text-center">
             <div>
               <div class="mx-auto mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 12px; background: rgba(28, 59, 45, 0.1); color: var(--primary-forest); font-size: 24px;">
@@ -63,20 +63,6 @@ require_once __DIR__ . '/includes/header.php';
               <p class="text-secondary small mb-3">Corporate ESG, B2B wholesale, corporate gifting, waste audits, and institutional CSR.</p>
             </div>
             <a href="#partner" class="btn btn-outline-success btn-sm w-100">Partner Details &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Pathway 4: Donate -->
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 rounded-3 border border-success-subtle h-100 d-flex flex-column justify-content-between text-center" style="background: #eef7f2;">
-            <div>
-              <div class="mx-auto mb-3 d-inline-flex align-items-center justify-content-center" style="width: 52px; height: 52px; border-radius: 12px; background: #1c3b2d; color: #fff; font-size: 24px;">
-                <i class="bi bi-heart-fill"></i>
-              </div>
-              <h3 class="h5 fw-bold mb-2" style="color: var(--primary-forest);">Donate &amp; Support</h3>
-              <p class="text-secondary small mb-3">Finance healthcare camps, safety gear, and school stipends for ragpicker families.</p>
-            </div>
-            <a href="#donate" class="btn-primary-forest btn-sm w-100 text-decoration-none">Donate Now &hearts;</a>
           </div>
         </div>
 
@@ -197,102 +183,6 @@ require_once __DIR__ . '/includes/header.php';
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Section: Donate & Support (#donate) -->
-  <section class="ed-content-section" id="donate" style="background: #eef7f2; border-top: 1px solid var(--border-subtle);">
-    <div class="container px-lg-4">
-      <div class="text-center mb-5">
-        <span class="badge bg-success text-white px-3 py-1 mb-2">DIRECT HUMAN IMPACT</span>
-        <h2 class="ed-section-title" style="color: var(--primary-forest);">Donate &amp; Empower Grassroots Families</h2>
-        <p class="ed-section-desc mx-auto">
-          Every contribution goes directly to the frontlines—providing health checkups, safety kits, vocational materials, and educational stipends for Delhi's waste-picking and refugee households.
-        </p>
-      </div>
-
-      <div class="row g-4 mb-5">
-        <!-- Tier 1 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 bg-white rounded-3 border border-success-subtle h-100 text-center d-flex flex-column justify-content-between shadow-sm">
-            <div>
-              <span class="badge bg-light text-success border border-success-subtle px-3 py-1 mb-2">Health &amp; Safety</span>
-              <h3 class="display-6 fw-bold text-success mb-1">&#8377;1,500</h3>
-              <p class="text-muted small mb-3">~ $20 USD</p>
-              <h4 class="h6 fw-bold mb-2" style="color: var(--primary-forest);">Worker Safety Toolkit</h4>
-              <p class="text-secondary small mb-0" style="line-height: 1.6;">
-                Provides puncture-proof sorting gloves, boots, mask, and a first-aid kit for 2 frontline waste collectors.
-              </p>
-            </div>
-            <div class="pt-3 mt-3 border-top border-light-subtle">
-              <a href="contact-us.php?donate=1500" class="btn btn-outline-success btn-sm w-100">Donate &#8377;1,500</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tier 2 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 bg-white rounded-3 border border-success-subtle h-100 text-center d-flex flex-column justify-content-between shadow-sm">
-            <div>
-              <span class="badge bg-light text-success border border-success-subtle px-3 py-1 mb-2">Financial Inclusion</span>
-              <h3 class="display-6 fw-bold text-success mb-1">&#8377;3,500</h3>
-              <p class="text-muted small mb-3">~ $45 USD</p>
-              <h4 class="h6 fw-bold mb-2" style="color: var(--primary-forest);">Women's Literacy Camp</h4>
-              <p class="text-secondary small mb-0" style="line-height: 1.6;">
-                Funds a 4-week financial and digital banking course for 5 women waste sorters opening their first bank accounts.
-              </p>
-            </div>
-            <div class="pt-3 mt-3 border-top border-light-subtle">
-              <a href="contact-us.php?donate=3500" class="btn btn-outline-success btn-sm w-100">Donate &#8377;3,500</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tier 3: Popular -->
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 rounded-3 border border-success h-100 text-center d-flex flex-column justify-content-between shadow" style="background: #1c3b2d; color: #fff;">
-            <div>
-              <span class="badge bg-warning text-dark px-3 py-1 mb-2 fw-semibold">Most Impactful</span>
-              <h3 class="display-6 fw-bold text-white mb-1">&#8377;7,500</h3>
-              <p class="text-white-50 small mb-3">~ $95 USD</p>
-              <h4 class="h6 fw-bold mb-2 text-white">Artisan Sewing Toolkit</h4>
-              <p class="text-white-50 small mb-0" style="line-height: 1.6;">
-                Equips an Afghan refugee or ragpicker woman with industrial sewing shears, pattern rulers, and tailoring training materials.
-              </p>
-            </div>
-            <div class="pt-3 mt-3 border-top border-secondary">
-              <a href="contact-us.php?donate=7500" class="btn btn-light btn-sm w-100 fw-semibold text-dark">Donate &#8377;7,500</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tier 4 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="p-4 bg-white rounded-3 border border-success-subtle h-100 text-center d-flex flex-column justify-content-between shadow-sm">
-            <div>
-              <span class="badge bg-light text-success border border-success-subtle px-3 py-1 mb-2">Child Education</span>
-              <h3 class="display-6 fw-bold text-success mb-1">&#8377;15,000</h3>
-              <p class="text-muted small mb-3">~ $180 USD</p>
-              <h4 class="h6 fw-bold mb-2" style="color: var(--primary-forest);">Annual Child Schooling</h4>
-              <p class="text-secondary small mb-0" style="line-height: 1.6;">
-                Sponsors 1 full year of school books, uniforms, tuition fees, and nutrition for a child of a waste-picking family.
-              </p>
-            </div>
-            <div class="pt-3 mt-3 border-top border-light-subtle">
-              <a href="contact-us.php?donate=15000" class="btn btn-outline-success btn-sm w-100">Donate &#8377;15,000</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Trust note -->
-      <div class="p-4 bg-white rounded-3 border border-light-subtle text-center max-w-700 mx-auto">
-        <p class="small text-muted mb-0">
-          <i class="bi bi-shield-check text-success me-1"></i>
-          <strong>Transparency Guarantee:</strong> Conserve India is a registered non-profit society in New Delhi. Donors receive an official receipt and annual impact audit report. For institutional CSR grants or bank wire transfers, please email <a href="mailto:info@conserveindia.org" class="text-success fw-semibold text-decoration-none">info@conserveindia.org</a>.
-        </p>
-      </div>
-
     </div>
   </section>
 

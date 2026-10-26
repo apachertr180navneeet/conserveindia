@@ -28,8 +28,6 @@ if (!isset($current_page)) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Leaflet CSS for Interactive Map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -53,28 +51,14 @@ if (!isset($current_page)) {
       <div class="collapse navbar-collapse" id="conserveNavbar">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
           
-          <!-- 1. Home Page -->
+          <!-- 1. Home -->
           <li class="nav-item">
-            <a class="nav-link custom-nav-link <?php echo ($current_page === 'home') ? 'active text-success fw-bold' : ''; ?>" href="index.php">Home Page</a>
+            <a class="nav-link custom-nav-link <?php echo ($current_page === 'home') ? 'active text-success fw-bold' : ''; ?>" href="index.php">Home</a>
           </li>
 
-          <!-- 2. About US Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'about') ? 'active text-success fw-bold' : ''; ?>" href="about-us.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About US
-            </a>
-            <ul class="dropdown-menu dropdown-menu-conserve shadow">
-              <li><a class="dropdown-item fw-semibold" href="about-us.php">About Us Overview</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="about-us.php#mission-vision">Mission &amp; Vision</a></li>
-              <li><a class="dropdown-item" href="about-us.php#values">Core Values</a></li>
-              <li><a class="dropdown-item" href="about-us.php#impact">Impact Numbers</a></li>
-              <li><a class="dropdown-item" href="about-us.php#paradigms">Supporting Paradigms</a></li>
-              <li><a class="dropdown-item" href="about-us.php#thematic-areas">Thematic Areas</a></li>
-              <li><a class="dropdown-item" href="about-us.php#social-enterprise">Redesigning Social Enterprise</a></li>
-              <li><a class="dropdown-item" href="about-us.php#team">Meet The Team (Core Team)</a></li>
-              <li><a class="dropdown-item" href="about-us.php#milestones">Milestones &amp; Heritage</a></li>
-            </ul>
+          <!-- 2. About Us -->
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link <?php echo ($current_page === 'about') ? 'active text-success fw-bold' : ''; ?>" href="about-us.php">About Us</a>
           </li>
           
           <!-- 3. Our Work Dropdown -->
@@ -111,41 +95,27 @@ if (!isset($current_page)) {
             </ul>
           </li>
 
-          <!-- 5. Lastest Updates Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'updates') ? 'active text-success fw-bold' : ''; ?>" href="latest-updates.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Lastest Updates
+          <!-- 5. Latest Updates -->
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link <?php echo ($current_page === 'updates') ? 'active text-success fw-bold' : ''; ?>" href="latest-updates.php">
+              Latest Updates
             </a>
-            <ul class="dropdown-menu dropdown-menu-conserve shadow">
-              <li><a class="dropdown-item fw-semibold" href="latest-updates.php">Updates Overview</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="latest-updates.php#awards">Awards &amp; Accolades</a></li>
-              <li><a class="dropdown-item" href="green-stories.php">Blog &amp; Green Stories</a></li>
-              <li><a class="dropdown-item" href="latest-updates.php#publications">Annual Reports &amp; Publications</a></li>
-            </ul>
           </li>
 
-          <!-- 6. Gallery Pages -->
+          <!-- 6. Gallery -->
           <li class="nav-item">
             <a class="nav-link custom-nav-link <?php echo ($current_page === 'gallery') ? 'active text-success fw-bold' : ''; ?>" href="gallery.php">
-              Gallery Pages
+              Gallery
             </a>
           </li>
 
-          <!-- 7. Connect With US Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link custom-nav-link dropdown-toggle <?php echo ($current_page === 'connect') ? 'active text-success fw-bold' : ''; ?>" href="connect-with-us.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Connect With US
+          <!-- 7. Connect With Us -->
+          <li class="nav-item">
+            <a class="nav-link custom-nav-link <?php echo ($current_page === 'connect') ? 'active text-success fw-bold' : ''; ?>" href="connect-with-us.php">
+              Connect With Us
             </a>
-            <ul class="dropdown-menu dropdown-menu-conserve shadow dropdown-menu-end">
-              <li><a class="dropdown-item fw-semibold" href="connect-with-us.php">Connect Overview</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="contact-us.php">Contact Us</a></li>
-              <li><a class="dropdown-item" href="connect-with-us.php#volunteer">Volunteer With Us</a></li>
-              <li><a class="dropdown-item" href="connect-with-us.php#partner">Partner With Us</a></li>
-              <li><a class="dropdown-item text-success fw-semibold" href="connect-with-us.php#donate">Donate &amp; Support &hearts;</a></li>
-            </ul>
           </li>
+
         </ul>
       </div>
     </div>
