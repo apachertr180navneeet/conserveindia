@@ -1292,25 +1292,25 @@ h1, h2, h3, h4, h5, h6, .font-serif, .font-heading {
 }
 
 .ed-hero-headline .text-accent {
-  color: #f7ce74;
+  color: #a4ceb5;
 }
 
 .ed-hero-lead {
   font-size: clamp(1.05rem, 1.35vw, 1.24rem);
-  color: rgba(255, 255, 255, 0.94);
+  color: #ffffff !important;
   line-height: 1.65;
   max-width: 880px;
   width: 100%;
   margin-bottom: 34px;
   font-weight: 400;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
-/* Standout High-Contrast Hero Primary CTA */
+/* Standout High-Contrast Hero Primary CTA (Brand Harmonious) */
 .ed-hero-cta {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  color: #0b140f !important;
-  border: 1px solid #f59e0b;
+  background: #ffffff;
+  color: #141716 !important;
+  border: 1px solid #ffffff;
   border-radius: 6px;
   padding: 14px 32px;
   font-size: 15px;
@@ -1320,16 +1320,16 @@ h1, h2, h3, h4, h5, h6, .font-serif, .font-heading {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 20px rgba(217, 119, 6, 0.45);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
   transition: all 0.25s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
 .ed-hero-cta:hover {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  border-color: #fbbf24;
-  color: #000000 !important;
+  background: #e8eee9;
+  border-color: #e8eee9;
+  color: #1c3b2d !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(217, 119, 6, 0.65);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
 }
 
 .ed-hero-cta svg {
@@ -1502,104 +1502,186 @@ h1, h2, h3, h4, h5, h6, .font-serif, .font-heading {
 }
 
 /* ========================================================
-   SECTION 3: SERVICES (Ref: Charity:Water)
+   SECTION 3: SERVICES / ACTION CARDS (Ref: Charity:Water)
+   Visual photo cards with bottom action bar (avoiding text heaviness)
    ======================================================== */
 .ed-services-section {
-  padding: 90px 0 95px;
-  background-color: #f7f6f2;
+  padding: 95px 0 100px;
+  background-color: #f7f6f2; /* Warm creamy background like reference */
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
 }
 
-.ed-service-card {
-  background-color: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: 10px;
-  overflow: hidden;
+.ed-action-card {
+  display: block;
+  text-decoration: none;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ed-service-card:hover {
-  transform: translateY(-5px);
-  border-color: #b8ccbf;
-  box-shadow: 0 16px 32px -8px rgba(28, 59, 45, 0.12);
-}
-
-.ed-service-img-box {
-  position: relative;
-  aspect-ratio: 16 / 9;
+  border-radius: 16px;
   overflow: hidden;
-  background-color: #edf2ee;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(20, 23, 22, 0.08);
+  transition: transform 0.35s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
-.ed-service-img {
+.ed-action-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px -4px rgba(28, 59, 45, 0.18);
+}
+
+.ed-action-img-box {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  background-color: #121815;
+}
+
+@media (max-width: 1199.98px) {
+  .ed-action-img-box {
+    height: 410px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ed-action-img-box {
+    height: 380px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ed-action-img-box {
+    height: 360px;
+  }
+}
+
+.ed-action-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center;
   transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
-.ed-service-card:hover .ed-service-img {
+.ed-action-card:hover .ed-action-img {
   transform: scale(1.06);
 }
 
-.ed-service-badge-overlay {
+/* Scrim overlay for readability */
+.ed-action-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 20, 16, 0.12) 0%, rgba(14, 20, 16, 0.04) 50%, rgba(14, 20, 16, 0.88) 100%);
+  z-index: 2;
+  transition: background 0.35s ease;
+}
+
+.ed-action-card:hover .ed-action-scrim {
+  background: linear-gradient(180deg, rgba(14, 20, 16, 0.08) 0%, rgba(14, 20, 16, 0.02) 40%, rgba(14, 20, 16, 0.92) 100%);
+}
+
+/* Top-left pill tag */
+.ed-action-tag {
   position: absolute;
   top: 14px;
   left: 14px;
-  background-color: rgba(28, 59, 45, 0.9);
-  color: #ffffff;
-  backdrop-filter: blur(4px);
-  font-size: 11px;
-  font-weight: 700;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.94);
+  color: #1c3b2d;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  font-weight: 800;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 5px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.ed-service-body {
-  padding: 28px 24px 24px;
+.ed-action-card:hover .ed-action-tag {
+  background-color: #1c3b2d;
+  color: #ffffff;
+}
+
+/* Floating bottom action bar (Ref: Charity:Water action strip) */
+.ed-action-bar {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  z-index: 3;
+  background: rgba(18, 24, 21, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 10px 12px;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
-.ed-service-index {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 11.5px;
-  letter-spacing: 1.5px;
-  color: var(--primary-forest);
-  background-color: #edf2ef;
-  padding: 4px 10px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 12px;
+.ed-action-card:hover .ed-action-bar {
+  background: rgba(28, 59, 45, 0.95);
+  border-color: rgba(164, 206, 181, 0.45);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 }
 
-.ed-service-title {
+/* Action circular icon on the left (on-brand forest/sage, NOT yellow) */
+.ed-action-icon-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2d5a44 0%, #1c3b2d 100%);
+  border: 1px solid rgba(164, 206, 181, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.ed-action-card:hover .ed-action-icon-circle {
+  background: #a4ceb5;
+  color: #0e1813;
+  border-color: #a4ceb5;
+  transform: rotate(6deg) scale(1.05);
+}
+
+/* Action label */
+.ed-action-label {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.32;
-  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.25;
+  flex-grow: 1;
 }
 
-.ed-service-desc {
-  font-size: 13.8px;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 18px;
+/* Arrow indicator on the right */
+.ed-action-chevron {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 
+.ed-action-card:hover .ed-action-chevron {
+  color: #a4ceb5;
+  transform: translateX(4px);
+}
+
+/* Legacy deliverable list styles preserved for about-us.php & services.php */
 .ed-service-deliverables {
   list-style: none;
   padding: 0;

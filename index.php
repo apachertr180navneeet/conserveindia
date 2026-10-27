@@ -352,134 +352,90 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================
-       SECTION 5: OUR SERVICES (REORDERED IMMEDIATELY AFTER GLOBAL PARTNERS)
-       Updated with relevant images, deliverables, and responsive card design
+       SECTION 5: OUR SERVICES (VISUAL ACTION CARDS - Ref: Charity:Water)
+       Consistent with services.php: Consulting, Outreach, Education, Immersion
        ======================================================== -->
   <section class="ed-services-section" id="services">
     <div class="container px-lg-4">
       <div class="text-center mb-5">
-        <span class="ed-section-tag">SERVICES &amp; ADVISORY</span>
-        <h2 class="ed-section-title">Circular Strategy &amp; Partnership Solutions</h2>
+        <span class="ed-section-tag">SERVICES &amp; CAPABILITIES</span>
+        <h2 class="ed-section-title">Ready to Take Action?</h2>
         <p class="ed-section-desc mx-auto">
-          Collaborating with corporations, institutional buyers, and development agencies to engineer circular value, CSR alignment, and measurable ESG outcomes.
+          There are lots of impactful ways to collaborate with Conserve India. Explore our key circular services, outreach programs, and immersion experiences.
         </p>
       </div>
 
-      <div class="row g-4">
-        <!-- Service 1: Circular Economy Research & Strategy -->
-        <div class="col-md-6">
-          <div class="ed-service-card">
-            <div class="ed-service-img-box">
-              <img src="assets/images/plastic-bottles-sorting.jpg" alt="Diagnostic corporate waste stream audits and plastic segregation" class="ed-service-img" loading="lazy">
-              <span class="ed-service-badge-overlay">SERVICE 01</span>
-            </div>
-            <div class="ed-service-body">
-              <div>
-                <span class="ed-service-index">STRATEGY &amp; AUDITS</span>
-                <h3 class="ed-service-title">Circular Economy Research &amp; Strategy</h3>
-                <p class="ed-service-desc">
-                  Diagnostic corporate waste stream audits, material lifecycle mapping, and tailored operational roadmaps to eliminate single-use plastics and establish closed-loop recycling.
-                </p>
-                <ul class="ed-service-deliverables">
-                  <li><i class="bi bi-check2-circle"></i> Comprehensive campus and factory waste diagnostics</li>
-                  <li><i class="bi bi-check2-circle"></i> Single-use plastic phaseout and segregation workflows</li>
-                  <li><i class="bi bi-check2-circle"></i> Verifiable material recovery audits for ESG reporting</li>
-                </ul>
-              </div>
-              <div class="pt-2">
-                <a href="services.php#consulting" class="ed-btn-outline">
-                  Explore Advisory &rarr;
-                </a>
+      <div class="row g-4 justify-content-center">
+        <!-- Service 1: Consulting & Strategic Advisory -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="services.php#consulting" class="ed-action-card" aria-label="Explore Consulting & Strategic Advisory">
+            <div class="ed-action-img-box">
+              <img src="assets/images/plastic-bottles-sorting.jpg" alt="Diagnostic corporate waste stream audits and circular consulting" class="ed-action-img" loading="lazy">
+              <div class="ed-action-scrim"></div>
+              <span class="ed-action-tag">ADVISORY</span>
+              <div class="ed-action-bar">
+                <div class="ed-action-icon-circle">
+                  <i class="bi bi-clipboard2-data-fill"></i>
+                </div>
+                <span class="ed-action-label">Consulting &amp; Advisory</span>
+                <i class="bi bi-arrow-right ed-action-chevron"></i>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- Service 2: Sustainable Production & Value-Chain Development -->
-        <div class="col-md-6">
-          <div class="ed-service-card">
-            <div class="ed-service-img-box">
-              <img src="assets/images/upcycling-innovation.jpg" alt="Patented Handmade Recycled Plastic material and B2B goods" class="ed-service-img" loading="lazy">
-              <span class="ed-service-badge-overlay">SERVICE 02</span>
-            </div>
-            <div class="ed-service-body">
-              <div>
-                <span class="ed-service-index">B2B &amp; MATERIAL SCIENCE</span>
-                <h3 class="ed-service-title">Sustainable Production &amp; Value-Chain Development</h3>
-                <p class="ed-service-desc">
-                  B2B supply of patented Handmade Recycled Plastic (HRP) sheets, bespoke upcycled lifestyle goods, and certified Fair Trade merchandise for corporate events and retail collections.
-                </p>
-                <ul class="ed-service-deliverables">
-                  <li><i class="bi bi-check2-circle"></i> Patented HRP material development for B2B applications</li>
-                  <li><i class="bi bi-check2-circle"></i> Custom-branded corporate gifting and conference accessories</li>
-                  <li><i class="bi bi-check2-circle"></i> Certified Fair Trade production adhering to ethical living wages</li>
-                </ul>
-              </div>
-              <div class="pt-2">
-                <a href="connect-with-us.php#partner" class="ed-btn-outline">
-                  Explore B2B Partnerships &rarr;
-                </a>
+        <!-- Service 2: Events, Campaigns & Outreach -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="services.php#events-outreach" class="ed-action-card" aria-label="Explore Events, Campaigns & Outreach">
+            <div class="ed-action-img-box">
+              <img src="assets/images/story-farming.jpg" alt="Community environmental campaigns, corporate zero-waste days, and workshops" class="ed-action-img" loading="lazy">
+              <div class="ed-action-scrim"></div>
+              <span class="ed-action-tag">OUTREACH</span>
+              <div class="ed-action-bar">
+                <div class="ed-action-icon-circle">
+                  <i class="bi bi-megaphone-fill"></i>
+                </div>
+                <span class="ed-action-label">Events &amp; Outreach</span>
+                <i class="bi bi-arrow-right ed-action-chevron"></i>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- Service 3: Capacity Building & Artisan Livelihoods -->
-        <div class="col-md-6">
-          <div class="ed-service-card">
-            <div class="ed-service-img-box">
-              <img src="assets/images/artisan-livelihoods.jpg" alt="Artisan capacity building and refugee women stitching training" class="ed-service-img" loading="lazy">
-              <span class="ed-service-badge-overlay">SERVICE 03</span>
-            </div>
-            <div class="ed-service-body">
-              <div>
-                <span class="ed-service-index">LIVELIHOODS &amp; VOCATIONAL</span>
-                <h3 class="ed-service-title">Capacity Building &amp; Artisan Livelihoods</h3>
-                <p class="ed-service-desc">
-                  Field-tested vocational curricula designed for CSR funders, NGOs, and municipal councils seeking to transition informal ragpickers and refugee women into skilled craft livelihoods.
-                </p>
-                <ul class="ed-service-deliverables">
-                  <li><i class="bi bi-check2-circle"></i> 6–12 month master stitching, weaving, and sorting modules</li>
-                  <li><i class="bi bi-check2-circle"></i> Fair Trade labor rights, financial literacy, and health insurance</li>
-                  <li><i class="bi bi-check2-circle"></i> Proven micro-enterprise incubation (e.g. Akseer brand)</li>
-                </ul>
-              </div>
-              <div class="pt-2">
-                <a href="capacity-building.php" class="ed-btn-outline">
-                  Explore Training Programs &rarr;
-                </a>
+        <!-- Service 3: Education & Training Incubator -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="services.php#education-training" class="ed-action-card" aria-label="Explore Education & Training Incubator">
+            <div class="ed-action-img-box">
+              <img src="assets/images/artisan-livelihoods.jpg" alt="Youth design incubator, artisan stitching and financial literacy training" class="ed-action-img" loading="lazy">
+              <div class="ed-action-scrim"></div>
+              <span class="ed-action-tag">INCUBATOR</span>
+              <div class="ed-action-bar">
+                <div class="ed-action-icon-circle">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <span class="ed-action-label">Education &amp; Training</span>
+                <i class="bi bi-arrow-right ed-action-chevron"></i>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
-        <!-- Service 4: Education, Awareness & Stakeholder Engagement -->
-        <div class="col-md-6">
-          <div class="ed-service-card">
-            <div class="ed-service-img-box">
-              <img src="assets/images/belief-sapling.jpg" alt="Environmental education, corporate workshops and advocacy" class="ed-service-img" loading="lazy">
-              <span class="ed-service-badge-overlay">SERVICE 04</span>
-            </div>
-            <div class="ed-service-body">
-              <div>
-                <span class="ed-service-index">EDUCATION &amp; EPR</span>
-                <h3 class="ed-service-title">Education, Awareness &amp; Stakeholder Engagement</h3>
-                <p class="ed-service-desc">
-                  Hands-on corporate sensitization workshops, academic partnerships, and Extended Producer Responsibility (EPR) advisory aligning brand commitments with grassroots reality.
-                </p>
-                <ul class="ed-service-deliverables">
-                  <li><i class="bi bi-check2-circle"></i> Corporate employee sustainability workshops and field visits</li>
-                  <li><i class="bi bi-check2-circle"></i> Ethical Extended Producer Responsibility (EPR) compliance models</li>
-                  <li><i class="bi bi-check2-circle"></i> Community environmental campaigns and educational sessions</li>
-                </ul>
-              </div>
-              <div class="pt-2">
-                <a href="#contact-section" class="ed-btn-outline">
-                  Discuss a Partnership &rarr;
-                </a>
+        <!-- Service 4: Stay & Learn: Immersion Tours -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="services.php#immersion-tours" class="ed-action-card" aria-label="Explore Stay & Learn Immersion Tours">
+            <div class="ed-action-img-box">
+              <img src="assets/images/circular-communities.jpg" alt="Stay & Learn circular immersion tours, waste mapping, and eco-stay" class="ed-action-img" loading="lazy">
+              <div class="ed-action-scrim"></div>
+              <span class="ed-action-tag">IMMERSION</span>
+              <div class="ed-action-bar">
+                <div class="ed-action-icon-circle">
+                  <i class="bi bi-compass-fill"></i>
+                </div>
+                <span class="ed-action-label">Stay &amp; Learn Tours</span>
+                <i class="bi bi-arrow-right ed-action-chevron"></i>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

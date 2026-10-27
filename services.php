@@ -19,29 +19,123 @@ require_once __DIR__ . '/includes/header.php';
     </div>
   </header>
 
-  <!-- Service 1: Consulting -->
-  <section class="ed-content-section" id="consulting" style="background: #fff;">
+  <!-- ========================================================
+       SECTION: VISUAL ACTION CARDS (Ref: Charity:Water)
+       Identical to home page services section (avoiding text-heaviness)
+       ======================================================== -->
+  <section class="ed-services-section" style="padding: 70px 0 85px;">
+    <div class="container px-lg-4">
+      <div class="text-center mb-5">
+        <span class="ed-section-tag">CORE CAPABILITIES</span>
+        <h2 class="ed-section-title">Ready to Take Action?</h2>
+        <p class="ed-section-desc mx-auto">
+          Explore our four dedicated service offerings designed to accelerate circularity, build grassroots skills, and engage global changemakers.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Service 1: Consulting & Strategic Advisory -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="#consulting" class="ed-action-card" aria-label="View Consulting & Advisory Details">
+            <div class="ed-action-img-box">
+              <img src="assets/images/plastic-bottles-sorting.jpg" alt="Diagnostic corporate waste stream audits and circular consulting" class="ed-action-img" loading="lazy">
+              <div class="ed-action-scrim"></div>
+              <span class="ed-action-tag">ADVISORY</span>
+              <div class="ed-action-bar">
+                <div class="ed-action-icon-circle">
+                  <i class="bi bi-clipboard2-data-fill"></i>
+                </div>
+                <span class="ed-action-label">Consulting &amp; Advisory</span>
+                <i class="bi bi-arrow-right ed-action-chevron"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Service 2: Events, Campaigns & Outreach -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="#events-outreach" class="ed-action-card" aria-label="View Events & Outreach Details">
+            <div class="ed-action-img-box">
+              <img src="assets/images/story-farming.jpg" alt="Community environmental campaigns, corporate zero-waste days, and workshops" class="ed-action-img" loading="lazy">
+              <div class="ed-action-scrim"></div>
+              <span class="ed-action-tag">OUTREACH</span>
+              <div class="ed-action-bar">
+                <div class="ed-action-icon-circle">
+                  <i class="bi bi-megaphone-fill"></i>
+                </div>
+                <span class="ed-action-label">Events &amp; Outreach</span>
+                <i class="bi bi-arrow-right ed-action-chevron"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Service 3: Education & Training Incubator -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="#education-training" class="ed-action-card" aria-label="View Education & Training Details">
+            <div class="ed-action-img-box">
+              <img src="assets/images/artisan-livelihoods.jpg" alt="Youth design incubator, artisan stitching and financial literacy training" class="ed-action-img" loading="lazy">
+              <div class="ed-action-scrim"></div>
+              <span class="ed-action-tag">INCUBATOR</span>
+              <div class="ed-action-bar">
+                <div class="ed-action-icon-circle">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <span class="ed-action-label">Education &amp; Training</span>
+                <i class="bi bi-arrow-right ed-action-chevron"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Service 4: Stay & Learn: Immersion Tours -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <a href="#immersion-tours" class="ed-action-card" aria-label="View Stay & Learn Tour Details">
+            <div class="ed-action-img-box">
+              <img src="assets/images/circular-communities.jpg" alt="Stay & Learn circular immersion tours, waste mapping, and eco-stay" class="ed-action-img" loading="lazy">
+              <div class="ed-action-scrim"></div>
+              <span class="ed-action-tag">IMMERSION</span>
+              <div class="ed-action-bar">
+                <div class="ed-action-icon-circle">
+                  <i class="bi bi-compass-fill"></i>
+                </div>
+                <span class="ed-action-label">Stay &amp; Learn Tours</span>
+                <i class="bi bi-arrow-right ed-action-chevron"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       STREAMLINED DETAIL SECTIONS (CLEAN, FOCUSED, NOT TEXT-HEAVY)
+       ======================================================== -->
+
+  <!-- Service 1: Consulting & Advisory -->
+  <section class="ed-content-section" id="consulting" style="background: #ffffff; padding: 75px 0;">
     <div class="container px-lg-4">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
           <span class="ed-section-tag">SERVICE 01 &middot; STRATEGIC ADVISORY</span>
           <h2 class="ed-section-title">Circularity &amp; ESG Consulting</h2>
-          <p class="text-secondary small mb-3" style="line-height: 1.7;">
-            Drawing upon 25+ years of patented material R&amp;D and grassroots supply chain management, we partner with corporate leadership to audit packaging waste streams, fulfill statutory Extended Producer Responsibility (EPR), and create closed-loop recycling roadmaps.
+          <p class="text-secondary mb-3" style="line-height: 1.7; font-size: 15px;">
+            Partnering with corporate leadership to audit packaging waste streams, fulfill statutory Extended Producer Responsibility (EPR), and develop verifiable closed-loop recycling roadmaps.
           </p>
           <ul class="ed-service-deliverables mb-4">
-            <li><i class="bi bi-check2"></i> <strong>Waste Stream Diagnostic Audits:</strong> Comprehensive campus and factory waste mapping.</li>
-            <li><i class="bi bi-check2"></i> <strong>Statutory EPR Compliance:</strong> Verifiable chain-of-custody documentation and informal worker inclusion.</li>
-            <li><i class="bi bi-check2"></i> <strong>Sustainable Procurement:</strong> Replacing single-use plastic merchandise with patented HRP circular items.</li>
+            <li><i class="bi bi-check2-circle"></i> <strong>Waste Stream Diagnostic Audits:</strong> Complete campus and factory waste diagnostics.</li>
+            <li><i class="bi bi-check2-circle"></i> <strong>Statutory EPR Compliance:</strong> Verifiable chain-of-custody and informal recycler inclusion.</li>
+            <li><i class="bi bi-check2-circle"></i> <strong>Circular Procurement:</strong> Replacing single-use items with patented upcycled alternatives.</li>
           </ul>
-          <div class="d-flex gap-3">
+          <div class="d-flex flex-wrap gap-3">
             <a href="connect-with-us.php#partner" class="btn-primary-forest text-nowrap">Inquire for Advisory &rarr;</a>
             <a href="connect-with-us.php#partner" class="ed-btn-outline">Book Waste Audit</a>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden;">
-            <img src="assets/images/circular-communities.jpg" alt="Conserve India corporate waste audit and consulting session" class="ed-media-img">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
+            <img src="assets/images/plastic-bottles-sorting.jpg" alt="Conserve India corporate waste audit and consulting session" class="ed-media-img">
           </div>
         </div>
       </div>
@@ -49,26 +143,26 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- Service 2: Events and Outreach -->
-  <section class="ed-content-section" id="events-outreach" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <section class="ed-content-section" id="events-outreach" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 75px 0;">
     <div class="container px-lg-4">
       <div class="row align-items-center g-5">
         <div class="col-lg-6 order-lg-2">
           <span class="ed-section-tag">SERVICE 02 &middot; PUBLIC ENGAGEMENT</span>
           <h2 class="ed-section-title">Events, Campaigns &amp; Outreach</h2>
-          <p class="text-secondary small mb-3" style="line-height: 1.7;">
-            We design and execute vibrant environmental campaigns, corporate zero-waste days, community hackathons, and design exhibitions that bring circular living into everyday awareness.
+          <p class="text-secondary mb-3" style="line-height: 1.7; font-size: 15px;">
+            Designing vibrant environmental campaigns, corporate zero-waste days, community hackathons, and design exhibitions that bring circular living into everyday awareness.
           </p>
           <ul class="ed-service-deliverables mb-4">
-            <li><i class="bi bi-check2"></i> <strong>Corporate Sensitization Workshops:</strong> Hands-on employee workshops on waste segregation and circular design.</li>
-            <li><i class="bi bi-check2"></i> <strong>Community Zero-Waste Drives:</strong> Neighborhood plastic recovery drives and awareness rallies.</li>
-            <li><i class="bi bi-check2"></i> <strong>Exhibitions &amp; Pop-ups:</strong> Design installations showcasing patented HRP textiles at cultural festivals and sustainability summits.</li>
+            <li><i class="bi bi-check2-circle"></i> <strong>Corporate Workshops:</strong> Hands-on employee waste segregation and circular design sessions.</li>
+            <li><i class="bi bi-check2-circle"></i> <strong>Community Drives:</strong> Neighborhood plastic recovery drives and public awareness campaigns.</li>
+            <li><i class="bi bi-check2-circle"></i> <strong>Exhibitions &amp; Pop-ups:</strong> Design installations showcasing patented HRP textiles at summits.</li>
           </ul>
           <a href="connect-with-us.php#partner" class="btn-primary-forest text-nowrap">
             Plan an Outreach Event &rarr;
           </a>
         </div>
         <div class="col-lg-6 order-lg-1">
-          <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden;">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
             <img src="assets/images/story-farming.jpg" alt="Conserve community outreach and ecological training event" class="ed-media-img">
           </div>
         </div>
@@ -77,35 +171,26 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- Service 3: Education and Training -->
-  <section class="ed-content-section" id="education-training" style="background: #fff;">
+  <section class="ed-content-section" id="education-training" style="background: #ffffff; padding: 75px 0;">
     <div class="container px-lg-4">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
           <span class="ed-section-tag">SERVICE 03 &middot; CAPACITY BUILDING</span>
-          <h2 class="ed-section-title">Education, Incubator &amp; Training</h2>
-          <p class="text-secondary small mb-3" style="line-height: 1.7;">
-            Our vocational education programs combine design thinking with practical industrial skills. From the <strong>DDU-GKY Design-Led Upcycling Incubator (2017–24)</strong> for underprivileged youth to female waste-collector financial literacy, we build future-ready green micro-entrepreneurs.
+          <h2 class="ed-section-title">Education &amp; Training Incubator</h2>
+          <p class="text-secondary mb-3" style="line-height: 1.7; font-size: 15px;">
+            Combining design thinking with certified vocational skills. Equipping underprivileged youth, waste-picker communities, and refugee women with high-value tailoring and enterprise capabilities.
           </p>
-          <div class="row g-3 mb-4">
-            <div class="col-sm-6">
-              <div class="p-3 bg-light rounded-3 border border-light-subtle">
-                <h4 class="h6 fw-bold mb-1" style="color: var(--primary-forest);">Youth Design Incubator</h4>
-                <p class="text-muted small mb-0">DDU-GKY government-recognized training equipping youth with CAD, tailoring &amp; upcycling expertise.</p>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="p-3 bg-light rounded-3 border border-light-subtle">
-                <h4 class="h6 fw-bold mb-1" style="color: var(--primary-forest);">Women's Literacy &amp; Health</h4>
-                <p class="text-muted small mb-0">100+ waste collecting women trained in hygiene, bank accounts, digital literacy, and self-help groups.</p>
-              </div>
-            </div>
-          </div>
+          <ul class="ed-service-deliverables mb-4">
+            <li><i class="bi bi-check2-circle"></i> <strong>Youth Design Incubator:</strong> CAD drafting, master tailoring, and upcycled product engineering.</li>
+            <li><i class="bi bi-check2-circle"></i> <strong>Women's Livelihood Cohorts:</strong> Financial literacy, bank accounts, and fair living wage production.</li>
+            <li><i class="bi bi-check2-circle"></i> <strong>Micro-Enterprise Incubation:</strong> Incubation of grassroots artisan brands with retail market access.</li>
+          </ul>
           <a href="capacity-building.php" class="btn-primary-forest text-nowrap">
-            View Training Curriculum &rarr;
+            Explore Training Programs &rarr;
           </a>
         </div>
         <div class="col-lg-6">
-          <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden;">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
             <img src="assets/images/artisan-livelihoods.jpg" alt="Artisan youth education and vocational training session" class="ed-media-img">
           </div>
         </div>
@@ -113,59 +198,64 @@ require_once __DIR__ . '/includes/header.php';
     </div>
   </section>
 
-  <!-- Service 4: Stay & Learn: Immersion Tours (Green Sticky on Miro Board) -->
-  <section class="ed-content-section" id="immersion-tours" style="background: #eef4f0; border-top: 1px solid var(--border-subtle);">
+  <!-- Service 4: Stay & Learn: Immersion Tours -->
+  <section class="ed-content-section" id="immersion-tours" style="background: #f7f9f7; border-top: 1px solid var(--border-subtle); padding: 75px 0;">
     <div class="container px-lg-4">
       <div class="row align-items-center g-5">
         <div class="col-lg-7">
-          <span class="badge bg-success text-white px-3 py-1 mb-2">EXPERIENTIAL PROGRAM &middot; MIRO BLUEPRINT</span>
-          <h2 class="ed-section-title" style="color: var(--primary-forest);">Stay &amp; Learn: Circular Immersion Tours</h2>
-          <p class="text-secondary mb-4" style="line-height: 1.7;">
-            Experience circular economy in motion. Designed for university students, researchers, ESG executives, and international travelers, our <strong>Stay &amp; Learn</strong> tours offer multi-day, hands-on immersion into the life cycle of upcycled materials.
+          <span class="ed-section-tag">SERVICE 04 &middot; EXPERIENTIAL IMMERSION</span>
+          <h2 class="ed-section-title">Stay &amp; Learn: Circular Immersion Tours</h2>
+          <p class="text-secondary mb-4" style="line-height: 1.7; font-size: 15px;">
+            A multi-day, hands-on journey through the life cycle of upcycled materials for university students, researchers, ESG executives, and eco-conscious travelers.
           </p>
           
           <div class="row g-3 mb-4">
-            <div class="col-md-6">
-              <div class="bg-white p-3 rounded-3 border border-success-subtle h-100">
+            <div class="col-sm-6">
+              <div class="bg-white p-3 rounded-3 border border-light-subtle h-100">
                 <div class="text-success fs-5 mb-2"><i class="bi bi-binoculars-fill"></i></div>
                 <h4 class="h6 fw-bold mb-1" style="color: var(--primary-forest);">Field Waste Mapping</h4>
-                <p class="text-muted small mb-0">Shadow grassroots waste collectors, learn informal supply chains, and understand urban solid waste dynamics.</p>
+                <p class="text-muted small mb-0">Learn informal supply chains and urban recycling dynamics with grassroot collectors.</p>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="bg-white p-3 rounded-3 border border-success-subtle h-100">
-                <div class="text-success fs-5 mb-2"><i class="bi bi-tools"></i></div>
-                <h4 class="h6 fw-bold mb-1" style="color: var(--primary-forest);">Hands-on HRP Crafting</h4>
-                <p class="text-muted small mb-0">Work alongside master artisans to wash, sort, thermocompress, and sew your own bespoke upcycled accessory.</p>
+            <div class="col-sm-6">
+              <div class="bg-white p-3 rounded-3 border border-light-subtle h-100">
+                <div class="text-success fs-5 mb-2"><i class="bi bi-recycle"></i></div>
+                <h4 class="h6 fw-bold mb-1" style="color: var(--primary-forest);">Hands-on Crafting</h4>
+                <p class="text-muted small mb-0">Work with artisans to wash, sort, thermocompress, and stitch your own upcycled piece.</p>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="bg-white p-3 rounded-3 border border-success-subtle h-100">
+            <div class="col-sm-6">
+              <div class="bg-white p-3 rounded-3 border border-light-subtle h-100">
                 <div class="text-success fs-5 mb-2"><i class="bi bi-chat-quote-fill"></i></div>
                 <h4 class="h6 fw-bold mb-1" style="color: var(--primary-forest);">Artisan Dialogue</h4>
-                <p class="text-muted small mb-0">Intimate roundtable discussions with Afghan refugee women and veteran waste picker community leaders.</p>
+                <p class="text-muted small mb-0">Roundtable discussions with refugee craftswomen and waste picker community leaders.</p>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="bg-white p-3 rounded-3 border border-success-subtle h-100">
+            <div class="col-sm-6">
+              <div class="bg-white p-3 rounded-3 border border-light-subtle h-100">
                 <div class="text-success fs-5 mb-2"><i class="bi bi-house-heart-fill"></i></div>
                 <h4 class="h6 fw-bold mb-1" style="color: var(--primary-forest);">Eco-Stay Hospitality</h4>
-                <p class="text-muted small mb-0">Guided overnight itineraries with organic zero-waste meals and reflective evening seminars with founders.</p>
+                <p class="text-muted small mb-0">Guided overnight itineraries with organic zero-waste meals and evening founder sessions.</p>
               </div>
             </div>
           </div>
 
-          <a href="connect-with-us.php#partner" class="btn-primary-forest px-4 py-2">
-            Book or Customize an Immersion Tour &rarr;
-          </a>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="connect-with-us.php#partner" class="btn-primary-forest px-4 py-2">
+              Book an Immersion Tour &rarr;
+            </a>
+            <a href="contact-us.php?topic=immersion" class="ed-btn-outline px-4 py-2">
+              Request Tour Brochure
+            </a>
+          </div>
         </div>
         <div class="col-lg-5">
-          <div class="p-4 rounded-4 bg-white border border-success-subtle shadow-sm text-center">
-            <div class="mx-auto mb-3" style="width: 60px; height: 60px; border-radius: 50%; background: #1c3b2d; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px;">
+          <div class="p-4 rounded-4 bg-white border border-light-subtle shadow-sm text-center">
+            <div class="mx-auto mb-3" style="width: 54px; height: 54px; border-radius: 50%; background: #1c3b2d; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 22px;">
               <i class="bi bi-calendar-check-fill"></i>
             </div>
-            <h3 class="h5 fw-bold mb-2" style="color: var(--primary-forest);">Upcoming Immersion Batches</h3>
-            <p class="text-muted small mb-3">Accepting registrations for individual researchers, university study-abroad groups, and corporate sustainability cohorts.</p>
+            <h3 class="h5 fw-bold mb-2" style="color: var(--primary-forest);">Upcoming Tour Batches</h3>
+            <p class="text-muted small mb-3">Accepting registrations for individual researchers, university groups, and corporate cohorts.</p>
             <div class="p-3 bg-light rounded-3 mb-3 text-start small">
               <div class="d-flex justify-content-between mb-1">
                 <strong>Duration:</strong> <span>1-Day or 3-Day Programs</span>
@@ -174,10 +264,10 @@ require_once __DIR__ . '/includes/header.php';
                 <strong>Location:</strong> <span>Delhi-NCR Atelier &amp; Field Hubs</span>
               </div>
               <div class="d-flex justify-content-between">
-                <strong>Certification:</strong> <span>Conserve Circular Fellow Certificate</span>
+                <strong>Recognition:</strong> <span>Conserve Circular Fellow Certificate</span>
               </div>
             </div>
-            <a href="contact-us.php?topic=immersion" class="btn-primary-forest w-100">Request Tour Brochure</a>
+            <a href="contact-us.php?topic=immersion" class="btn-primary-forest w-100">Download Brochure &amp; Dates</a>
           </div>
         </div>
       </div>
