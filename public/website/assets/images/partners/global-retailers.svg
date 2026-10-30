@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" aria-label="1,000+ Global Retailers Network">
+  <g>
+    <!-- Globe & Eco Retail Badge -->
+    <circle cx="28" cy="30" r="22" fill="#2a9d8f"/>
+    <!-- Globe lines -->
+    <ellipse cx="28" cy="30" rx="10" ry="20" stroke="#ffffff" stroke-width="1.8" fill="none"/>
+    <line x1="8" y1="30" x2="48" y2="30" stroke="#ffffff" stroke-width="1.8"/>
+    <path d="M12 20 Q28 26 44 20" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+    <path d="M12 40 Q28 34 44 40" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+    
+    <!-- Wordmark -->
+    <text x="60" y="27" font-family="'Manrope', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="1" fill="#141716">1,000+ RETAILERS</text>
+    <text x="60" y="42" font-family="'Inter', Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="1" fill="#2a9d8f">US, UK &amp; EUROPE NETWORK</text>
+  </g>
+</svg>

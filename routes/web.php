@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // Home
 Route::get('/', function () {
-    return view('home');
+    return view('website.home');
 })->name('home');
 Route::get('/index.php', function () {
     return redirect()->route('home');
@@ -12,7 +12,7 @@ Route::get('/index.php', function () {
 
 // About Us
 Route::get('/about-us', function () {
-    return view('about-us');
+    return view('website.about-us');
 })->name('about-us');
 Route::get('/about-us.php', function () {
     return redirect()->route('about-us');
@@ -20,7 +20,7 @@ Route::get('/about-us.php', function () {
 
 // Our Work
 Route::get('/our-work', function () {
-    return view('our-work');
+    return view('website.our-work');
 })->name('our-work');
 Route::get('/our-work.php', function () {
     return redirect()->route('our-work');
@@ -28,7 +28,7 @@ Route::get('/our-work.php', function () {
 
 // Capacity Building
 Route::get('/capacity-building', function () {
-    return view('capacity-building');
+    return view('website.capacity-building');
 })->name('capacity-building');
 Route::get('/capacity-building.php', function () {
     return redirect()->route('capacity-building');
@@ -36,7 +36,7 @@ Route::get('/capacity-building.php', function () {
 
 // Sustainable Research & Development
 Route::get('/sustainable-research-development', function () {
-    return view('sustainable-research-development');
+    return view('website.sustainable-research-development');
 })->name('sustainable-research-development');
 Route::get('/sustainable-research-development.php', function () {
     return redirect()->route('sustainable-research-development');
@@ -44,7 +44,7 @@ Route::get('/sustainable-research-development.php', function () {
 
 // Advocacy and Lobbying
 Route::get('/advocacy-and-lobbying', function () {
-    return view('advocacy-and-lobbying');
+    return view('website.advocacy-and-lobbying');
 })->name('advocacy-and-lobbying');
 Route::get('/advocacy-and-lobbying.php', function () {
     return redirect()->route('advocacy-and-lobbying');
@@ -52,7 +52,7 @@ Route::get('/advocacy-and-lobbying.php', function () {
 
 // Sustainable Trade
 Route::get('/sustainable-trade', function () {
-    return view('sustainable-trade');
+    return view('website.sustainable-trade');
 })->name('sustainable-trade');
 Route::get('/sustainable-trade.php', function () {
     return redirect()->route('sustainable-trade');
@@ -60,7 +60,7 @@ Route::get('/sustainable-trade.php', function () {
 
 // COVID Relief Project Sahyog
 Route::get('/covid-relief-project-sahyog', function () {
-    return view('covid-relief-project-sahyog');
+    return view('website.covid-relief-project-sahyog');
 })->name('covid-relief-project-sahyog');
 Route::get('/covid-relief-project-sahyog.php', function () {
     return redirect()->route('covid-relief-project-sahyog');
@@ -68,7 +68,7 @@ Route::get('/covid-relief-project-sahyog.php', function () {
 
 // Services
 Route::get('/services', function () {
-    return view('services');
+    return view('website.services');
 })->name('services');
 Route::get('/services.php', function () {
     return redirect()->route('services');
@@ -76,7 +76,7 @@ Route::get('/services.php', function () {
 
 // Latest Updates
 Route::get('/latest-updates', function () {
-    return view('latest-updates');
+    return view('website.latest-updates');
 })->name('latest-updates');
 Route::get('/latest-updates.php', function () {
     return redirect()->route('latest-updates');
@@ -84,7 +84,7 @@ Route::get('/latest-updates.php', function () {
 
 // Gallery
 Route::get('/gallery', function () {
-    return view('gallery');
+    return view('website.gallery');
 })->name('gallery');
 Route::get('/gallery.php', function () {
     return redirect()->route('gallery');
@@ -92,7 +92,7 @@ Route::get('/gallery.php', function () {
 
 // Green Stories
 Route::get('/green-stories', function () {
-    return view('green-stories');
+    return view('website.green-stories');
 })->name('green-stories');
 Route::get('/green-stories.php', function () {
     return redirect()->route('green-stories');
@@ -100,7 +100,7 @@ Route::get('/green-stories.php', function () {
 
 // Connect With Us
 Route::get('/connect-with-us', function () {
-    return view('connect-with-us');
+    return view('website.connect-with-us');
 })->name('connect-with-us');
 Route::get('/connect-with-us.php', function () {
     return redirect()->route('connect-with-us');
@@ -108,7 +108,7 @@ Route::get('/connect-with-us.php', function () {
 
 // Contact Us
 Route::get('/contact-us', function () {
-    return view('contact-us');
+    return view('website.contact-us');
 })->name('contact-us');
 Route::get('/contact-us.php', function () {
     return redirect()->route('contact-us');

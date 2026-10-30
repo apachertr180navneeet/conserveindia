@@ -1,0 +1,35 @@
+<svg width="240" height="380" viewBox="0 0 240 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main stem curving downwards -->
+  <path d="M-10 10 C 30 70, 70 160, 60 260 C 52 310, 30 350, 10 380" stroke="#486350" stroke-width="1.6" stroke-linecap="round" opacity="0.45"/>
+  
+  <!-- Leaf 1 (Top Left) -->
+  <path d="M10 20 C 40 25, 75 55, 65 95 C 55 135, 15 110, 10 90 C 5 70, -10 30, 10 20 Z" stroke="#486350" stroke-width="1.3" fill="none" opacity="0.4"/>
+  <path d="M10 20 C 35 60, 48 95, 45 105" stroke="#486350" stroke-width="0.9" opacity="0.3"/>
+  <path d="M26 50 C 40 52, 55 60, 60 70" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+  <path d="M34 75 C 46 80, 52 92, 54 100" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+  <path d="M20 58 C 12 65, 8 76, 8 85" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+
+  <!-- Leaf 2 (Top Right) -->
+  <path d="M30 75 C 65 70, 115 90, 118 135 C 120 180, 75 185, 55 160 C 40 140, 35 100, 30 75 Z" stroke="#486350" stroke-width="1.3" fill="none" opacity="0.4"/>
+  <path d="M30 75 C 65 110, 88 145, 92 160" stroke="#486350" stroke-width="0.9" opacity="0.3"/>
+  <path d="M50 100 C 70 95, 95 105, 105 120" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+  <path d="M68 122 C 85 130, 98 142, 102 152" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+  <path d="M52 125 C 45 135, 42 148, 45 158" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+
+  <!-- Leaf 3 (Middle Left) -->
+  <path d="M55 165 C 30 175, 2 210, 5 255 C 8 295, 45 285, 55 255 C 62 230, 60 190, 55 165 Z" stroke="#486350" stroke-width="1.3" fill="none" opacity="0.4"/>
+  <path d="M55 165 C 35 205, 25 245, 25 265" stroke="#486350" stroke-width="0.9" opacity="0.3"/>
+  <path d="M44 195 C 30 202, 18 215, 12 230" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+  <path d="M35 225 C 24 235, 16 250, 15 260" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+  <path d="M42 225 C 48 238, 50 252, 48 265" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+
+  <!-- Leaf 4 (Lower Middle Right) -->
+  <path d="M62 205 C 95 210, 135 235, 130 280 C 125 320, 85 315, 65 285 C 55 265, 58 230, 62 205 Z" stroke="#486350" stroke-width="1.3" fill="none" opacity="0.4"/>
+  <path d="M62 205 C 88 240, 102 275, 105 292" stroke="#486350" stroke-width="0.9" opacity="0.3"/>
+  <path d="M78 230 C 95 235, 115 245, 120 260" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+  <path d="M88 255 C 102 265, 112 278, 114 288" stroke="#486350" stroke-width="0.7" opacity="0.25"/>
+
+  <!-- Small accent leaf at bottom -->
+  <path d="M45 295 C 30 305, 15 330, 18 355 C 22 375, 45 370, 50 350 C 52 335, 50 310, 45 295 Z" stroke="#486350" stroke-width="1.2" fill="none" opacity="0.35"/>
+  <path d="M45 295 C 35 325, 30 348, 32 360" stroke="#486350" stroke-width="0.8" opacity="0.25"/>
+</svg>
