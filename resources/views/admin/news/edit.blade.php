@@ -8,17 +8,6 @@
   <div class="card border-0 shadow-sm rounded-3">
     <div class="card-body p-4 p-md-5">
 
-      @if($errors->any())
-        <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
-          <ul class="mb-0 small">
-            @foreach($errors->all() as $error)
-              <li>{{ $error }}</li>
-            @endforeach
-          </ul>
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
-      @endif
-
       <form action="{{ route('admin.news.update', $news->id) }}" method="POST" enctype="multipart/form-data" id="newsForm">
         @csrf
         @method('PUT')
