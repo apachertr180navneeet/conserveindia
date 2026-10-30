@@ -10,8 +10,12 @@
             <p class="text-muted mb-0" style="font-size: 13px;">Subscribe for updates on our circular economy research, new upcycled collections, and artisan community stories.</p>
           </div>
           <div class="col-lg-6">
-            <form class="d-flex gap-2" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Conserve India newsletter!');">
-              <input type="email" class="form-control newsletter-input" placeholder="Enter your email address" required>
+            <form action="{{ route('inquiry.submit') }}" method="POST" class="d-flex gap-2">
+              @csrf
+              <input type="hidden" name="name" value="Newsletter Subscriber">
+              <input type="hidden" name="subject" value="Newsletter Subscription">
+              <input type="hidden" name="message" value="Please subscribe me to the Conserve India newsletter.">
+              <input type="email" name="email" class="form-control newsletter-input" placeholder="Enter your email address" required>
               <button type="submit" class="btn-primary-forest text-nowrap">Subscribe</button>
             </form>
           </div>
@@ -60,24 +64,37 @@
         <div class="col-lg-4" id="partner-footer">
           <h6 class="fw-bold mb-3" style="font-size: 13.5px; color: var(--primary-forest); text-transform: uppercase; letter-spacing: 1px;">Connect With Us</h6>
           <p class="text-muted mb-2" style="font-size: 13px;">
-            <i class="bi bi-geo-alt me-1 text-success"></i> Conserve HRP, New Delhi, India
+            <i class="bi bi-geo-alt me-1 text-success"></i> {{ $settings['contact_address'] ?? 'Conserve HRP, New Delhi, India' }}
           </p>
           <p class="text-muted mb-2" style="font-size: 13px;">
-            <i class="bi bi-envelope me-1 text-success"></i> info@conserveindia.org
+            <i class="bi bi-envelope me-1 text-success"></i> {{ $settings['contact_email'] ?? 'info@conserveindia.org' }}
           </p>
+          @if(!empty($settings['contact_phone']))
+            <p class="text-muted mb-2" style="font-size: 13px;">
+              <i class="bi bi-telephone me-1 text-success"></i> {{ $settings['contact_phone'] }}
+            </p>
+          @endif
           <div class="d-flex align-items-center gap-2 mb-3">
-            <a href="https://facebook.com" class="social-circle-link" aria-label="Facebook" target="_blank" rel="noopener">
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a href="https://instagram.com/conserveindia" class="social-circle-link" aria-label="Instagram" target="_blank" rel="noopener">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://linkedin.com" class="social-circle-link" aria-label="LinkedIn" target="_blank" rel="noopener">
-              <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="https://youtube.com" class="social-circle-link" aria-label="YouTube" target="_blank" rel="noopener">
-              <i class="bi bi-youtube"></i>
-            </a>
+            @if(!empty($settings['facebook_url']))
+              <a href="{{ $settings['facebook_url'] }}" class="social-circle-link" aria-label="Facebook" target="_blank" rel="noopener">
+                <i class="bi bi-facebook"></i>
+              </a>
+            @endif
+            @if(!empty($settings['instagram_url']))
+              <a href="{{ $settings['instagram_url'] }}" class="social-circle-link" aria-label="Instagram" target="_blank" rel="noopener">
+                <i class="bi bi-instagram"></i>
+              </a>
+            @endif
+            @if(!empty($settings['linkedin_url']))
+              <a href="{{ $settings['linkedin_url'] }}" class="social-circle-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            @endif
+            @if(!empty($settings['youtube_url']))
+              <a href="{{ $settings['youtube_url'] }}" class="social-circle-link" aria-label="YouTube" target="_blank" rel="noopener">
+                <i class="bi bi-youtube"></i>
+              </a>
+            @endif
           </div>
           <div>
             <a href="{{ url('/connect-with-us#partner') }}" class="btn-primary-forest text-nowrap">
@@ -90,7 +107,7 @@
       <!-- Copyright Bar -->
       <div class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-3 border-top border-light-subtle text-muted" style="font-size: 12.5px;">
         <div>
-          &copy; {{ date("Y") }} Conserve HRP | All Rights Reserved | Transforming Waste into Opportunity Since 1997
+          &copy; {{ date("Y") }} {{ $settings['site_title'] ?? 'Conserve HRP' }} | All Rights Reserved | Transforming Waste into Opportunity Since 1997
         </div>
         <div class="mt-2 mt-md-0">
           <a href="#" class="text-muted text-decoration-none me-3">Back to Top &uarr;</a>
@@ -99,4 +116,3 @@
       </div>
     </div>
   </footer>
-

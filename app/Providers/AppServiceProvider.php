@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Schema;
+use App\Models\Setting;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +22,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        try {
+            if (Schema::hasTable('settings')) {
+                $settings = Setting::all()->pluck('value', 'key');
+                View::share('settings', $settings);
+            }
+        } catch (\Exception $e) {
+            // Ignore during CLI migration steps
+        }
     }
 }

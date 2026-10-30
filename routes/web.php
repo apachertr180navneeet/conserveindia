@@ -1,115 +1,98 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\InitiativeController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\RegionController;
+use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\InquiryController;
 
-// Home
-Route::get('/', function () {
-    return view('website.home');
-})->name('home');
-Route::get('/index.php', function () {
-    return redirect()->route('home');
-});
+/*
+|--------------------------------------------------------------------------
+| Public Website Routes (Dynamic)
+|--------------------------------------------------------------------------
+*/
+Route::get('/', [WebsiteController::class, 'home'])->name('home');
+Route::get('/index.php', fn() => redirect()->route('home'));
 
-// About Us
-Route::get('/about-us', function () {
-    return view('website.about-us');
-})->name('about-us');
-Route::get('/about-us.php', function () {
-    return redirect()->route('about-us');
-});
+Route::get('/about-us', [WebsiteController::class, 'about'])->name('about-us');
+Route::get('/about-us.php', fn() => redirect()->route('about-us'));
 
-// Our Work
-Route::get('/our-work', function () {
-    return view('website.our-work');
-})->name('our-work');
-Route::get('/our-work.php', function () {
-    return redirect()->route('our-work');
-});
+Route::get('/our-work', [WebsiteController::class, 'ourWork'])->name('our-work');
+Route::get('/our-work.php', fn() => redirect()->route('our-work'));
 
-// Capacity Building
-Route::get('/capacity-building', function () {
-    return view('website.capacity-building');
-})->name('capacity-building');
-Route::get('/capacity-building.php', function () {
-    return redirect()->route('capacity-building');
-});
+Route::get('/capacity-building', [WebsiteController::class, 'capacityBuilding'])->name('capacity-building');
+Route::get('/capacity-building.php', fn() => redirect()->route('capacity-building'));
 
-// Sustainable Research & Development
-Route::get('/sustainable-research-development', function () {
-    return view('website.sustainable-research-development');
-})->name('sustainable-research-development');
-Route::get('/sustainable-research-development.php', function () {
-    return redirect()->route('sustainable-research-development');
-});
+Route::get('/sustainable-research-development', [WebsiteController::class, 'sustainableResearch'])->name('sustainable-research-development');
+Route::get('/sustainable-research-development.php', fn() => redirect()->route('sustainable-research-development'));
 
-// Advocacy and Lobbying
-Route::get('/advocacy-and-lobbying', function () {
-    return view('website.advocacy-and-lobbying');
-})->name('advocacy-and-lobbying');
-Route::get('/advocacy-and-lobbying.php', function () {
-    return redirect()->route('advocacy-and-lobbying');
-});
+Route::get('/advocacy-and-lobbying', [WebsiteController::class, 'advocacy'])->name('advocacy-and-lobbying');
+Route::get('/advocacy-and-lobbying.php', fn() => redirect()->route('advocacy-and-lobbying'));
 
-// Sustainable Trade
-Route::get('/sustainable-trade', function () {
-    return view('website.sustainable-trade');
-})->name('sustainable-trade');
-Route::get('/sustainable-trade.php', function () {
-    return redirect()->route('sustainable-trade');
-});
+Route::get('/sustainable-trade', [WebsiteController::class, 'sustainableTrade'])->name('sustainable-trade');
+Route::get('/sustainable-trade.php', fn() => redirect()->route('sustainable-trade'));
 
-// COVID Relief Project Sahyog
-Route::get('/covid-relief-project-sahyog', function () {
-    return view('website.covid-relief-project-sahyog');
-})->name('covid-relief-project-sahyog');
-Route::get('/covid-relief-project-sahyog.php', function () {
-    return redirect()->route('covid-relief-project-sahyog');
-});
+Route::get('/covid-relief-project-sahyog', [WebsiteController::class, 'covidRelief'])->name('covid-relief-project-sahyog');
+Route::get('/covid-relief-project-sahyog.php', fn() => redirect()->route('covid-relief-project-sahyog'));
 
-// Services
-Route::get('/services', function () {
-    return view('website.services');
-})->name('services');
-Route::get('/services.php', function () {
-    return redirect()->route('services');
-});
+Route::get('/services', [WebsiteController::class, 'services'])->name('services');
+Route::get('/services.php', fn() => redirect()->route('services'));
 
-// Latest Updates
-Route::get('/latest-updates', function () {
-    return view('website.latest-updates');
-})->name('latest-updates');
-Route::get('/latest-updates.php', function () {
-    return redirect()->route('latest-updates');
-});
+Route::get('/latest-updates', [WebsiteController::class, 'latestUpdates'])->name('latest-updates');
+Route::get('/latest-updates.php', fn() => redirect()->route('latest-updates'));
 
-// Gallery
-Route::get('/gallery', function () {
-    return view('website.gallery');
-})->name('gallery');
-Route::get('/gallery.php', function () {
-    return redirect()->route('gallery');
-});
+Route::get('/gallery', [WebsiteController::class, 'gallery'])->name('gallery');
+Route::get('/gallery.php', fn() => redirect()->route('gallery'));
 
-// Green Stories
-Route::get('/green-stories', function () {
-    return view('website.green-stories');
-})->name('green-stories');
-Route::get('/green-stories.php', function () {
-    return redirect()->route('green-stories');
-});
+Route::get('/green-stories', [WebsiteController::class, 'greenStories'])->name('green-stories');
+Route::get('/green-stories.php', fn() => redirect()->route('green-stories'));
 
-// Connect With Us
-Route::get('/connect-with-us', function () {
-    return view('website.connect-with-us');
-})->name('connect-with-us');
-Route::get('/connect-with-us.php', function () {
-    return redirect()->route('connect-with-us');
-});
+Route::get('/connect-with-us', [WebsiteController::class, 'connectWithUs'])->name('connect-with-us');
+Route::get('/connect-with-us.php', fn() => redirect()->route('connect-with-us'));
 
-// Contact Us
-Route::get('/contact-us', function () {
-    return view('website.contact-us');
-})->name('contact-us');
-Route::get('/contact-us.php', function () {
-    return redirect()->route('contact-us');
+Route::get('/contact-us', [WebsiteController::class, 'contactUs'])->name('contact-us');
+Route::get('/contact-us.php', fn() => redirect()->route('contact-us'));
+
+Route::post('/inquiry', [WebsiteController::class, 'submitInquiry'])->name('inquiry.submit');
+
+/*
+|--------------------------------------------------------------------------
+| Admin Portal Routes
+|--------------------------------------------------------------------------
+*/
+Route::prefix('admin')->name('admin.')->group(function () {
+    // Guest Admin Auth
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    // Protected Admin Routes
+    Route::middleware('auth')->group(function () {
+        Route::get('/', [DashboardController::class, 'index']);
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+        // Site Settings
+        Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
+        Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
+
+        // CMS Resources
+        Route::resource('sliders', SliderController::class)->except(['show']);
+        Route::resource('initiatives', InitiativeController::class)->except(['show']);
+        Route::resource('services', ServiceController::class)->except(['show']);
+        Route::resource('regions', RegionController::class)->except(['show']);
+        Route::resource('testimonials', TestimonialController::class)->except(['show']);
+        Route::resource('news', NewsController::class)->except(['show']);
+
+        // Inquiries Management
+        Route::get('/inquiries', [InquiryController::class, 'index'])->name('inquiries.index');
+        Route::get('/inquiries/{inquiry}', [InquiryController::class, 'show'])->name('inquiries.show');
+        Route::delete('/inquiries/{inquiry}', [InquiryController::class, 'destroy'])->name('inquiries.destroy');
+    });
 });
