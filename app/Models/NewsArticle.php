@@ -15,6 +15,9 @@ class NewsArticle extends Model
         'image',
         'published_date',
         'is_active',
+        'meta_title',
+        'meta_keywords',
+        'meta_description',
     ];
 
     protected $casts = [

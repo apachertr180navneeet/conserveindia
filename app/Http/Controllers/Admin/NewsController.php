@@ -24,14 +24,25 @@ class NewsController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
+            'slug' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
             'summary' => 'nullable|string',
             'content' => 'nullable|string',
+            'meta_title' => 'nullable|string|max:255',
+            'meta_keywords' => 'nullable|string',
+            'meta_description' => 'nullable|string',
             'published_date' => 'nullable|date',
             'image' => 'nullable|image|max:5120',
         ]);
 
-        $validated['slug'] = Str::slug($validated['title']) . '-' . rand(100, 999);
+        $baseSlug = !empty($validated['slug']) ? Str::slug($validated['slug']) : Str::slug($validated['title']);
+        $slug = $baseSlug;
+        $counter = 1;
+        while (NewsArticle::where('slug', $slug)->exists()) {
+            $slug = $baseSlug . '-' . $counter;
+            $counter++;
+        }
+        $validated['slug'] = $slug;
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -40,7 +51,7 @@ class NewsController extends Controller
             $validated['image'] = 'assets/images/' . $filename;
         }
 
-        $validated['is_active'] = $request->has('is_active');
+        $validated['is_active'] = $request->has('is_active') ? (bool)$request->is_active : true;
         if (empty($validated['published_date'])) {
             $validated['published_date'] = now();
         }
@@ -59,12 +70,29 @@ class NewsController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
+            'slug' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
             'summary' => 'nullable|string',
             'content' => 'nullable|string',
+            'meta_title' => 'nullable|string|max:255',
+            'meta_keywords' => 'nullable|string',
+            'meta_description' => 'nullable|string',
             'published_date' => 'nullable|date',
             'image' => 'nullable|image|max:5120',
         ]);
+
+        $baseSlug = !empty($validated['slug']) ? Str::slug($validated['slug']) : Str::slug($validated['title']);
+        $slug = $baseSlug;
+        $counter = 1;
+        while (NewsArticle::where('slug', $slug)->where('id', '!=', $news->id)->exists()) {
+            $slug = $baseSlug . '-' . $counter;
+            $counter++;
+        }
+        $validated['slug'] = $slug;
+
+        if ($request->boolean('remove_image')) {
+            $validated['image'] = null;
+        }
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -73,7 +101,7 @@ class NewsController extends Controller
             $validated['image'] = 'assets/images/' . $filename;
         }
 
-        $validated['is_active'] = $request->has('is_active');
+        $validated['is_active'] = $request->has('is_active') ? (bool)$request->is_active : true;
 
         $news->update($validated);
 

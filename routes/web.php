@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\RegionController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\InquiryController;
+use App\Http\Controllers\Admin\SeoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,6 +63,8 @@ Route::get('/contact-us.php', fn() => redirect()->route('contact-us'));
 
 Route::post('/inquiry', [WebsiteController::class, 'submitInquiry'])->name('inquiry.submit');
 
+Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');
+
 /*
 |--------------------------------------------------------------------------
 | Admin Portal Routes
@@ -81,6 +84,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Site Settings
         Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
         Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
+
+        // Dynamic SEO Management
+        Route::get('/seo', [SeoController::class, 'index'])->name('seo.index');
+        Route::get('/seo/{seo}/edit', [SeoController::class, 'edit'])->name('seo.edit');
+        Route::put('/seo/{seo}', [SeoController::class, 'update'])->name('seo.update');
 
         // CMS Resources
         Route::resource('sliders', SliderController::class)->except(['show']);

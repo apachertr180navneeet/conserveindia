@@ -79,6 +79,13 @@
     <div class="admin-nav-section-title">System & Settings</div>
 
     <div class="admin-nav-item">
+      <a href="{{ route('admin.seo.index') }}" class="admin-nav-link {{ request()->routeIs('admin.seo.*') ? 'active' : '' }}">
+        <i class="bi bi-search"></i>
+        <span>SEO Management</span>
+      </a>
+    </div>
+
+    <div class="admin-nav-item">
       <a href="{{ route('admin.settings.index') }}" class="admin-nav-link {{ request()->routeIs('admin.settings.*') ? 'active' : '' }}">
         <i class="bi bi-gear-fill"></i>
         <span>Site Settings</span>

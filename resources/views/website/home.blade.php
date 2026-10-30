@@ -302,9 +302,16 @@
 
       <!-- Featured Geographic Footprint Map Graphic -->
       <div class="row justify-content-center mb-5">
-        <div class="col-lg-9 col-xl-8 text-center">
-          <div class="p-3 p-md-4 bg-white shadow-sm" style="border: 1px solid var(--border-light); border-radius: 16px;">
-            <img src="{{ asset('website/' . ($settings['footprint_map_image'] ?? 'assets/images/india-map-footprint.jpg')) }}" alt="Conserve India Geographic Footprint Map" class="img-fluid rounded" style="max-height: 520px; width: auto; object-fit: contain;">
+        <div class="col-lg-10 col-xl-9 text-center">
+          <div class="p-3 p-md-4 bg-white shadow-sm" style="border: 1px solid var(--border-light); border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+            <img src="{{ asset('website/' . ($settings['footprint_map_image'] ?? 'assets/images/india-map-footprint.jpg')) }}" alt="Conserve India Geographic Footprint & Field Locations" class="img-fluid rounded" style="max-height: 540px; width: auto; object-fit: contain;">
+            <div class="mt-3 pt-3 border-top border-light-subtle text-muted small d-flex align-items-center justify-content-center gap-3 flex-wrap">
+              <span><i class="bi bi-geo-alt-fill text-success me-1"></i> Grassroots Training & Collection Hubs</span>
+              <span class="text-secondary">&bull;</span>
+              <span><i class="bi bi-shield-check text-success me-1"></i> Fair Trade Innovation Centers</span>
+              <span class="text-secondary">&bull;</span>
+              <span><i class="bi bi-globe2 text-success me-1"></i> Global Export Outlets</span>
+            </div>
           </div>
         </div>
       </div>
