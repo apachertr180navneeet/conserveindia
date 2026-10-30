@@ -455,13 +455,22 @@ require_once __DIR__ . '/includes/header.php';
         </p>
       </div>
 
+      <!-- Featured Geographic Footprint Map Graphic -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-9 col-xl-8 text-center">
+          <div class="p-3 p-md-4 bg-white shadow-sm" style="border: 1px solid var(--border-light); border-radius: 16px;">
+            <img src="assets/images/india-map-footprint.jpg" alt="Conserve India Geographic Footprint Map" class="img-fluid rounded" style="max-height: 520px; width: auto; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+
       <!-- Regional Detail Cards -->
       <div class="row g-4">
         <!-- Region 1: Delhi-NCR -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div class="ed-work-card h-100 p-4 bg-white d-flex flex-column" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
             <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
+              <div class="d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-geo-alt-fill"></i>
               </div>
               <div>
@@ -469,10 +478,10 @@ require_once __DIR__ . '/includes/header.php';
                 <span class="text-muted small">Central Innovation Hub</span>
               </div>
             </div>
-            <p class="text-secondary small mb-3" style="line-height: 1.6;">
+            <p class="text-secondary small mb-3 flex-grow-1" style="line-height: 1.6;">
               Flagship HRP material innovation atelier, Highbrow Crafts initiative, and Afghan refugee women training center (Akseer) in collaboration with UNHCR.
             </p>
-            <div class="pt-2 border-top border-light-subtle">
+            <div class="pt-2 border-top border-light-subtle mt-auto">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">3,000+ Waste Collectors</span>
             </div>
           </div>
@@ -480,9 +489,9 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- Region 2: Ghaziabad & Noida -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div class="ed-work-card h-100 p-4 bg-white d-flex flex-column" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
             <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
+              <div class="d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-buildings-fill"></i>
               </div>
               <div>
@@ -490,10 +499,10 @@ require_once __DIR__ . '/includes/header.php';
                 <span class="text-muted small">Upcycling &amp; Relief Hub</span>
               </div>
             </div>
-            <p class="text-secondary small mb-3" style="line-height: 1.6;">
+            <p class="text-secondary small mb-3 flex-grow-1" style="line-height: 1.6;">
               Roosh Upcycle Project, Wastepreneurs training hub, material washing &amp; compression facilities, and emergency kitchens during Project Sahyog.
             </p>
-            <div class="pt-2 border-top border-light-subtle">
+            <div class="pt-2 border-top border-light-subtle mt-auto">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">Wastepreneurs Hub</span>
             </div>
           </div>
@@ -501,9 +510,9 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- Region 3: Haryana & Grassroots Clusters -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div class="ed-work-card h-100 p-4 bg-white d-flex flex-column" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
             <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
+              <div class="d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-people-fill"></i>
               </div>
               <div>
@@ -511,10 +520,10 @@ require_once __DIR__ . '/includes/header.php';
                 <span class="text-muted small">Faridabad &amp; Gurugram</span>
               </div>
             </div>
-            <p class="text-secondary small mb-3" style="line-height: 1.6;">
+            <p class="text-secondary small mb-3 flex-grow-1" style="line-height: 1.6;">
               Footprints Project empowering grassroots waste pickers, health checkups, sanitation workshops, and financial literacy training for women recyclers.
             </p>
-            <div class="pt-2 border-top border-light-subtle">
+            <div class="pt-2 border-top border-light-subtle mt-auto">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">100+ Women Recyclers</span>
             </div>
           </div>
@@ -522,9 +531,9 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- Region 4: Global Distribution -->
         <div class="col-md-6 col-lg-3">
-          <div class="ed-work-card h-100 p-4 bg-white" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+          <div class="ed-work-card h-100 p-4 bg-white d-flex flex-column" style="border: 1px solid var(--border-light); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease;">
             <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="d-inline-flex align-items-center justify-content-center" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
+              <div class="d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
                 <i class="bi bi-globe2"></i>
               </div>
               <div>
@@ -532,10 +541,10 @@ require_once __DIR__ . '/includes/header.php';
                 <span class="text-muted small">USA, UK &amp; Europe</span>
               </div>
             </div>
-            <p class="text-secondary small mb-3" style="line-height: 1.6;">
+            <p class="text-secondary small mb-3 flex-grow-1" style="line-height: 1.6;">
               Certified Fair Trade upcycled fashion exported to Whole Foods Market nationwide in the USA and over 1,000 independent eco-design retail boutiques.
             </p>
-            <div class="pt-2 border-top border-light-subtle">
+            <div class="pt-2 border-top border-light-subtle mt-auto">
               <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">1,000+ Retail Outlets</span>
             </div>
           </div>
