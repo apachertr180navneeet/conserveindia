@@ -8,7 +8,6 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\InitiativeController;
 use App\Http\Controllers\Admin\ServiceController;
-use App\Http\Controllers\Admin\RegionController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\InquiryController;
@@ -94,7 +93,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('sliders', SliderController::class)->except(['show']);
         Route::resource('initiatives', InitiativeController::class)->except(['show']);
         Route::resource('services', ServiceController::class)->except(['show']);
-        Route::resource('regions', RegionController::class)->except(['show']);
         Route::resource('testimonials', TestimonialController::class)->except(['show']);
         Route::resource('news', NewsController::class)->except(['show']);
 

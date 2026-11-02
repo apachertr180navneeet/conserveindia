@@ -53,21 +53,6 @@
             </div>
           </div>
 
-          <h6 class="fw-bold pb-2 border-bottom mb-3" style="color: var(--admin-forest);">Where We Have Worked: Map Graphic</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-6">
-              <label class="form-label small fw-semibold">Upload New Map Graphic</label>
-              <input type="file" name="footprint_map_image" class="form-control" accept="image/*">
-              <small class="text-muted">Upload an infographic map image for the "Where We Have Worked" homepage section.</small>
-            </div>
-            <div class="col-md-6 text-center">
-              <label class="form-label small fw-semibold d-block text-start">Current Active Map</label>
-              <div class="p-2 border rounded bg-light d-inline-block">
-                <img src="{{ asset('website/' . ($settings['footprint_map_image'] ?? 'assets/images/india-map-footprint.jpg')) }}" alt="Current Map" style="max-height: 140px; max-width: 100%; object-fit: contain;">
-              </div>
-            </div>
-          </div>
-
           <div class="text-end border-top pt-3">
             <button type="submit" class="btn btn-admin-forest px-4">
               <i class="bi bi-save me-1"></i> Save Settings

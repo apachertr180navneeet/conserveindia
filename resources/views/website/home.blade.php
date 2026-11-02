@@ -287,73 +287,7 @@
   </section>
 
   <!-- ========================================================
-       SECTION 6: GEOGRAPHICAL FOOTPRINT / WHERE WE HAVE WORKED
-       Interactive Leaflet map displaying verified project locations
-       ======================================================== -->
-  <section class="ed-content-section" id="where-we-work" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-    <div class="container px-lg-4">
-      <div class="text-center mb-5">
-        <span class="ed-section-tag">GEOGRAPHIC FOOTPRINT</span>
-        <h2 class="ed-section-title">Where We Have Worked</h2>
-        <p class="ed-section-desc mx-auto">
-          Over 25 years of grassroots field programs in urban informal settlements across Northern India, expanding to sustainable trade partnerships across 4 continents.
-        </p>
-      </div>
-
-      <!-- Featured Geographic Footprint Map Graphic -->
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-10 col-xl-9 text-center">
-          <div class="p-3 p-md-4 bg-white shadow-sm" style="border: 1px solid var(--border-light); border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
-            <img src="{{ asset('website/' . ($settings['footprint_map_image'] ?? 'assets/images/india-map-footprint.jpg')) }}" alt="Conserve India Geographic Footprint & Field Locations" class="img-fluid rounded" style="max-height: 540px; width: auto; object-fit: contain;">
-            <div class="mt-3 pt-3 border-top border-light-subtle text-muted small d-flex align-items-center justify-content-center gap-3 flex-wrap">
-              <span><i class="bi bi-geo-alt-fill text-success me-1"></i> Grassroots Training & Collection Hubs</span>
-              <span class="text-secondary">&bull;</span>
-              <span><i class="bi bi-shield-check text-success me-1"></i> Fair Trade Innovation Centers</span>
-              <span class="text-secondary">&bull;</span>
-              <span><i class="bi bi-globe2 text-success me-1"></i> Global Export Outlets</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Regional Detail Cards -->
-      <div class="row g-4">
-        @foreach($regions as $item)
-          <div class="col-md-6 col-lg-3">
-            <div class="ed-work-card h-100 bg-white d-flex flex-column" style="border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease;">
-              @if($item->image)
-                <div class="ed-work-img-box" style="aspect-ratio: 16 / 10; overflow: hidden; background-color: #f0eee8;">
-                  <img src="{{ asset('website/' . $item->image) }}" alt="{{ $item->name }}" class="ed-work-img" loading="lazy">
-                </div>
-              @endif
-              <div class="p-4 d-flex flex-column flex-grow-1">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="d-inline-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px; border-radius: 10px; background: rgba(28, 59, 45, 0.08); color: var(--primary-forest); font-size: 20px;">
-                    <i class="bi {{ $item->icon ?? 'bi-geo-alt-fill' }}"></i>
-                  </div>
-                  <div>
-                    <h3 class="h5 fw-bold mb-0" style="color: var(--primary-forest);">{{ $item->name }}</h3>
-                    <span class="text-muted small">{{ $item->subtitle }}</span>
-                  </div>
-                </div>
-                <p class="text-secondary small mb-3 flex-grow-1" style="line-height: 1.6;">
-                  {{ $item->description }}
-                </p>
-                @if($item->badge)
-                  <div class="pt-2 border-top border-light-subtle mt-auto">
-                    <span class="badge bg-light text-success border border-success-subtle px-2 py-1 small">{{ $item->badge }}</span>
-                  </div>
-                @endif
-              </div>
-            </div>
-          </div>
-        @endforeach
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================
-       SECTION 7: TESTIMONIALS
+       SECTION 6: TESTIMONIALS
        Reference: Acumen (acumen.co.in)
        Integrated with partner & organization logos
        ======================================================== -->
@@ -393,7 +327,7 @@
   </section>
 
   <!-- ========================================================
-       SECTION 8: CONTACT SECTION (REPLACES THE LAST INSTAGRAM SECTION)
+       SECTION 7: CONTACT SECTION (REPLACES THE LAST INSTAGRAM SECTION)
        Divided into two responsive columns:
        - Left column: Social media icons and official profile links
        - Right column: Interactive contact and enquiry form

@@ -41,13 +41,6 @@
     </div>
 
     <div class="admin-nav-item">
-      <a href="{{ route('admin.regions.index') }}" class="admin-nav-link {{ request()->routeIs('admin.regions.*') ? 'active' : '' }}">
-        <i class="bi bi-geo-alt-fill"></i>
-        <span>Where We Worked</span>
-      </a>
-    </div>
-
-    <div class="admin-nav-item">
       <a href="{{ route('admin.testimonials.index') }}" class="admin-nav-link {{ request()->routeIs('admin.testimonials.*') ? 'active' : '' }}">
         <i class="bi bi-quote"></i>
         <span>Testimonials</span>

@@ -6,7 +6,7 @@
 @section('content')
 <div class="row g-3 mb-4">
   <!-- Stat 1: Sliders -->
-  <div class="col-sm-6 col-xl-3">
+  <div class="col-sm-6 col-lg-4">
     <div class="admin-card p-3 h-100">
       <div class="d-flex align-items-center justify-content-between mb-2">
         <span class="text-muted small fw-semibold">Hero Sliders</span>
@@ -20,7 +20,7 @@
   </div>
 
   <!-- Stat 2: Initiatives -->
-  <div class="col-sm-6 col-xl-3">
+  <div class="col-sm-6 col-lg-4">
     <div class="admin-card p-3 h-100">
       <div class="d-flex align-items-center justify-content-between mb-2">
         <span class="text-muted small fw-semibold">Initiatives (Our Work)</span>
@@ -33,22 +33,8 @@
     </div>
   </div>
 
-  <!-- Stat 3: Regions -->
-  <div class="col-sm-6 col-xl-3">
-    <div class="admin-card p-3 h-100">
-      <div class="d-flex align-items-center justify-content-between mb-2">
-        <span class="text-muted small fw-semibold">Where We Worked</span>
-        <div class="bg-warning bg-opacity-10 text-warning p-2 rounded">
-          <i class="bi bi-geo-alt-fill fs-5"></i>
-        </div>
-      </div>
-      <h3 class="fw-bold mb-1">{{ $stats['regions'] }}</h3>
-      <a href="{{ route('admin.regions.index') }}" class="text-decoration-none small text-warning fw-semibold">Manage Regions &rarr;</a>
-    </div>
-  </div>
-
-  <!-- Stat 4: Inquiries -->
-  <div class="col-sm-6 col-xl-3">
+  <!-- Stat 3: Inquiries -->
+  <div class="col-sm-6 col-lg-4">
     <div class="admin-card p-3 h-100">
       <div class="d-flex align-items-center justify-content-between mb-2">
         <span class="text-muted small fw-semibold">Contact Inquiries</span>
@@ -134,10 +120,6 @@
         </a>
         <a href="{{ route('admin.initiatives.create') }}" class="btn btn-light border text-start d-flex align-items-center justify-content-between p-2">
           <span><i class="bi bi-plus-circle text-success me-2"></i> Add Flagship Initiative</span>
-          <i class="bi bi-chevron-right text-muted small"></i>
-        </a>
-        <a href="{{ route('admin.regions.create') }}" class="btn btn-light border text-start d-flex align-items-center justify-content-between p-2">
-          <span><i class="bi bi-plus-circle text-success me-2"></i> Add Regional Location</span>
           <i class="bi bi-chevron-right text-muted small"></i>
         </a>
         <a href="{{ route('admin.testimonials.create') }}" class="btn btn-light border text-start d-flex align-items-center justify-content-between p-2">

@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Slider;
 use App\Models\Initiative;
 use App\Models\Service;
-use App\Models\Region;
 use App\Models\Testimonial;
 use App\Models\NewsArticle;
 use App\Models\Inquiry;
@@ -19,7 +18,6 @@ class DashboardController extends Controller
             'sliders' => Slider::count(),
             'initiatives' => Initiative::count(),
             'services' => Service::count(),
-            'regions' => Region::count(),
             'testimonials' => Testimonial::count(),
             'news' => NewsArticle::count(),
             'inquiries' => Inquiry::count(),

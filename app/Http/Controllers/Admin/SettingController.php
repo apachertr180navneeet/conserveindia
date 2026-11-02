@@ -31,14 +31,6 @@ class SettingController extends Controller
             Setting::set($key, $request->input($key, ''));
         }
 
-        // Handle Footprint Map Image Upload
-        if ($request->hasFile('footprint_map_image')) {
-            $file = $request->file('footprint_map_image');
-            $filename = 'map_' . time() . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('website/assets/images'), $filename);
-            Setting::set('footprint_map_image', 'assets/images/' . $filename);
-        }
-
         return redirect()->back()->with('success', 'Site settings updated successfully!');
     }
 }

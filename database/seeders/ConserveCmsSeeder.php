@@ -9,7 +9,6 @@ use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Initiative;
 use App\Models\Service;
-use App\Models\Region;
 use App\Models\Testimonial;
 use App\Models\NewsArticle;
 
@@ -33,7 +32,6 @@ class ConserveCmsSeeder extends Seeder
             'contact_email' => 'info@conserveindia.org',
             'contact_phone' => '+91 98100 12345',
             'contact_address' => 'Conserve HRP, New Delhi, India',
-            'footprint_map_image' => 'assets/images/india-map-footprint.jpg',
             'facebook_url' => 'https://facebook.com',
             'instagram_url' => 'https://instagram.com/conserveindia',
             'linkedin_url' => 'https://linkedin.com',
@@ -160,50 +158,7 @@ class ConserveCmsSeeder extends Seeder
             'is_active' => true,
         ]);
 
-        // 6. Regional Footprint
-        Region::truncate();
-        Region::create([
-            'name' => 'Delhi-NCR',
-            'subtitle' => 'Central Innovation Hub',
-            'description' => 'Flagship HRP material innovation atelier, Highbrow Crafts initiative, and Afghan refugee women training center (Akseer) in collaboration with UNHCR.',
-            'badge' => '3,000+ Waste Collectors',
-            'icon' => 'bi-geo-alt-fill',
-            'image' => 'assets/images/regions/delhi-ncr.jpg',
-            'order' => 1,
-            'is_active' => true,
-        ]);
-        Region::create([
-            'name' => 'Ghaziabad & Noida',
-            'subtitle' => 'Upcycling & Relief Hub',
-            'description' => 'Roosh Upcycle Project, Wastepreneurs training hub, material washing & compression facilities, and emergency kitchens during Project Sahyog.',
-            'badge' => 'Wastepreneurs Hub',
-            'icon' => 'bi-buildings-fill',
-            'image' => 'assets/images/regions/ghaziabad-noida.jpg',
-            'order' => 2,
-            'is_active' => true,
-        ]);
-        Region::create([
-            'name' => 'Haryana Clusters',
-            'subtitle' => 'Faridabad & Gurugram',
-            'description' => 'Footprints Project empowering grassroots waste pickers, health checkups, sanitation workshops, and financial literacy training for women recyclers.',
-            'badge' => '100+ Women Recyclers',
-            'icon' => 'bi-people-fill',
-            'image' => 'assets/images/regions/haryana-clusters.jpg',
-            'order' => 3,
-            'is_active' => true,
-        ]);
-        Region::create([
-            'name' => 'Global Reach',
-            'subtitle' => 'USA, UK & Europe',
-            'description' => 'Certified Fair Trade upcycled fashion exported to Whole Foods Market nationwide in the USA and over 1,000 independent eco-design retail boutiques.',
-            'badge' => '1,000+ Retail Outlets',
-            'icon' => 'bi-globe2',
-            'image' => 'assets/images/regions/global-reach.jpg',
-            'order' => 4,
-            'is_active' => true,
-        ]);
-
-        // 7. Testimonials
+        // 6. Testimonials
         Testimonial::truncate();
         Testimonial::create([
             'author' => 'Whole Foods Market Buyer',

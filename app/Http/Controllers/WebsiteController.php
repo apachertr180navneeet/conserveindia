@@ -7,7 +7,6 @@ use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Initiative;
 use App\Models\Service;
-use App\Models\Region;
 use App\Models\Testimonial;
 use App\Models\NewsArticle;
 use App\Models\Inquiry;
@@ -25,11 +24,10 @@ class WebsiteController extends Controller
         $sliders = Slider::where('is_active', true)->orderBy('order')->get();
         $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
         $services = Service::where('is_active', true)->orderBy('order')->get();
-        $regions = Region::where('is_active', true)->orderBy('order')->get();
         $testimonials = Testimonial::where('is_active', true)->orderBy('order')->get();
         $newsArticles = NewsArticle::where('is_active', true)->latest()->take(3)->get();
 
-        return view('website.home', compact('settings', 'sliders', 'initiatives', 'services', 'regions', 'testimonials', 'newsArticles'));
+        return view('website.home', compact('settings', 'sliders', 'initiatives', 'services', 'testimonials', 'newsArticles'));
     }
 
     public function about()
