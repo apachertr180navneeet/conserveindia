@@ -16,15 +16,16 @@ class InitiativeController extends Controller
 
     public function create()
     {
-        return view('admin.initiatives.create');
+        $categories = Initiative::categories();
+        return view('admin.initiatives.create', compact('categories'));
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'meta' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
+            'meta' => 'nullable|string|max:255',
             'short_description' => 'nullable|string',
             'content' => 'nullable|string',
             'link' => 'nullable|string|max:255',
@@ -40,7 +41,8 @@ class InitiativeController extends Controller
         }
 
         $validated['is_active'] = $request->has('is_active');
-        $validated['order'] = $request->input('order', 0);
+        $validated['order'] = (int) $request->input('order', 0);
+        $validated['category'] = strtolower(trim($request->input('category') ?: 'community'));
 
         Initiative::create($validated);
 
@@ -49,15 +51,16 @@ class InitiativeController extends Controller
 
     public function edit(Initiative $initiative)
     {
-        return view('admin.initiatives.edit', compact('initiative'));
+        $categories = Initiative::categories();
+        return view('admin.initiatives.edit', compact('initiative', 'categories'));
     }
 
     public function update(Request $request, Initiative $initiative)
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'meta' => 'nullable|string|max:255',
             'category' => 'nullable|string|max:255',
+            'meta' => 'nullable|string|max:255',
             'short_description' => 'nullable|string',
             'content' => 'nullable|string',
             'link' => 'nullable|string|max:255',
@@ -73,7 +76,8 @@ class InitiativeController extends Controller
         }
 
         $validated['is_active'] = $request->has('is_active');
-        $validated['order'] = $request->input('order', 0);
+        $validated['order'] = (int) $request->input('order', 0);
+        $validated['category'] = strtolower(trim($request->input('category') ?: 'community'));
 
         $initiative->update($validated);
 
@@ -86,4 +90,3 @@ class InitiativeController extends Controller
         return redirect()->route('admin.initiatives.index')->with('success', 'Initiative deleted successfully!');
     }
 }
-

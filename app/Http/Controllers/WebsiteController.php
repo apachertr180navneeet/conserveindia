@@ -71,7 +71,7 @@ class WebsiteController extends Controller
         $seo = $this->getSeo('home');
         $page = $this->getPage('home', 'Turning Waste Plastic into Dignified Livelihoods', 'CIRCULAR ECONOMY IN ACTION');
         $sliders = Slider::where('is_active', true)->orderBy('order')->get();
-        $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
+        $initiatives = Initiative::where('is_active', true)->orderBy('order')->take(4)->get();
         $services = Service::where('is_active', true)->orderBy('order')->get();
         $testimonials = Testimonial::where('is_active', true)->orderBy('order')->get();
         $newsArticles = NewsArticle::where('is_active', true)->latest()->take(3)->get();
@@ -170,8 +170,15 @@ class WebsiteController extends Controller
         $settings = $this->getSettings();
         $seo = $this->getSeo('gallery');
         $page = $this->getPage('gallery', 'Gallery of Milestones & Grassroots Action', 'PROJECT REPOSITORY', 'A visual showcase of the foundational initiatives shaping our journey—from patented material discoveries to cooperative waste collectors associations and refugee ateliers.');
-        $projects = $this->getGalleryProjects();
-        $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
+        
+        $dbInitiatives = Initiative::where('is_active', true)->orderBy('order')->get();
+        if ($dbInitiatives->isNotEmpty()) {
+            $projects = $dbInitiatives;
+        } else {
+            $projects = collect($this->getGalleryProjects());
+        }
+
+        $initiatives = $projects;
         return view('website.gallery', compact('settings', 'seo', 'page', 'projects', 'initiatives'));
     }
 

@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             ConserveCmsSeeder::class,
+            InitiativeSeeder::class,
             PageSeoSeeder::class,
             PageSeeder::class,
         ]);

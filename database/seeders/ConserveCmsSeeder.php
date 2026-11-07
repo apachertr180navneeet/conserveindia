@@ -85,44 +85,8 @@ class ConserveCmsSeeder extends Seeder
             'is_active' => true,
         ]);
 
-        // 4. Initiatives
-        Initiative::truncate();
-        Initiative::create([
-            'title' => 'Patented HRP Material Innovation',
-            'meta' => 'New Delhi · Patented HRP',
-            'short_description' => 'Converting post-consumer plastic bags and vinyl scrap into durable, leather-like materials without chemical dyes.',
-            'image' => 'assets/images/upcycling-innovation.jpg',
-            'link' => 'sustainable-research-development',
-            'order' => 1,
-            'is_active' => true,
-        ]);
-        Initiative::create([
-            'title' => 'Artisan Capacity & Refugee Livelihoods',
-            'meta' => 'UNHCR Partner · 25+ Artisans',
-            'short_description' => 'Training Delhi\'s informal recyclers and Afghani refugee women in stitching, Fair Trade standards, and micro-enterprises.',
-            'image' => 'assets/images/artisan-livelihoods.jpg',
-            'link' => 'capacity-building',
-            'order' => 2,
-            'is_active' => true,
-        ]);
-        Initiative::create([
-            'title' => 'Project Sahyog Community Relief',
-            'meta' => 'National Relief · Top 50 India',
-            'short_description' => 'Mobilized emergency community kitchens, nutrition, and sanitary kits for vulnerable migrant waste-picking families.',
-            'image' => 'assets/images/circular-communities.jpg',
-            'link' => 'covid-relief-project-sahyog',
-            'order' => 3,
-            'is_active' => true,
-        ]);
-        Initiative::create([
-            'title' => 'Sustainable Trade & EPR Advocacy',
-            'meta' => 'Global B2B · 1,000+ Retailers',
-            'short_description' => 'Advocating Extended Producer Responsibility (EPR) while supplying certified Fair Trade goods to international partners.',
-            'image' => 'assets/images/belief-sapling.jpg',
-            'link' => 'sustainable-trade',
-            'order' => 4,
-            'is_active' => true,
-        ]);
+        // 4. Initiatives (Seed 17 Dynamic Gallery Initiatives)
+        $this->call(InitiativeSeeder::class);
 
         // 5. Services
         Service::truncate();

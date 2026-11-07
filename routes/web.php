@@ -220,6 +220,7 @@ Route::get('/run-seeder', function () {
         
         $allowedMap = [
             'DatabaseSeeder'    => \Database\Seeders\DatabaseSeeder::class,
+            'InitiativeSeeder'  => \Database\Seeders\InitiativeSeeder::class,
             'PageSeeder'        => \Database\Seeders\PageSeeder::class,
             'PageSeoSeeder'     => \Database\Seeders\PageSeoSeeder::class,
             'ConserveCmsSeeder' => \Database\Seeders\ConserveCmsSeeder::class,
@@ -280,6 +281,7 @@ Route::get('/run-seeder', function () {
                     <div style='margin-bottom: 12px; font-size: 13px; color: #94a3b8;'>Run a specific seeder:</div>
                     <div class='quick-links'>
                         <a href='" . url('/run-seeder') . "' class='chip " . ($shortName === 'DatabaseSeeder' ? 'active' : '') . "'>🚀 All Seeders (DatabaseSeeder)</a>
+                        <a href='" . url('/run-seeder?class=InitiativeSeeder') . "' class='chip " . ($shortName === 'InitiativeSeeder' ? 'active' : '') . "'>🌿 InitiativeSeeder (17 Initiatives)</a>
                         <a href='" . url('/run-seeder?class=PageSeeder') . "' class='chip " . ($shortName === 'PageSeeder' ? 'active' : '') . "'>📄 PageSeeder (Dynamic Pages)</a>
                         <a href='" . url('/run-seeder?class=PageSeoSeeder') . "' class='chip " . ($shortName === 'PageSeoSeeder' ? 'active' : '') . "'>🔍 PageSeoSeeder (SEO Metadata)</a>
                         <a href='" . url('/run-seeder?class=ConserveCmsSeeder') . "' class='chip " . ($shortName === 'ConserveCmsSeeder' ? 'active' : '') . "'>🏢 ConserveCmsSeeder (CMS & Admin)</a>
