@@ -25,6 +25,11 @@ class SettingController extends Controller
             'instagram_url',
             'linkedin_url',
             'youtube_url',
+            'about_intro_lead',
+            'impact_plastic_tons',
+            'impact_ragpickers',
+            'impact_women_trained',
+            'impact_retail_partners',
         ];
 
         foreach ($keys as $key) {

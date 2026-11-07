@@ -33,6 +33,36 @@
             </div>
           </div>
 
+          <h6 class="fw-bold pb-2 border-bottom mb-3" style="color: var(--admin-forest);">About Us &amp; Impact Figures</h6>
+          <div class="mb-4">
+            <label class="form-label small fw-semibold">About Us Editorial Intro Lead</label>
+            <textarea name="about_intro_lead" class="form-control" rows="3" placeholder="Conserve India operates at the intersection of environmental conservation and social justice...">{{ old('about_intro_lead', $settings['about_intro_lead'] ?? 'Conserve India operates at the intersection of environmental conservation and social justice—diverting urban plastic waste while empowering marginalized waste pickers and refugee women with dignified, employable opportunities.') }}</textarea>
+            <small class="text-muted">Displayed prominently under the page title on the About Us page.</small>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-md-3">
+              <label class="form-label small fw-semibold">Plastic Diverted</label>
+              <input type="text" name="impact_plastic_tons" class="form-control" value="{{ old('impact_plastic_tons', $settings['impact_plastic_tons'] ?? '500+ Tons') }}" placeholder="500+ Tons">
+              <small class="text-muted">Landfill diversion stat</small>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label small fw-semibold">Ragpickers Organized</label>
+              <input type="text" name="impact_ragpickers" class="form-control" value="{{ old('impact_ragpickers', $settings['impact_ragpickers'] ?? '3,000+') }}" placeholder="3,000+">
+              <small class="text-muted">Waste collectors count</small>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label small fw-semibold">Women Recyclers Trained</label>
+              <input type="text" name="impact_women_trained" class="form-control" value="{{ old('impact_women_trained', $settings['impact_women_trained'] ?? '100+') }}" placeholder="100+">
+              <small class="text-muted">Women empowered</small>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label small fw-semibold">Retail Partners Worldwide</label>
+              <input type="text" name="impact_retail_partners" class="form-control" value="{{ old('impact_retail_partners', $settings['impact_retail_partners'] ?? '1,000+') }}" placeholder="1,000+">
+              <small class="text-muted">Export stockists</small>
+            </div>
+          </div>
+
           <h6 class="fw-bold pb-2 border-bottom mb-3" style="color: var(--admin-forest);">Social Media Links</h6>
           <div class="row g-3 mb-4">
             <div class="col-md-6">

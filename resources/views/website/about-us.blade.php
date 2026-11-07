@@ -13,7 +13,7 @@
       <span class="ed-section-tag">ORGANIZATIONAL HERITAGE</span>
       <h1 class="ed-page-title">Pioneering Circularity Since 1997</h1>
       <p class="ed-page-lead">
-        Conserve India operates at the intersection of environmental conservation and social justice—diverting urban plastic waste while empowering marginalized waste pickers and refugee women with dignified, employable opportunities.
+        {{ $settings['about_intro_lead'] ?? 'Conserve India operates at the intersection of environmental conservation and social justice—diverting urban plastic waste while empowering marginalized waste pickers and refugee women with dignified, employable opportunities.' }}
       </p>
     </div>
   </header>
@@ -138,28 +138,28 @@
       <div class="row g-4 text-center">
         <div class="col-6 col-md-3">
           <div class="p-4 bg-white rounded-3 border border-light-subtle h-100 shadow-sm">
-            <div class="display-5 fw-bold text-success mb-1">500+</div>
-            <div class="fw-bold mb-1" style="color: var(--primary-forest);">Tons Plastic Diverted</div>
+            <div class="display-5 fw-bold text-success mb-1">{{ $settings['impact_plastic_tons'] ?? '500+ Tons' }}</div>
+            <div class="fw-bold mb-1" style="color: var(--primary-forest);">Plastic Diverted</div>
             <div class="text-muted small">From Delhi-NCR urban landfills</div>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="p-4 bg-white rounded-3 border border-light-subtle h-100 shadow-sm">
-            <div class="display-5 fw-bold text-success mb-1">3,000+</div>
+            <div class="display-5 fw-bold text-success mb-1">{{ $settings['impact_ragpickers'] ?? '3,000+' }}</div>
             <div class="fw-bold mb-1" style="color: var(--primary-forest);">Ragpickers Organized</div>
             <div class="text-muted small">Registered in Regional Association</div>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="p-4 bg-white rounded-3 border border-light-subtle h-100 shadow-sm">
-            <div class="display-5 fw-bold text-success mb-1">100+</div>
+            <div class="display-5 fw-bold text-success mb-1">{{ $settings['impact_women_trained'] ?? '100+' }}</div>
             <div class="fw-bold mb-1" style="color: var(--primary-forest);">Women Recyclers Trained</div>
             <div class="text-muted small">Hygiene &amp; financial literacy</div>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="p-4 bg-white rounded-3 border border-light-subtle h-100 shadow-sm">
-            <div class="display-5 fw-bold text-success mb-1">1,000+</div>
+            <div class="display-5 fw-bold text-success mb-1">{{ $settings['impact_retail_partners'] ?? '1,000+' }}</div>
             <div class="fw-bold mb-1" style="color: var(--primary-forest);">Retail Partners Worldwide</div>
             <div class="text-muted small">Exported to US, UK, and Europe</div>
           </div>
@@ -298,6 +298,49 @@
     </div>
   </section>
 
+  <!-- Dynamic Section: Flagship Initiatives in Action -->
+  @if(isset($initiatives) && $initiatives->isNotEmpty())
+  <section class="ed-content-section" style="background: #ffffff; border-top: 1px solid var(--border-subtle);">
+    <div class="container px-lg-4">
+      <div class="text-center mb-5">
+        <span class="ed-section-tag">WHAT WE CHAMPION</span>
+        <h2 class="ed-section-title">Flagship Initiatives in Action</h2>
+        <p class="ed-section-desc mx-auto">Discover the grassroots and circular initiatives directed and sustained by our leadership and community teams.</p>
+      </div>
+
+      <div class="row g-4">
+        @foreach($initiatives as $item)
+          <div class="col-md-6 col-lg-3">
+            <div class="ed-step-card h-100 d-flex flex-column justify-content-between p-3" style="border: 1px solid var(--border-light); border-radius: 12px; background: #fdfcf9;">
+              <div>
+                <div class="rounded-3 overflow-hidden mb-3" style="height: 160px; background: #e8eee9;">
+                  @if($item->image)
+                    <img src="{{ asset('website/' . $item->image) }}" class="w-100 h-100 object-fit-cover" alt="{{ $item->title }}">
+                  @else
+                    <div class="w-100 h-100 d-flex align-items-center justify-content-center text-muted">
+                      <i class="bi bi-flower1 fs-1 text-success opacity-50"></i>
+                    </div>
+                  @endif
+                </div>
+                @if($item->meta)
+                  <span class="badge bg-success-subtle text-success small mb-2">{{ $item->meta }}</span>
+                @endif
+                <h3 class="h6 fw-bold mb-2" style="color: var(--primary-forest);">{{ $item->title }}</h3>
+                <p class="text-muted small mb-3" style="line-height: 1.6;">{{ Str::limit($item->short_description, 95) }}</p>
+              </div>
+              <div class="pt-2 border-top border-light-subtle">
+                <a href="{{ $item->link ? url($item->link) : url('/our-work') }}" class="text-success fw-semibold small text-decoration-none">
+                  Learn More &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
+  @endif
+
   <!-- Section 1.9: Meet The Team (Core Team) -->
   <section class="ed-content-section" id="team" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle);">
     <div class="container px-lg-4">
@@ -323,13 +366,13 @@
             </div>
             <!-- Verified Social Profile Icons -->
             <div class="ed-team-socials">
-              <a href="https://www.linkedin.com/company/conserve-india/" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Anita Ahuja - Conserve India LinkedIn">
+              <a href="{{ $settings['linkedin_url'] ?? 'https://www.linkedin.com/company/conserve-india/' }}" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Anita Ahuja - Conserve India LinkedIn">
                 <i class="bi bi-linkedin"></i>
               </a>
-              <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Anita Ahuja - Workshop &amp; Ateliers Instagram">
+              <a href="{{ $settings['instagram_url'] ?? 'https://www.instagram.com/conserveindia/' }}" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Anita Ahuja - Workshop &amp; Ateliers Instagram">
                 <i class="bi bi-instagram"></i>
               </a>
-              <a href="mailto:info@conserveindia.org" class="ed-team-social-link" aria-label="Contact Anita Ahuja via Conserve India">
+              <a href="mailto:{{ $settings['contact_email'] ?? 'info@conserveindia.org' }}" class="ed-team-social-link" aria-label="Contact Anita Ahuja via Conserve India">
                 <i class="bi bi-envelope-fill"></i>
               </a>
             </div>
@@ -349,13 +392,13 @@
             </div>
             <!-- Verified Social Profile Icons -->
             <div class="ed-team-socials">
-              <a href="https://www.linkedin.com/company/conserve-india/" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Shalabh Ahuja - Conserve India LinkedIn">
+              <a href="{{ $settings['linkedin_url'] ?? 'https://www.linkedin.com/company/conserve-india/' }}" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Shalabh Ahuja - Conserve India LinkedIn">
                 <i class="bi bi-linkedin"></i>
               </a>
-              <a href="https://conserveindia.org" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Conserve India Corporate Site">
+              <a href="{{ url('/') }}" class="ed-team-social-link" aria-label="Conserve India Site">
                 <i class="bi bi-globe2"></i>
               </a>
-              <a href="mailto:info@conserveindia.org" class="ed-team-social-link" aria-label="Contact Shalabh Ahuja via Conserve India">
+              <a href="mailto:{{ $settings['contact_email'] ?? 'info@conserveindia.org' }}" class="ed-team-social-link" aria-label="Contact Shalabh Ahuja via Conserve India">
                 <i class="bi bi-envelope-fill"></i>
               </a>
             </div>
@@ -375,13 +418,13 @@
             </div>
             <!-- Verified Profile Links -->
             <div class="ed-team-socials">
-              <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Atelier Craft Stories on Instagram">
+              <a href="{{ $settings['instagram_url'] ?? 'https://www.instagram.com/conserveindia/' }}" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Atelier Craft Stories on Instagram">
                 <i class="bi bi-instagram"></i>
               </a>
               <a href="{{ url('/gallery') }}" class="ed-team-social-link" aria-label="View Craft Gallery">
                 <i class="bi bi-images"></i>
               </a>
-              <a href="mailto:info@conserveindia.org" class="ed-team-social-link" aria-label="Inquire with Atelier Team">
+              <a href="mailto:{{ $settings['contact_email'] ?? 'info@conserveindia.org' }}" class="ed-team-social-link" aria-label="Inquire with Atelier Team">
                 <i class="bi bi-envelope-fill"></i>
               </a>
             </div>
@@ -401,13 +444,13 @@
             </div>
             <!-- Verified Profile Links -->
             <div class="ed-team-socials">
-              <a href="https://www.facebook.com/conserveindia" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Community Mobilizers Facebook Updates">
+              <a href="{{ $settings['facebook_url'] ?? 'https://www.facebook.com/conserveindia' }}" target="_blank" rel="noopener noreferrer" class="ed-team-social-link" aria-label="Community Mobilizers Facebook Updates">
                 <i class="bi bi-facebook"></i>
               </a>
               <a href="{{ url('/capacity-building') }}" class="ed-team-social-link" aria-label="Explore Community Programs">
                 <i class="bi bi-journal-text"></i>
               </a>
-              <a href="mailto:info@conserveindia.org" class="ed-team-social-link" aria-label="Connect with Community Mobilizers">
+              <a href="mailto:{{ $settings['contact_email'] ?? 'info@conserveindia.org' }}" class="ed-team-social-link" aria-label="Connect with Community Mobilizers">
                 <i class="bi bi-envelope-fill"></i>
               </a>
             </div>
@@ -520,6 +563,101 @@
           </div>
         </div>
       </div>
+
+      <!-- Dynamic Section: Global Partner Testimonials -->
+      @if(isset($testimonials) && $testimonials->isNotEmpty())
+      <div class="mt-5 pt-4 border-top border-light-subtle">
+        <div class="text-center mb-4">
+          <span class="ed-section-tag">GLOBAL TRUST &amp; RECOGNITION</span>
+          <h2 class="ed-section-title">What Our Global Partners Say</h2>
+          <p class="ed-section-desc mx-auto">Endorsements from international retail partners, certifiers, and grassroots development allies.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          @foreach($testimonials as $item)
+            <div class="col-md-6 col-lg-4">
+              <div class="bg-white rounded-3 p-4 border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div class="text-success fs-3"><i class="bi bi-quote"></i></div>
+                    @if($item->logo)
+                      <div style="height: 36px; max-width: 110px;">
+                        <img src="{{ asset('website/' . $item->logo) }}" class="h-100 w-auto object-fit-contain" alt="{{ $item->author }}">
+                      </div>
+                    @endif
+                  </div>
+                  <p class="text-secondary small fst-italic mb-3" style="line-height: 1.7;">
+                    &ldquo;{{ $item->quote }}&rdquo;
+                  </p>
+                </div>
+                <div class="pt-3 border-top border-light-subtle">
+                  <h4 class="h6 fw-bold mb-0" style="color: var(--primary-forest);">{{ $item->author }}</h4>
+                  @if($item->designation)
+                    <span class="text-muted small" style="font-size: 12px;">{{ $item->designation }}</span>
+                  @endif
+                </div>
+              </div>
+            </div>
+          @endforeach
+        </div>
+      </div>
+      @endif
+
+      <!-- Dynamic Section: Dispatches & Latest Green Stories -->
+      @if(isset($recentStories) && $recentStories->isNotEmpty())
+      <div class="mt-5 pt-4 border-top border-light-subtle">
+        <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-4">
+          <div>
+            <span class="ed-section-tag">DISPATCHES &amp; FIELD NOTES</span>
+            <h2 class="ed-section-title mb-0">Latest Stories from Our Ateliers</h2>
+          </div>
+          <a href="{{ url('/green-stories') }}" class="ed-btn-outline mt-3 mt-md-0">
+            View All Green Stories &rarr;
+          </a>
+        </div>
+
+        <div class="row g-4">
+          @foreach($recentStories as $story)
+            <div class="col-md-6 col-lg-4">
+              <article class="bg-white rounded-3 overflow-hidden border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+                <div>
+                  <div class="position-relative overflow-hidden" style="height: 190px; background: #e8eee9;">
+                    @if($story->image)
+                      <img src="{{ asset('website/' . $story->image) }}" class="w-100 h-100 object-fit-cover" alt="{{ $story->title }}">
+                    @else
+                      <div class="w-100 h-100 d-flex align-items-center justify-content-center text-muted">
+                        <i class="bi bi-newspaper fs-1 text-secondary opacity-50"></i>
+                      </div>
+                    @endif
+                    @if($story->category)
+                      <span class="position-absolute top-0 start-0 m-3 badge bg-white text-dark shadow-sm">{{ $story->category }}</span>
+                    @endif
+                  </div>
+                  <div class="p-4">
+                    <span class="text-muted small d-block mb-1">
+                      <i class="bi bi-calendar3 me-1"></i> {{ $story->published_date ? $story->published_date->format('M d, Y') : $story->created_at->format('M d, Y') }}
+                    </span>
+                    <h3 class="h6 fw-bold mb-2" style="color: var(--primary-forest);">
+                      <a href="{{ route('story.detail', $story->slug ?: $story->id) }}" class="text-decoration-none text-dark">
+                        {{ $story->title }}
+                      </a>
+                    </h3>
+                    <p class="text-muted small mb-0" style="line-height: 1.6;">
+                      {{ Str::limit($story->summary ?: strip_tags($story->content), 95) }}
+                    </p>
+                  </div>
+                </div>
+                <div class="p-4 pt-0">
+                  <a href="{{ route('story.detail', $story->slug ?: $story->id) }}" class="text-success fw-semibold small text-decoration-none">
+                    Read Full Story &rarr;
+                  </a>
+                </div>
+              </article>
+            </div>
+          @endforeach
+        </div>
+      </div>
+      @endif
 
       <!-- Quote Banner -->
       <div class="ed-quote-banner mt-5">

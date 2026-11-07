@@ -36,6 +36,11 @@ class ConserveCmsSeeder extends Seeder
             'instagram_url' => 'https://instagram.com/conserveindia',
             'linkedin_url' => 'https://linkedin.com',
             'youtube_url' => 'https://youtube.com',
+            'about_intro_lead' => 'Conserve India operates at the intersection of environmental conservation and social justice—diverting urban plastic waste while empowering marginalized waste pickers and refugee women with dignified, employable opportunities.',
+            'impact_plastic_tons' => '500+ Tons',
+            'impact_ragpickers' => '3,000+',
+            'impact_women_trained' => '100+',
+            'impact_retail_partners' => '1,000+',
         ];
         foreach ($settings as $key => $val) {
             Setting::set($key, $val);

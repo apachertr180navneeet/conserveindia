@@ -93,38 +93,51 @@
               <p class="text-muted small mb-0">Conference portfolios, eco-friendly laptop sleeves, and customized upcycled items with your brand story.</p>
             </div>
           </div>
-          <a href="contact-us.php?topic=partner" class="btn-primary-forest">Initiate a Partnership &rarr;</a>
+          <a href="{{ url('/contact-us?topic=partner') }}" class="btn-primary-forest">Initiate a Partnership &rarr;</a>
         </div>
         <div class="col-lg-6">
           <div class="p-4 p-md-5 rounded-4 bg-white border border-light-subtle shadow-sm">
             <h3 class="h5 fw-bold mb-3" style="color: var(--primary-forest);">Partnership Request</h3>
-            <form onsubmit="event.preventDefault(); alert('Thank you for reaching out to partner with Conserve India. We will review your organization\'s details and connect shortly.');">
+
+            @if(session('inquiry_success'))
+              <div class="alert alert-success d-flex align-items-center gap-2 mb-4" role="alert">
+                <i class="bi bi-check-circle-fill fs-5"></i>
+                <div>
+                  <strong>Request Received!</strong><br>
+                  {{ session('inquiry_success') }}
+                </div>
+              </div>
+            @endif
+
+            <form action="{{ route('inquiry.submit') }}" method="POST">
+              @csrf
+              <input type="hidden" name="subject" value="Partnership Request">
               <div class="mb-3">
                 <label class="form-label small fw-semibold">Contact Name *</label>
-                <input type="text" class="form-control" placeholder="Full Name" required>
+                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Full Name" required>
               </div>
               <div class="mb-3">
                 <label class="form-label small fw-semibold">Work Email *</label>
-                <input type="email" class="form-control" placeholder="name@company.com" required>
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="name@company.com" required>
               </div>
               <div class="mb-3">
                 <label class="form-label small fw-semibold">Organization / Brand *</label>
-                <input type="text" class="form-control" placeholder="Organization Name" required>
+                <input type="text" class="form-control" name="organization" value="{{ old('organization') }}" placeholder="Organization Name" required>
               </div>
               <div class="mb-3">
                 <label class="form-label small fw-semibold">Collaboration Scope *</label>
-                <select class="form-select" required>
+                <select class="form-select" name="scope" required>
                   <option value="" selected disabled>Select partnership model</option>
-                  <option value="b2b">Wholesale / Private Label Upcycled Goods</option>
-                  <option value="corporate-gifting">Corporate Merchandising &amp; Gifting</option>
-                  <option value="epr">EPR &amp; Plastic Waste Neutralization</option>
-                  <option value="csr">CSR Grants &amp; Livelihood Incubation</option>
-                  <option value="academic">Academic / University Immersion</option>
+                  <option value="Wholesale / Private Label Upcycled Goods">Wholesale / Private Label Upcycled Goods</option>
+                  <option value="Corporate Merchandising & Gifting">Corporate Merchandising &amp; Gifting</option>
+                  <option value="EPR & Plastic Waste Neutralization">EPR &amp; Plastic Waste Neutralization</option>
+                  <option value="CSR Grants & Livelihood Incubation">CSR Grants &amp; Livelihood Incubation</option>
+                  <option value="Academic / University Immersion">Academic / University Immersion</option>
                 </select>
               </div>
               <div class="mb-3">
                 <label class="form-label small fw-semibold">Estimated Volume / Timeline</label>
-                <input type="text" class="form-control" placeholder="e.g. 500 units, Q4 event, 10 tons plastic audit">
+                <input type="text" class="form-control" name="volume" value="{{ old('volume') }}" placeholder="e.g. 500 units, Q4 event, 10 tons plastic audit">
               </div>
               <button type="submit" class="btn-primary-forest w-100">Submit Partnership Request &rarr;</button>
             </form>
@@ -174,7 +187,7 @@
               </div>
             </div>
           </div>
-          <a href="contact-us.php?topic=volunteer" class="btn-primary-forest">Apply to Volunteer &rarr;</a>
+          <a href="{{ url('/contact-us?topic=volunteer') }}" class="btn-primary-forest">Apply to Volunteer &rarr;</a>
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden;">

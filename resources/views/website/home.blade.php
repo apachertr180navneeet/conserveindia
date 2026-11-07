@@ -723,7 +723,7 @@
               <span class="text-muted small fw-bold text-uppercase" style="letter-spacing: 1px; font-size: 11px;">Official Social Channels</span>
               <div class="ed-social-list">
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on Instagram">
+                <a href="{{ $settings['instagram_url'] ?? 'https://www.instagram.com/conserveindia/' }}" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on Instagram">
                   <div class="ed-social-icon-box" style="color: #e1306c;">
                     <i class="bi bi-instagram"></i>
                   </div>
@@ -735,7 +735,7 @@
                 </a>
 
                 <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/company/conserve-india/" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on LinkedIn">
+                <a href="{{ $settings['linkedin_url'] ?? 'https://www.linkedin.com/company/conserve-india/' }}" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on LinkedIn">
                   <div class="ed-social-icon-box" style="color: #0a66c2;">
                     <i class="bi bi-linkedin"></i>
                   </div>
@@ -747,7 +747,7 @@
                 </a>
 
                 <!-- Facebook -->
-                <a href="https://www.facebook.com/conserveindia" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on Facebook">
+                <a href="{{ $settings['facebook_url'] ?? 'https://www.facebook.com/conserveindia' }}" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on Facebook">
                   <div class="ed-social-icon-box" style="color: #1877f2;">
                     <i class="bi bi-facebook"></i>
                   </div>
@@ -759,7 +759,7 @@
                 </a>
 
                 <!-- YouTube -->
-                <a href="https://www.youtube.com/user/conserveindia" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on YouTube">
+                <a href="{{ $settings['youtube_url'] ?? 'https://www.youtube.com/user/conserveindia' }}" target="_blank" rel="noopener noreferrer" class="ed-social-item" aria-label="Visit Conserve India on YouTube">
                   <div class="ed-social-icon-box" style="color: #ff0000;">
                     <i class="bi bi-youtube"></i>
                   </div>

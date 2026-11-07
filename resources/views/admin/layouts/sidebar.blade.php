@@ -61,7 +61,11 @@
         <i class="bi bi-envelope-open"></i>
         <span>Contact Inquiries</span>
         @php
-          $unread = \App\Models\Inquiry::where('is_read', false)->count();
+          try {
+            $unread = \App\Models\Inquiry::where('is_read', false)->count();
+          } catch (\Throwable $e) {
+            $unread = 0;
+          }
         @endphp
         @if($unread > 0)
           <span class="badge bg-danger ms-auto rounded-pill">{{ $unread }}</span>

@@ -21,7 +21,50 @@
   <!-- Section 1: Core Pillars Overview -->
   <section class="ed-content-section" style="background: #fff;">
     <div class="container px-lg-4">
-      <div class="row g-4">
+
+      @if(isset($initiatives) && $initiatives->isNotEmpty())
+        <div class="text-center mb-5">
+          <span class="ed-section-tag">STRATEGIC PILLARS</span>
+          <h2 class="ed-section-title">Flagship Initiatives in Action</h2>
+          <p class="ed-section-desc mx-auto">
+            Dynamic programs managed by Conserve India to abate pollution and create dignified employment.
+          </p>
+        </div>
+
+        <div class="row g-4 mb-5">
+          @foreach($initiatives as $index => $init)
+            <div class="col-lg-6">
+              <div class="p-4 p-md-5 rounded-4 h-100 border border-light-subtle d-flex flex-column justify-content-between shadow-sm" style="background: #fcfbf8;">
+                <div>
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span class="badge bg-success-subtle text-success px-2 py-1">Pillar 0{{ $index + 1 }} &middot; {{ $init->category ?? 'Initiative' }}</span>
+                    @if($init->meta)
+                      <span class="text-muted small"><i class="bi bi-geo-alt text-success me-1"></i>{{ $init->meta }}</span>
+                    @endif
+                  </div>
+
+                  @if($init->image)
+                    <div class="mb-3 rounded-3 overflow-hidden" style="aspect-ratio: 16 / 9; max-height: 220px; background: #e8eee9;">
+                      <img src="{{ str_starts_with($init->image, 'http') ? $init->image : asset('website/' . $init->image) }}" alt="{{ $init->title }}" class="w-100 h-100 object-fit-cover" loading="lazy">
+                    </div>
+                  @endif
+
+                  <h2 class="h4 fw-bold mb-3" style="color: var(--primary-forest);">{{ $init->title }}</h2>
+                  <p class="text-secondary small mb-4" style="line-height: 1.7;">
+                    {{ $init->short_description ?: Str::limit(strip_tags($init->content), 180) }}
+                  </p>
+                </div>
+                <div class="pt-3 border-top border-light-subtle">
+                  <a href="{{ $init->link ? (Str::startsWith($init->link, ['http', '#']) ? $init->link : url($init->link)) : url('/gallery') }}" class="btn-primary-forest text-nowrap">
+                    Explore {{ $init->title }} &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          @endforeach
+        </div>
+      @else
+        <div class="row g-4">
         
         <!-- Pillar 1: Circular Livelihoods -->
         <div class="col-lg-6" id="livelihoods">
@@ -127,7 +170,8 @@
           </div>
         </div>
 
-      </div>
+        </div>
+      @endif
     </div>
   </section>
 

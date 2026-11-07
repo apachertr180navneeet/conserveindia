@@ -126,50 +126,96 @@
       </div>
 
       <div class="row g-4">
-        <!-- Story 1 -->
-        <div class="col-md-4">
-          <div class="ed-work-card h-100 bg-white">
-            <div class="ed-work-img-box">
-              <img src="{{ asset('website/assets/images/story-textile.jpg') }}" alt="Textile Waste Crisis" class="ed-work-img" loading="lazy">
+        @if(isset($newsArticles) && $newsArticles->isNotEmpty())
+          @foreach($newsArticles as $article)
+            <div class="col-md-4">
+              <div class="ed-work-card h-100 bg-white border border-light-subtle rounded-3 overflow-hidden shadow-sm d-flex flex-column">
+                @if($article->image)
+                  <div class="ed-work-img-box" style="aspect-ratio: 16 / 10; overflow: hidden; background: #e8eee9;">
+                    <img src="{{ str_starts_with($article->image, 'http') ? $article->image : asset('website/' . $article->image) }}" alt="{{ $article->title }}" class="ed-work-img w-100 h-100 object-fit-cover" loading="lazy">
+                  </div>
+                @endif
+                <div class="ed-work-body p-4 d-flex flex-column flex-grow-1">
+                  <div>
+                    <span class="ed-work-meta text-success small fw-semibold text-uppercase d-block mb-1">
+                      {{ $article->category ?? 'Research' }} &middot; {{ $article->published_date ? \Carbon\Carbon::parse($article->published_date)->format('M d, Y') : $article->created_at->format('M d, Y') }}
+                    </span>
+                    <h3 class="ed-work-title h5 fw-bold mb-2" style="color: var(--primary-forest);">
+                      <a href="{{ route('story.detail', $article->slug) }}" class="text-decoration-none" style="color: inherit;">
+                        {{ $article->title }}
+                      </a>
+                    </h3>
+                    <p class="ed-work-desc text-secondary small mb-3" style="line-height: 1.65;">
+                      {{ $article->summary ?: Str::limit(strip_tags($article->content), 120) }}
+                    </p>
+                  </div>
+                  <div class="mt-auto pt-3 border-top border-light-subtle">
+                    <a href="{{ route('story.detail', $article->slug) }}" class="ed-work-card-link text-success fw-bold small text-decoration-none">
+                      Read Story &rarr;
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="ed-work-body">
-              <span class="ed-work-meta">Material Lifecycle &middot; 6 Min Read</span>
-              <h3 class="ed-work-title">Textile Waste: The Unnoticed Environmental Hazard</h3>
-              <p class="ed-work-desc">Investigating why fabric scraps overwhelm landfills and how design-led cutting reduces virgin cotton demand.</p>
-              <a href="{{ url('/green-stories#textile') }}" class="ed-work-card-link">Read Story &rarr;</a>
+          @endforeach
+        @else
+          <!-- Fallback Story 1 -->
+          <div class="col-md-4">
+            <div class="ed-work-card h-100 bg-white border border-light-subtle rounded-3 overflow-hidden shadow-sm d-flex flex-column">
+              <div class="ed-work-img-box" style="aspect-ratio: 16 / 10; overflow: hidden; background: #e8eee9;">
+                <img src="{{ asset('website/assets/images/story-textile.jpg') }}" alt="Textile Waste Crisis" class="ed-work-img w-100 h-100 object-fit-cover" loading="lazy">
+              </div>
+              <div class="ed-work-body p-4 d-flex flex-column flex-grow-1">
+                <div>
+                  <span class="ed-work-meta text-success small fw-semibold text-uppercase d-block mb-1">Material Lifecycle &middot; 6 Min Read</span>
+                  <h3 class="ed-work-title h5 fw-bold mb-2" style="color: var(--primary-forest);">Textile Waste: The Unnoticed Environmental Hazard</h3>
+                  <p class="ed-work-desc text-secondary small mb-3">Investigating why fabric scraps overwhelm landfills and how design-led cutting reduces virgin cotton demand.</p>
+                </div>
+                <div class="mt-auto pt-3 border-top border-light-subtle">
+                  <a href="{{ url('/green-stories#textile') }}" class="ed-work-card-link text-success fw-bold small text-decoration-none">Read Story &rarr;</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Story 2 -->
-        <div class="col-md-4">
-          <div class="ed-work-card h-100 bg-white">
-            <div class="ed-work-img-box">
-              <img src="{{ asset('website/assets/images/circular-communities.jpg') }}" alt="Lifaffa Circular Economy" class="ed-work-img" loading="lazy">
-            </div>
-            <div class="ed-work-body">
-              <span class="ed-work-meta">Circular Economy &middot; 5 Min Read</span>
-              <h3 class="ed-work-title">How Lifaffa Innovates Circular Retail</h3>
-              <p class="ed-work-desc">Bridging zero-waste manufacturing with conscious urban consumers through everyday upcycled bags and organizers.</p>
-              <a href="{{ url('/green-stories#lifaffa') }}" class="ed-work-card-link">Read Story &rarr;</a>
+          <!-- Fallback Story 2 -->
+          <div class="col-md-4">
+            <div class="ed-work-card h-100 bg-white border border-light-subtle rounded-3 overflow-hidden shadow-sm d-flex flex-column">
+              <div class="ed-work-img-box" style="aspect-ratio: 16 / 10; overflow: hidden; background: #e8eee9;">
+                <img src="{{ asset('website/assets/images/circular-communities.jpg') }}" alt="Lifaffa Circular Economy" class="ed-work-img w-100 h-100 object-fit-cover" loading="lazy">
+              </div>
+              <div class="ed-work-body p-4 d-flex flex-column flex-grow-1">
+                <div>
+                  <span class="ed-work-meta text-success small fw-semibold text-uppercase d-block mb-1">Circular Economy &middot; 5 Min Read</span>
+                  <h3 class="ed-work-title h5 fw-bold mb-2" style="color: var(--primary-forest);">How Lifaffa Innovates Circular Retail</h3>
+                  <p class="ed-work-desc text-secondary small mb-3">Bridging zero-waste manufacturing with conscious urban consumers through everyday upcycled bags and organizers.</p>
+                </div>
+                <div class="mt-auto pt-3 border-top border-light-subtle">
+                  <a href="{{ url('/green-stories#lifaffa') }}" class="ed-work-card-link text-success fw-bold small text-decoration-none">Read Story &rarr;</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Story 3 -->
-        <div class="col-md-4">
-          <div class="ed-work-card h-100 bg-white">
-            <div class="ed-work-img-box">
-              <img src="{{ asset('website/assets/images/story-farming.jpg') }}" alt="Soil-less Farming" class="ed-work-img" loading="lazy">
-            </div>
-            <div class="ed-work-body">
-              <span class="ed-work-meta">Eco-Agriculture &middot; 4 Min Read</span>
-              <h3 class="ed-work-title">Soil-Less Farming: Rooftop Nutrition</h3>
-              <p class="ed-work-desc">Testing organic hydroponics and micro-farming modules on workshop rooftops to bolster food sovereignty.</p>
-              <a href="{{ url('/green-stories#farming') }}" class="ed-work-card-link">Read Story &rarr;</a>
+          <!-- Fallback Story 3 -->
+          <div class="col-md-4">
+            <div class="ed-work-card h-100 bg-white border border-light-subtle rounded-3 overflow-hidden shadow-sm d-flex flex-column">
+              <div class="ed-work-img-box" style="aspect-ratio: 16 / 10; overflow: hidden; background: #e8eee9;">
+                <img src="{{ asset('website/assets/images/story-farming.jpg') }}" alt="Soil-less Farming" class="ed-work-img w-100 h-100 object-fit-cover" loading="lazy">
+              </div>
+              <div class="ed-work-body p-4 d-flex flex-column flex-grow-1">
+                <div>
+                  <span class="ed-work-meta text-success small fw-semibold text-uppercase d-block mb-1">Eco-Agriculture &middot; 4 Min Read</span>
+                  <h3 class="ed-work-title h5 fw-bold mb-2" style="color: var(--primary-forest);">Soil-Less Farming: Rooftop Nutrition</h3>
+                  <p class="ed-work-desc text-secondary small mb-3">Testing organic hydroponics and micro-farming modules on workshop rooftops to bolster food sovereignty.</p>
+                </div>
+                <div class="mt-auto pt-3 border-top border-light-subtle">
+                  <a href="{{ url('/green-stories#farming') }}" class="ed-work-card-link text-success fw-bold small text-decoration-none">Read Story &rarr;</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        @endif
       </div>
     </div>
   </section>
@@ -202,7 +248,7 @@
               </p>
             </div>
             <div class="pt-3 border-top border-light-subtle mt-3">
-              <a href="contact-us.php?request=annual-report" class="btn btn-sm btn-outline-success w-100">
+              <a href="{{ url('/contact-us?request=annual-report') }}" class="btn btn-sm btn-outline-success w-100">
                 <i class="bi bi-download me-1"></i> Request PDF
               </a>
             </div>
@@ -223,7 +269,7 @@
               </p>
             </div>
             <div class="pt-3 border-top border-light-subtle mt-3">
-              <a href="contact-us.php?request=epr-brief" class="btn btn-sm btn-outline-success w-100">
+              <a href="{{ url('/contact-us?request=epr-brief') }}" class="btn btn-sm btn-outline-success w-100">
                 <i class="bi bi-download me-1"></i> Request PDF
               </a>
             </div>
@@ -244,7 +290,7 @@
               </p>
             </div>
             <div class="pt-3 border-top border-light-subtle mt-3">
-              <a href="contact-us.php?request=hrp-whitepaper" class="btn btn-sm btn-outline-success w-100">
+              <a href="{{ url('/contact-us?request=hrp-whitepaper') }}" class="btn btn-sm btn-outline-success w-100">
                 <i class="bi bi-download me-1"></i> Request PDF
               </a>
             </div>
@@ -265,7 +311,7 @@
               </p>
             </div>
             <div class="pt-3 border-top border-light-subtle mt-3">
-              <a href="contact-us.php?request=akseer-study" class="btn btn-sm btn-outline-success w-100">
+              <a href="{{ url('/contact-us?request=akseer-study') }}" class="btn btn-sm btn-outline-success w-100">
                 <i class="bi bi-download me-1"></i> Request PDF
               </a>
             </div>

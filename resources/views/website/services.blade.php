@@ -33,77 +33,98 @@
       </div>
 
       <div class="row g-4 justify-content-center">
-        <!-- Service 1: Consulting & Strategic Advisory -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <a href="#consulting" class="ed-action-card" aria-label="View Consulting & Advisory Details">
-            <div class="ed-action-img-box">
-              <img src="{{ asset('website/assets/images/plastic-bottles-sorting.jpg') }}" alt="Diagnostic corporate waste stream audits and circular consulting" class="ed-action-img" loading="lazy">
-              <div class="ed-action-scrim"></div>
-              <span class="ed-action-tag">ADVISORY</span>
-              <div class="ed-action-bar">
-                <div class="ed-action-icon-circle">
-                  <i class="bi bi-clipboard2-data-fill"></i>
+        @if(isset($services) && $services->isNotEmpty())
+          @foreach($services as $item)
+            <div class="col-12 col-sm-6 col-lg-3">
+              <a href="{{ Str::startsWith($item->link, ['http', '#']) ? $item->link : url($item->link) }}" class="ed-action-card" aria-label="Explore {{ $item->title }}">
+                <div class="ed-action-img-box">
+                  <img src="{{ str_starts_with($item->image, 'http') ? $item->image : asset('website/' . $item->image) }}" alt="{{ $item->title }}" class="ed-action-img" loading="lazy">
+                  <div class="ed-action-scrim"></div>
+                  <span class="ed-action-tag">SERVICE</span>
+                  <div class="ed-action-bar">
+                    <div class="ed-action-icon-circle">
+                      <i class="bi bi-arrow-up-right-circle-fill"></i>
+                    </div>
+                    <span class="ed-action-label">{{ $item->title }}</span>
+                    <i class="bi bi-arrow-right ed-action-chevron"></i>
+                  </div>
                 </div>
-                <span class="ed-action-label">Consulting &amp; Advisory</span>
-                <i class="bi bi-arrow-right ed-action-chevron"></i>
-              </div>
+              </a>
             </div>
-          </a>
-        </div>
+          @endforeach
+        @else
+          <!-- Service 1: Consulting & Strategic Advisory -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <a href="#consulting" class="ed-action-card" aria-label="View Consulting & Advisory Details">
+              <div class="ed-action-img-box">
+                <img src="{{ asset('website/assets/images/plastic-bottles-sorting.jpg') }}" alt="Diagnostic corporate waste stream audits and circular consulting" class="ed-action-img" loading="lazy">
+                <div class="ed-action-scrim"></div>
+                <span class="ed-action-tag">ADVISORY</span>
+                <div class="ed-action-bar">
+                  <div class="ed-action-icon-circle">
+                    <i class="bi bi-clipboard2-data-fill"></i>
+                  </div>
+                  <span class="ed-action-label">Consulting &amp; Advisory</span>
+                  <i class="bi bi-arrow-right ed-action-chevron"></i>
+                </div>
+              </div>
+            </a>
+          </div>
 
-        <!-- Service 2: Events, Campaigns & Outreach -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <a href="#events-outreach" class="ed-action-card" aria-label="View Events & Outreach Details">
-            <div class="ed-action-img-box">
-              <img src="{{ asset('website/assets/images/story-farming.jpg') }}" alt="Community environmental campaigns, corporate zero-waste days, and workshops" class="ed-action-img" loading="lazy">
-              <div class="ed-action-scrim"></div>
-              <span class="ed-action-tag">OUTREACH</span>
-              <div class="ed-action-bar">
-                <div class="ed-action-icon-circle">
-                  <i class="bi bi-megaphone-fill"></i>
+          <!-- Service 2: Events, Campaigns & Outreach -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <a href="#events-outreach" class="ed-action-card" aria-label="View Events & Outreach Details">
+              <div class="ed-action-img-box">
+                <img src="{{ asset('website/assets/images/story-farming.jpg') }}" alt="Community environmental campaigns, corporate zero-waste days, and workshops" class="ed-action-img" loading="lazy">
+                <div class="ed-action-scrim"></div>
+                <span class="ed-action-tag">OUTREACH</span>
+                <div class="ed-action-bar">
+                  <div class="ed-action-icon-circle">
+                    <i class="bi bi-megaphone-fill"></i>
+                  </div>
+                  <span class="ed-action-label">Events &amp; Outreach</span>
+                  <i class="bi bi-arrow-right ed-action-chevron"></i>
                 </div>
-                <span class="ed-action-label">Events &amp; Outreach</span>
-                <i class="bi bi-arrow-right ed-action-chevron"></i>
               </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <!-- Service 3: Education & Training Incubator -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <a href="#education-training" class="ed-action-card" aria-label="View Education & Training Details">
-            <div class="ed-action-img-box">
-              <img src="{{ asset('website/assets/images/artisan-livelihoods.jpg') }}" alt="Youth design incubator, artisan stitching and financial literacy training" class="ed-action-img" loading="lazy">
-              <div class="ed-action-scrim"></div>
-              <span class="ed-action-tag">INCUBATOR</span>
-              <div class="ed-action-bar">
-                <div class="ed-action-icon-circle">
-                  <i class="bi bi-mortarboard-fill"></i>
+          <!-- Service 3: Education & Training Incubator -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <a href="#education-training" class="ed-action-card" aria-label="View Education & Training Details">
+              <div class="ed-action-img-box">
+                <img src="{{ asset('website/assets/images/artisan-livelihoods.jpg') }}" alt="Youth design incubator, artisan stitching and financial literacy training" class="ed-action-img" loading="lazy">
+                <div class="ed-action-scrim"></div>
+                <span class="ed-action-tag">INCUBATOR</span>
+                <div class="ed-action-bar">
+                  <div class="ed-action-icon-circle">
+                    <i class="bi bi-mortarboard-fill"></i>
+                  </div>
+                  <span class="ed-action-label">Education &amp; Training</span>
+                  <i class="bi bi-arrow-right ed-action-chevron"></i>
                 </div>
-                <span class="ed-action-label">Education &amp; Training</span>
-                <i class="bi bi-arrow-right ed-action-chevron"></i>
               </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <!-- Service 4: Stay & Learn: Immersion Tours -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <a href="#immersion-tours" class="ed-action-card" aria-label="View Stay & Learn Tour Details">
-            <div class="ed-action-img-box">
-              <img src="{{ asset('website/assets/images/circular-communities.jpg') }}" alt="Stay & Learn circular immersion tours, waste mapping, and eco-stay" class="ed-action-img" loading="lazy">
-              <div class="ed-action-scrim"></div>
-              <span class="ed-action-tag">IMMERSION</span>
-              <div class="ed-action-bar">
-                <div class="ed-action-icon-circle">
-                  <i class="bi bi-compass-fill"></i>
+          <!-- Service 4: Stay & Learn: Immersion Tours -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <a href="#immersion-tours" class="ed-action-card" aria-label="View Stay & Learn Tour Details">
+              <div class="ed-action-img-box">
+                <img src="{{ asset('website/assets/images/circular-communities.jpg') }}" alt="Stay & Learn circular immersion tours, waste mapping, and eco-stay" class="ed-action-img" loading="lazy">
+                <div class="ed-action-scrim"></div>
+                <span class="ed-action-tag">IMMERSION</span>
+                <div class="ed-action-bar">
+                  <div class="ed-action-icon-circle">
+                    <i class="bi bi-compass-fill"></i>
+                  </div>
+                  <span class="ed-action-label">Stay &amp; Learn Tours</span>
+                  <i class="bi bi-arrow-right ed-action-chevron"></i>
                 </div>
-                <span class="ed-action-label">Stay &amp; Learn Tours</span>
-                <i class="bi bi-arrow-right ed-action-chevron"></i>
               </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+        @endif
       </div>
     </div>
   </section>
@@ -243,7 +264,7 @@
             <a href="{{ url('/connect-with-us#partner') }}" class="btn-primary-forest px-4 py-2">
               Book an Immersion Tour &rarr;
             </a>
-            <a href="contact-us.php?topic=immersion" class="ed-btn-outline px-4 py-2">
+            <a href="{{ url('/contact-us?topic=immersion') }}" class="ed-btn-outline px-4 py-2">
               Request Tour Brochure
             </a>
           </div>
@@ -266,7 +287,7 @@
                 <strong>Recognition:</strong> <span>Conserve Circular Fellow Certificate</span>
               </div>
             </div>
-            <a href="contact-us.php?topic=immersion" class="btn-primary-forest w-100">Download Brochure &amp; Dates</a>
+            <a href="{{ url('/contact-us?topic=immersion') }}" class="btn-primary-forest w-100">Download Brochure &amp; Dates</a>
           </div>
         </div>
       </div>

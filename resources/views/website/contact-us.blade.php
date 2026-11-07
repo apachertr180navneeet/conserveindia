@@ -94,14 +94,35 @@
               Please provide project details, delivery expectations, or technical questions. Our directors review and respond to each inquiry personally.
             </p>
 
-            <form id="contactPageForm" onsubmit="handleContactPageSubmit(event)">
+            @if(session('inquiry_success'))
+              <div class="alert alert-success d-flex align-items-center gap-2 mb-4" role="alert">
+                <i class="bi bi-check-circle-fill fs-5"></i>
+                <div>
+                  <strong>Inquiry Successfully Received!</strong><br>
+                  {{ session('inquiry_success') }}
+                </div>
+              </div>
+            @endif
+
+            @if($errors->any())
+              <div class="alert alert-danger mb-4">
+                <ul class="mb-0 small ps-3">
+                  @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                  @endforeach
+                </ul>
+              </div>
+            @endif
+
+            <form action="{{ route('inquiry.submit') }}" method="POST" id="contactPageForm">
+              @csrf
               <div class="row g-3">
                 <!-- Full Name -->
                 <div class="col-md-6 cu-form-group mb-0">
                   <label for="cuName" class="cu-form-label">Your Name <span class="text-danger">*</span></label>
                   <div class="cu-input-wrapper">
                     <i class="bi bi-person cu-input-icon"></i>
-                    <input type="text" class="cu-form-control" id="cuName" name="name" placeholder="Full Name" required>
+                    <input type="text" class="cu-form-control" id="cuName" name="name" value="{{ old('name') }}" placeholder="Full Name" required>
                   </div>
                 </div>
 
@@ -110,7 +131,7 @@
                   <label for="cuEmail" class="cu-form-label">Email Address <span class="text-danger">*</span></label>
                   <div class="cu-input-wrapper">
                     <i class="bi bi-envelope cu-input-icon"></i>
-                    <input type="email" class="cu-form-control" id="cuEmail" name="email" placeholder="name@company.com" required>
+                    <input type="email" class="cu-form-control" id="cuEmail" name="email" value="{{ old('email') }}" placeholder="name@company.com" required>
                   </div>
                 </div>
 
@@ -119,7 +140,7 @@
                   <label for="cuPhone" class="cu-form-label">Phone / WhatsApp</label>
                   <div class="cu-input-wrapper">
                     <i class="bi bi-telephone cu-input-icon"></i>
-                    <input type="tel" class="cu-form-control" id="cuPhone" name="phone" placeholder="+91 / International number">
+                    <input type="tel" class="cu-form-control" id="cuPhone" name="phone" value="{{ old('phone') }}" placeholder="+91 / International number">
                   </div>
                 </div>
 
@@ -128,7 +149,7 @@
                   <label for="cuOrg" class="cu-form-label">Company or Organization</label>
                   <div class="cu-input-wrapper">
                     <i class="bi bi-building cu-input-icon"></i>
-                    <input type="text" class="cu-form-control" id="cuOrg" name="organization" placeholder="Enterprise or Agency">
+                    <input type="text" class="cu-form-control" id="cuOrg" name="organization" value="{{ old('organization') }}" placeholder="Enterprise or Agency">
                   </div>
                 </div>
 
@@ -139,12 +160,12 @@
                     <i class="bi bi-tag cu-input-icon"></i>
                     <select class="cu-form-select" id="cuSubject" name="subject" required>
                       <option value="" disabled>Select an inquiry area</option>
-                      <option value="wholesale" selected>B2B Wholesale &amp; International Export</option>
-                      <option value="corporate">Corporate Gifting &amp; Co-Branded Accessories</option>
-                      <option value="consulting">Sustainability Consulting, Waste Audits &amp; EPR</option>
-                      <option value="training">Artisan Capacity Building &amp; CSR Collaboration</option>
-                      <option value="research">Academic / Environmental Material Science</option>
-                      <option value="general">Press, Media &amp; General Inquiries</option>
+                      <option value="B2B Wholesale & International Export" selected>B2B Wholesale &amp; International Export</option>
+                      <option value="Corporate Gifting & Co-Branded Accessories">Corporate Gifting &amp; Co-Branded Accessories</option>
+                      <option value="Sustainability Consulting, Waste Audits & EPR">Sustainability Consulting, Waste Audits &amp; EPR</option>
+                      <option value="Artisan Capacity Building & CSR Collaboration">Artisan Capacity Building &amp; CSR Collaboration</option>
+                      <option value="Academic / Environmental Material Science">Academic / Environmental Material Science</option>
+                      <option value="Press, Media & General Inquiries">Press, Media &amp; General Inquiries</option>
                     </select>
                   </div>
                 </div>
@@ -154,7 +175,7 @@
                   <label for="cuMessage" class="cu-form-label">Project Scope &amp; Specifications <span class="text-danger">*</span></label>
                   <div class="cu-input-wrapper">
                     <i class="bi bi-chat-left-text cu-input-icon-textarea"></i>
-                    <textarea class="cu-form-control" id="cuMessage" name="message" rows="5" placeholder="Please outline your product requirements, volume estimates, desired timelines, or corporate collaboration goals..." required></textarea>
+                    <textarea class="cu-form-control" id="cuMessage" name="message" rows="5" placeholder="Please outline your product requirements, volume estimates, desired timelines, or corporate collaboration goals..." required>{{ old('message') }}</textarea>
                   </div>
                 </div>
 
@@ -162,19 +183,7 @@
                 <div class="col-12 pt-2">
                   <button type="submit" id="cuSubmitBtn" class="cu-btn-submit-contact">
                     <span class="btn-text">Submit Inquiry &rarr;</span>
-                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
                   </button>
-                </div>
-              </div>
-
-              <!-- Inline Success Alert -->
-              <div id="cuSuccessFeedback" class="alert alert-success mt-4 mb-0" style="display: none; border-radius: 10px;" role="alert">
-                <div class="d-flex align-items-start gap-3">
-                  <i class="bi bi-check-circle-fill text-success fs-4"></i>
-                  <div>
-                    <h4 class="h6 fw-bold mb-1">Inquiry Successfully Received</h4>
-                    <p class="small mb-0" style="line-height: 1.5;">Thank you for contacting Conserve India. A representative from our team will review your specifications and reply via email within 24 to 48 business hours.</p>
-                  </div>
                 </div>
               </div>
             </form>
@@ -198,7 +207,7 @@
               </div>
               <div class="small">
                 <strong class="text-white d-block">Production Atelier &amp; Studio:</strong>
-                <span class="text-muted">New Delhi / NCR, India</span><br>
+                <span class="text-muted">{{ $settings['contact_address'] ?? 'New Delhi / NCR, India' }}</span><br>
                 <span class="text-white-50" style="font-size: 11.5px;">Atelier tours &amp; visits welcome by prior appointment</span>
               </div>
             </div>
@@ -209,9 +218,21 @@
               </div>
               <div class="small">
                 <strong class="text-white d-block">Official Inquiries &amp; Proposals:</strong>
-                <a href="mailto:info@conserveindia.org" class="text-white fw-bold text-decoration-none">info@conserveindia.org</a>
+                <a href="mailto:{{ $settings['contact_email'] ?? 'info@conserveindia.org' }}" class="text-white fw-bold text-decoration-none">{{ $settings['contact_email'] ?? 'info@conserveindia.org' }}</a>
               </div>
             </div>
+
+            @if(!empty($settings['contact_phone']))
+              <div class="cu-info-item">
+                <div class="cu-info-icon-box">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div class="small">
+                  <strong class="text-white d-block">Phone / WhatsApp:</strong>
+                  <a href="tel:{{ $settings['contact_phone'] }}" class="text-white fw-bold text-decoration-none">{{ $settings['contact_phone'] }}</a>
+                </div>
+              </div>
+            @endif
 
             <div class="cu-info-item">
               <div class="cu-info-icon-box">
@@ -226,16 +247,27 @@
             <!-- Social Links inside Dark Card -->
             <div class="pt-3 mt-3 border-top border-secondary-subtle">
               <span class="text-white-50 small d-block mb-2">Connect via official social channels:</span>
-              <div class="d-flex align-items-center gap-2">
-                <a href="https://www.instagram.com/conserveindia/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3" style="font-size: 12px;">
-                  <i class="bi bi-instagram me-1 text-warning"></i> Instagram
-                </a>
-                <a href="https://www.linkedin.com/company/conserve-india/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3" style="font-size: 12px;">
-                  <i class="bi bi-linkedin me-1 text-info"></i> LinkedIn
-                </a>
-                <a href="https://www.facebook.com/conserveindia" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3" style="font-size: 12px;">
-                  <i class="bi bi-facebook me-1 text-primary"></i> Facebook
-                </a>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                @if(!empty($settings['instagram_url']))
+                  <a href="{{ $settings['instagram_url'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3" style="font-size: 12px;">
+                    <i class="bi bi-instagram me-1 text-warning"></i> Instagram
+                  </a>
+                @endif
+                @if(!empty($settings['linkedin_url']))
+                  <a href="{{ $settings['linkedin_url'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3" style="font-size: 12px;">
+                    <i class="bi bi-linkedin me-1 text-info"></i> LinkedIn
+                  </a>
+                @endif
+                @if(!empty($settings['facebook_url']))
+                  <a href="{{ $settings['facebook_url'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3" style="font-size: 12px;">
+                    <i class="bi bi-facebook me-1 text-primary"></i> Facebook
+                  </a>
+                @endif
+                @if(!empty($settings['youtube_url']))
+                  <a href="{{ $settings['youtube_url'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3" style="font-size: 12px;">
+                    <i class="bi bi-youtube me-1 text-danger"></i> YouTube
+                  </a>
+                @endif
               </div>
             </div>
           </div>
