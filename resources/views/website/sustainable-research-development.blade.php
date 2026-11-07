@@ -10,10 +10,10 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> <a href="{{ url('/#our-work') }}">Our Work</a> <span>/</span> Sustainable R&amp;D
       </nav>
-      <span class="ed-section-tag">CIRCULAR MATERIAL SCIENCE</span>
-      <h1 class="ed-page-title">Sustainable Research &amp; Development</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'CIRCULAR MATERIAL SCIENCE' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Sustainable Research & Development' }}</h1>
       <p class="ed-page-lead">
-        Pioneering patented low-energy material engineering that transforms neglected, contaminated post-consumer plastics into certified Fair Trade, high-durability circular textiles.
+        {{ $page->lead_text ?? 'Pioneering patented low-energy material engineering that transforms neglected, contaminated post-consumer plastics into certified Fair Trade, high-durability circular textiles.' }}
       </p>
     </div>
   </header>

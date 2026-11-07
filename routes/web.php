@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\InquiryController;
 use App\Http\Controllers\Admin\SeoController;
+use App\Http\Controllers\Admin\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,6 +94,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/seo/{seo}/edit', [SeoController::class, 'edit'])->name('seo.edit');
         Route::put('/seo/{seo}', [SeoController::class, 'update'])->name('seo.update');
 
+        // Dynamic Pages Management
+        Route::get('/pages', [PageController::class, 'index'])->name('pages.index');
+        Route::get('/pages/{page}/edit', [PageController::class, 'edit'])->name('pages.edit');
+        Route::put('/pages/{page}', [PageController::class, 'update'])->name('pages.update');
+
         // CMS Resources
         Route::resource('sliders', SliderController::class)->except(['show']);
         Route::resource('initiatives', InitiativeController::class)->except(['show']);
@@ -166,9 +172,10 @@ Route::get('/run-migration', function () {
                     " : "") . "
 
                     <div class='btn-group'>
-                        <a href='" . url('/run-migration?seed=1') . "' class='btn btn-seed'>⚡ Run With Seeders (?seed=1)</a>
+                        <a href='" . url('/run-seeder') . "' class='btn btn-seed'>🌱 Run Seeders (/run-seeder)</a>
+                        <a href='" . url('/run-seeder?class=PageSeeder') . "' class='btn btn-seed'>📄 Seed Pages Only</a>
                         <a href='" . url('/clear-cache') . "' class='btn btn-cache'>🧹 Clear Server Cache</a>
-                        <a href='" . url('/admin') . "' class='btn btn-admin'>🔐 Open Admin Portal</a>
+                        <a href='" . url('/admin/pages') . "' class='btn btn-admin'>🔐 Manage Dynamic Pages</a>
                         <a href='" . url('/') . "' class='btn btn-home'>🌐 View Live Site</a>
                     </div>
                 </div>
@@ -206,6 +213,127 @@ Route::get('/run-migration', function () {
 
 Route::get('/run-migrations', fn() => redirect('/run-migration'));
 Route::get('/migrate', fn() => redirect('/run-migration'));
+
+Route::get('/run-seeder', function () {
+    try {
+        $classParam = request()->query('class', 'DatabaseSeeder');
+        
+        $allowedMap = [
+            'DatabaseSeeder'    => \Database\Seeders\DatabaseSeeder::class,
+            'PageSeeder'        => \Database\Seeders\PageSeeder::class,
+            'PageSeoSeeder'     => \Database\Seeders\PageSeoSeeder::class,
+            'ConserveCmsSeeder' => \Database\Seeders\ConserveCmsSeeder::class,
+        ];
+
+        if (isset($allowedMap[$classParam])) {
+            $targetClass = $allowedMap[$classParam];
+        } elseif (class_exists($classParam)) {
+            $targetClass = $classParam;
+        } elseif (class_exists("Database\\Seeders\\{$classParam}")) {
+            $targetClass = "Database\\Seeders\\{$classParam}";
+        } else {
+            $targetClass = \Database\Seeders\DatabaseSeeder::class;
+        }
+
+        $exitCode = Artisan::call('db:seed', [
+            '--class' => $targetClass,
+            '--force' => true,
+        ]);
+        $output = Artisan::output();
+
+        $htmlOutput = e($output ?: "Seeder executed successfully. Target class: {$targetClass}");
+        $shortName = class_basename($targetClass);
+
+        return response("
+            <!DOCTYPE html>
+            <html lang='en'>
+            <head>
+                <meta charset='UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <title>Server Seeder Runner | Conserve India</title>
+                <style>
+                    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; padding: 40px 20px; line-height: 1.6; }
+                    .container { max-width: 860px; margin: 0 auto; background: #1e293b; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid #334155; }
+                    h2 { color: #22c55e; margin-top: 0; display: flex; align-items: center; gap: 10px; font-size: 22px; }
+                    .badge { display: inline-block; background: #065f46; color: #6ee7b7; font-size: 12px; padding: 3px 10px; border-radius: 9999px; font-weight: 600; text-transform: uppercase; }
+                    pre { background: #0b1120; padding: 18px; border-radius: 8px; border: 1px solid #1e293b; color: #38bdf8; font-size: 13px; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
+                    .quick-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+                    .chip { background: #334155; color: #e2e8f0; padding: 6px 14px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 500; transition: all 0.2s; }
+                    .chip:hover, .chip.active { background: #0284c7; color: #fff; }
+                    .btn-group { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; padding-top: 20px; border-top: 1px solid #334155; }
+                    .btn { display: inline-block; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; transition: opacity 0.2s; }
+                    .btn:hover { opacity: 0.9; }
+                    .btn-seed { background: #0284c7; color: #fff; }
+                    .btn-cache { background: #eab308; color: #000; }
+                    .btn-admin { background: #22c55e; color: #fff; }
+                    .btn-home { background: #475569; color: #fff; }
+                </style>
+            </head>
+            <body>
+                <div class='container'>
+                    <h2><span style='font-size: 28px;'>🌱</span> Seeder Executed Successfully</h2>
+                    <p style='color: #94a3b8; font-size: 14px;'>
+                        Class: <strong>{$targetClass}</strong> &nbsp;
+                        <span class='badge'>Exit Code: {$exitCode}</span>
+                    </p>
+                    
+                    <div style='margin-bottom: 12px; font-size: 13px; color: #94a3b8;'>Run a specific seeder:</div>
+                    <div class='quick-links'>
+                        <a href='" . url('/run-seeder') . "' class='chip " . ($shortName === 'DatabaseSeeder' ? 'active' : '') . "'>🚀 All Seeders (DatabaseSeeder)</a>
+                        <a href='" . url('/run-seeder?class=PageSeeder') . "' class='chip " . ($shortName === 'PageSeeder' ? 'active' : '') . "'>📄 PageSeeder (Dynamic Pages)</a>
+                        <a href='" . url('/run-seeder?class=PageSeoSeeder') . "' class='chip " . ($shortName === 'PageSeoSeeder' ? 'active' : '') . "'>🔍 PageSeoSeeder (SEO Metadata)</a>
+                        <a href='" . url('/run-seeder?class=ConserveCmsSeeder') . "' class='chip " . ($shortName === 'ConserveCmsSeeder' ? 'active' : '') . "'>🏢 ConserveCmsSeeder (CMS & Admin)</a>
+                    </div>
+
+                    <h4 style='color: #cbd5e1; margin-bottom: 8px;'>Artisan Output:</h4>
+                    <pre>{$htmlOutput}</pre>
+
+                    <div class='btn-group'>
+                        <a href='" . url('/clear-cache') . "' class='btn btn-cache'>🧹 Clear Server Cache</a>
+                        <a href='" . url('/admin/pages') . "' class='btn btn-admin'>🔐 Manage Dynamic Pages</a>
+                        <a href='" . url('/admin') . "' class='btn btn-seed'>🔐 Admin Dashboard</a>
+                        <a href='" . url('/') . "' class='btn btn-home'>🌐 View Live Site</a>
+                    </div>
+                </div>
+            </body>
+            </html>
+        ", 200);
+    } catch (\Throwable $e) {
+        $errorMsg = e($e->getMessage());
+        $errorTrace = e($e->getFile() . ':' . $e->getLine());
+
+        return response("
+            <!DOCTYPE html>
+            <html lang='en'>
+            <head>
+                <meta charset='UTF-8'>
+                <title>Seeder Error | Conserve India</title>
+                <style>
+                    body { font-family: monospace; background: #0f172a; color: #f8fafc; padding: 40px 20px; }
+                    .container { max-width: 860px; margin: 0 auto; background: #1e293b; border-radius: 12px; padding: 30px; border: 1px solid #ef4444; }
+                    h2 { color: #ef4444; margin-top: 0; }
+                    pre { background: #450a0a; color: #fca5a5; padding: 18px; border-radius: 8px; overflow-x: auto; white-space: pre-wrap; font-size: 13px; }
+                    a { color: #38bdf8; }
+                </style>
+            </head>
+            <body>
+                <div class='container'>
+                    <h2>✗ Seeder Error Encountered</h2>
+                    <pre>{$errorMsg}\n\nLocation: {$errorTrace}</pre>
+                    <p style='color: #94a3b8; font-size: 13px; margin-top: 20px;'>
+                        Tip: If the table doesn't exist yet, run migrations first: 
+                        <a href='" . url('/run-migration') . "'>Run Migrations Here</a>.
+                    </p>
+                </div>
+            </body>
+            </html>
+        ", 500);
+    }
+})->name('run.seeder');
+
+Route::get('/run-seeders', fn() => redirect('/run-seeder'));
+Route::get('/run-seed', fn() => redirect('/run-seeder'));
+Route::get('/seed', fn() => redirect('/run-seeder'));
 
 Route::get('/clear-cache', function () {
     try {

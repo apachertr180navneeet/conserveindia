@@ -10,11 +10,16 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> Our Work
       </nav>
-      <span class="ed-section-tag">INITIATIVES &amp; INTERVENTIONS</span>
-      <h1 class="ed-page-title">Pioneering Circular Ecology &amp; Social Justice</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'INITIATIVES & INTERVENTIONS' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Pioneering Circular Ecology & Social Justice' }}</h1>
       <p class="ed-page-lead">
-        From patented plastic recycling technologies to empowering thousands of informal waste pickers and UNHCR refugee women, explore how we connect waste abatement with human dignity.
+        {{ $page->lead_text ?? 'From patented plastic recycling technologies to empowering thousands of informal waste pickers and UNHCR refugee women, explore how we connect waste abatement with human dignity.' }}
       </p>
+      @if(!empty($page->content))
+        <div class="mt-4 p-4 bg-white rounded-3 border border-light-subtle shadow-sm text-secondary" style="line-height: 1.8;">
+          {!! $page->content !!}
+        </div>
+      @endif
     </div>
   </header>
 
@@ -175,8 +180,143 @@
     </div>
   </section>
 
-  <!-- Impact Band -->
-  <section class="ed-content-section-muted" style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <!-- Impact Band & Verified Metrics -->
+  <section class="ed-content-section-muted" style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 60px 0;">
+    <div class="container px-lg-4">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+          <div class="p-4 bg-white rounded-3 border border-light-subtle h-100 shadow-sm">
+            <div class="display-6 fw-bold text-success mb-1">{{ $settings['impact_plastic_tons'] ?? '500+ Tons' }}</div>
+            <div class="fw-bold mb-1" style="color: var(--primary-forest);">Plastic Diverted</div>
+            <div class="text-muted small">From urban landfills</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-4 bg-white rounded-3 border border-light-subtle h-100 shadow-sm">
+            <div class="display-6 fw-bold text-success mb-1">{{ $settings['impact_ragpickers'] ?? '3,000+' }}</div>
+            <div class="fw-bold mb-1" style="color: var(--primary-forest);">Ragpickers Organized</div>
+            <div class="text-muted small">Registered in Association</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-4 bg-white rounded-3 border border-light-subtle h-100 shadow-sm">
+            <div class="display-6 fw-bold text-success mb-1">{{ $settings['impact_women_trained'] ?? '100+' }}</div>
+            <div class="fw-bold mb-1" style="color: var(--primary-forest);">Women Recyclers Trained</div>
+            <div class="text-muted small">Certified livelihoods</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-4 bg-white rounded-3 border border-light-subtle h-100 shadow-sm">
+            <div class="display-6 fw-bold text-success mb-1">{{ $settings['impact_retail_partners'] ?? '1,000+' }}</div>
+            <div class="fw-bold mb-1" style="color: var(--primary-forest);">Retail Stockists</div>
+            <div class="text-muted small">Worldwide export network</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Section: Partner Testimonials -->
+  @if(isset($testimonials) && $testimonials->isNotEmpty())
+  <section class="ed-content-section" style="background: #fcfbf8; border-bottom: 1px solid var(--border-subtle); padding: 75px 0;">
+    <div class="container px-lg-4">
+      <div class="text-center mb-5">
+        <span class="ed-section-tag">GLOBAL PARTNERSHIPS</span>
+        <h2 class="ed-section-title">Endorsements from Our Partners</h2>
+        <p class="ed-section-desc mx-auto">Voices from global retail partners, WFTO certifiers, and civic allies collaborating with Conserve India.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        @foreach($testimonials as $item)
+          <div class="col-md-6 col-lg-4">
+            <div class="bg-white rounded-3 p-4 border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="text-success fs-3"><i class="bi bi-quote"></i></div>
+                  @if($item->logo)
+                    <div style="height: 36px; max-width: 110px;">
+                      <img src="{{ str_starts_with($item->logo, 'http') ? $item->logo : asset('website/' . $item->logo) }}" class="h-100 w-auto object-fit-contain" alt="{{ $item->author }}">
+                    </div>
+                  @endif
+                </div>
+                <p class="text-secondary small fst-italic mb-3" style="line-height: 1.7;">
+                  &ldquo;{{ $item->quote }}&rdquo;
+                </p>
+              </div>
+              <div class="pt-3 border-top border-light-subtle">
+                <h4 class="h6 fw-bold mb-0" style="color: var(--primary-forest);">{{ $item->author }}</h4>
+                @if($item->designation)
+                  <span class="text-muted small" style="font-size: 12px;">{{ $item->designation }}</span>
+                @endif
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
+  @endif
+
+  <!-- Dynamic Section: Dispatches from the Field -->
+  @if(isset($recentStories) && $recentStories->isNotEmpty())
+  <section class="ed-content-section" style="background: #ffffff; padding: 75px 0;">
+    <div class="container px-lg-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+        <div>
+          <span class="ed-section-tag">FIELD DISPATCHES</span>
+          <h2 class="ed-section-title mb-0">Latest Stories &amp; Updates</h2>
+        </div>
+        <a href="{{ url('/green-stories') }}" class="ed-btn-outline mt-3 mt-md-0">
+          View All Green Stories &rarr;
+        </a>
+      </div>
+
+      <div class="row g-4">
+        @foreach($recentStories as $story)
+          <div class="col-md-6 col-lg-4">
+            <article class="bg-white rounded-3 overflow-hidden border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+              <div>
+                <div class="position-relative overflow-hidden" style="height: 190px; background: #e8eee9;">
+                  @if($story->image)
+                    <img src="{{ str_starts_with($story->image, 'http') ? $story->image : asset('website/' . $story->image) }}" class="w-100 h-100 object-fit-cover" alt="{{ $story->title }}">
+                  @else
+                    <div class="w-100 h-100 d-flex align-items-center justify-content-center text-muted">
+                      <i class="bi bi-newspaper fs-1 text-secondary opacity-50"></i>
+                    </div>
+                  @endif
+                  @if($story->category)
+                    <span class="position-absolute top-0 start-0 m-3 badge bg-white text-dark shadow-sm">{{ $story->category }}</span>
+                  @endif
+                </div>
+                <div class="p-4">
+                  <span class="text-muted small d-block mb-1">
+                    <i class="bi bi-calendar3 me-1"></i> {{ $story->published_date ? $story->published_date->format('M d, Y') : $story->created_at->format('M d, Y') }}
+                  </span>
+                  <h3 class="h6 fw-bold mb-2" style="color: var(--primary-forest);">
+                    <a href="{{ route('story.detail', $story->slug ?: $story->id) }}" class="text-decoration-none text-dark">
+                      {{ $story->title }}
+                    </a>
+                  </h3>
+                  <p class="text-muted small mb-0" style="line-height: 1.6;">
+                    {{ Str::limit($story->summary ?: strip_tags($story->content), 95) }}
+                  </p>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="{{ route('story.detail', $story->slug ?: $story->id) }}" class="text-success fw-semibold small text-decoration-none">
+                  Read Full Story &rarr;
+                </a>
+              </div>
+            </article>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
+  @endif
+
+  <!-- Interactive Gallery CTA Band -->
+  <section class="ed-content-section-muted" style="border-top: 1px solid var(--border-subtle); padding: 70px 0;">
     <div class="container px-lg-4 text-center">
       <span class="ed-section-tag">PROJECT PORTFOLIO</span>
       <h2 class="ed-section-title mb-3">View Our Projects in Action</h2>

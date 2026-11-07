@@ -10,10 +10,10 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> Green Stories
       </nav>
-      <span class="ed-section-tag">RESEARCH &amp; ANALYSIS</span>
-      <h1 class="ed-page-title">Green Stories &amp; Field Dispatches</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'RESEARCH & ANALYSIS' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Green Stories & Field Dispatches' }}</h1>
       <p class="ed-page-lead">
-        Field reports, circular material investigations, and policy perspectives from over two and a half decades on the frontlines of India's urban waste and social enterprise sectors.
+        {{ $page->lead_text ?? 'Field reports, circular material investigations, and policy perspectives from over two and a half decades on the frontlines of India\'s urban waste and social enterprise sectors.' }}
       </p>
     </div>
   </header>

@@ -50,6 +50,13 @@
     <div class="admin-nav-section-title">Content & Media</div>
 
     <div class="admin-nav-item">
+      <a href="{{ route('admin.pages.index') }}" class="admin-nav-link {{ request()->routeIs('admin.pages.*') ? 'active' : '' }}">
+        <i class="bi bi-file-earmark-richtext"></i>
+        <span>Dynamic Pages</span>
+      </a>
+    </div>
+
+    <div class="admin-nav-item">
       <a href="{{ route('admin.news.index') }}" class="admin-nav-link {{ request()->routeIs('admin.news.*') ? 'active' : '' }}">
         <i class="bi bi-newspaper"></i>
         <span>News &amp; Stories</span>

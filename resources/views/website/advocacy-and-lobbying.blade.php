@@ -10,10 +10,10 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> <a href="{{ url('/#our-work') }}">Our Work</a> <span>/</span> Advocacy &amp; Policy
       </nav>
-      <span class="ed-section-tag">POLICY &amp; RIGHTS</span>
-      <h1 class="ed-page-title">Advocacy, Lobbying &amp; Policy Reform</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'POLICY & RIGHTS' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Advocacy, Lobbying & Policy Reform' }}</h1>
       <p class="ed-page-lead">
-        Influencing systemic change by bridging on-the-ground environmental realities with legislative frameworks, municipal policy, and corporate accountability across India.
+        {{ $page->lead_text ?? 'Influencing systemic change by bridging on-the-ground environmental realities with legislative frameworks, municipal policy, and corporate accountability across India.' }}
       </p>
     </div>
   </header>

@@ -10,11 +10,16 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> Latest Updates
       </nav>
-      <span class="ed-section-tag">NEWSROOM &amp; ARCHIVE</span>
-      <h1 class="ed-page-title">Awards, Stories &amp; Publications</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'NEWSROOM & ARCHIVE' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Awards, Stories & Publications' }}</h1>
       <p class="ed-page-lead">
-        Track our latest institutional milestones, field dispatches from artisan ateliers, and research publications shaping circular economy policies across India.
+        {{ $page->lead_text ?? 'Track our latest institutional milestones, field dispatches from artisan ateliers, and research publications shaping circular economy policies across India.' }}
       </p>
+      @if(!empty($page->content))
+        <div class="mt-4 p-4 bg-white rounded-3 border border-light-subtle shadow-sm text-secondary" style="line-height: 1.8;">
+          {!! $page->content !!}
+        </div>
+      @endif
     </div>
   </header>
 
@@ -217,6 +222,12 @@
           </div>
         @endif
       </div>
+
+      @if(method_exists($newsArticles, 'hasPages') && $newsArticles->hasPages())
+        <div class="d-flex justify-content-center mt-5 pt-3">
+          {{ $newsArticles->links() }}
+        </div>
+      @endif
     </div>
   </section>
 

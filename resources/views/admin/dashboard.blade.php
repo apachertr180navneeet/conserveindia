@@ -114,6 +114,10 @@
         <h6 class="fw-bold mb-0" style="color: var(--admin-forest);">Quick Management</h6>
       </div>
       <div class="admin-card-body d-flex flex-column gap-2">
+        <a href="{{ route('admin.pages.index') }}" class="btn btn-light border text-start d-flex align-items-center justify-content-between p-2">
+          <span><i class="bi bi-file-earmark-richtext text-success me-2"></i> Manage Dynamic Pages</span>
+          <i class="bi bi-chevron-right text-muted small"></i>
+        </a>
         <a href="{{ route('admin.sliders.create') }}" class="btn btn-light border text-start d-flex align-items-center justify-content-between p-2">
           <span><i class="bi bi-plus-circle text-success me-2"></i> Add New Slide</span>
           <i class="bi bi-chevron-right text-muted small"></i>

@@ -10,11 +10,16 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> About Us
       </nav>
-      <span class="ed-section-tag">ORGANIZATIONAL HERITAGE</span>
-      <h1 class="ed-page-title">Pioneering Circularity Since 1997</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'ORGANIZATIONAL HERITAGE' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Pioneering Circularity Since 1997' }}</h1>
       <p class="ed-page-lead">
-        {{ $settings['about_intro_lead'] ?? 'Conserve India operates at the intersection of environmental conservation and social justice—diverting urban plastic waste while empowering marginalized waste pickers and refugee women with dignified, employable opportunities.' }}
+        {{ $page->lead_text ?? ($settings['about_intro_lead'] ?? 'Conserve India operates at the intersection of environmental conservation and social justice—diverting urban plastic waste while empowering marginalized waste pickers and refugee women with dignified, employable opportunities.') }}
       </p>
+      @if(!empty($page->content))
+        <div class="mt-4 p-4 bg-white rounded-3 border border-light-subtle shadow-sm text-secondary" style="line-height: 1.8;">
+          {!! $page->content !!}
+        </div>
+      @endif
     </div>
   </header>
 

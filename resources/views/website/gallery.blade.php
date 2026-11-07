@@ -10,11 +10,16 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> Gallery
       </nav>
-      <span class="ed-section-tag">PROJECT REPOSITORY</span>
-      <h1 class="ed-page-title">Gallery of Milestones &amp; Grassroots Action</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'PROJECT REPOSITORY' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Gallery of Milestones & Grassroots Action' }}</h1>
       <p class="ed-page-lead">
-        A visual showcase of the 13 foundational initiatives shaping our journey—from patented material discoveries to cooperative waste collectors associations and refugee ateliers.
+        {{ $page->lead_text ?? 'A visual showcase of the foundational initiatives shaping our journey—from patented material discoveries to cooperative waste collectors associations and refugee ateliers.' }}
       </p>
+      @if(!empty($page->content))
+        <div class="mt-4 p-4 bg-white rounded-3 border border-light-subtle shadow-sm text-secondary" style="line-height: 1.8;">
+          {!! $page->content !!}
+        </div>
+      @endif
     </div>
   </header>
 
@@ -22,14 +27,31 @@
   <section class="ed-content-section" style="background: #fff;">
     <div class="container px-lg-4">
       
+      @php
+        $catCounts = [
+          'all' => count($projects),
+          'livelihoods' => 0,
+          'patent' => 0,
+          'community' => 0,
+          'products' => 0,
+          'youth' => 0,
+        ];
+        foreach ($projects as $p) {
+          $c = is_array($p) ? ($p['category'] ?? 'community') : ($p->category ?? 'community');
+          if (isset($catCounts[$c])) {
+            $catCounts[$c]++;
+          }
+        }
+      @endphp
+
       <!-- Filter Bar -->
       <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="galleryFilters">
-        <button type="button" class="btn btn-sm btn-outline-success active px-3 py-2 filter-btn" data-filter="all">All Initiatives (13)</button>
-        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="livelihoods">Livelihoods &amp; Artisans</button>
-        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="patent">Patents &amp; Material R&amp;D</button>
-        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="community">Community &amp; Advocacy</button>
-        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="products">Brands &amp; Products</button>
-        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="youth">Youth Incubator</button>
+        <button type="button" class="btn btn-sm btn-outline-success active px-3 py-2 filter-btn" data-filter="all">All Initiatives ({{ $catCounts['all'] }})</button>
+        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="livelihoods">Livelihoods &amp; Artisans ({{ $catCounts['livelihoods'] }})</button>
+        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="patent">Patents &amp; Material R&amp;D ({{ $catCounts['patent'] }})</button>
+        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="community">Community &amp; Advocacy ({{ $catCounts['community'] }})</button>
+        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="products">Brands &amp; Products ({{ $catCounts['products'] }})</button>
+        <button type="button" class="btn btn-sm btn-outline-success px-3 py-2 filter-btn" data-filter="youth">Youth Incubator ({{ $catCounts['youth'] }})</button>
       </div>
 
       <!-- Projects Grid -->

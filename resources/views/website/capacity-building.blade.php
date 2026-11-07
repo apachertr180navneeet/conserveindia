@@ -10,10 +10,10 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> <a href="{{ url('/#our-work') }}">Our Work</a> <span>/</span> Capacity Building
       </nav>
-      <span class="ed-section-tag">HUMAN DIGNITY &amp; CRAFT</span>
-      <h1 class="ed-page-title">Artisan Capacity Building &amp; Livelihoods</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'HUMAN DIGNITY & CRAFT' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Artisan Capacity Building & Livelihoods' }}</h1>
       <p class="ed-page-lead">
-        Maximizing socio-economic upliftment by transitioning informal ragpickers and refugee women into skilled craftswomen, backed by fair wages, technical education, and global market linkages.
+        {{ $page->lead_text ?? 'Maximizing socio-economic upliftment by transitioning informal ragpickers and refugee women into skilled craftswomen, backed by fair wages, technical education, and global market linkages.' }}
       </p>
     </div>
   </header>

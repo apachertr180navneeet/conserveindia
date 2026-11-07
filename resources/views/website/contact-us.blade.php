@@ -10,10 +10,10 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> <a href="{{ url('/connect-with-us') }}">Connect With Us</a> <span>/</span> Contact
       </nav>
-      <span class="ed-section-tag">CONNECT &amp; COLLABORATE</span>
-      <h1 class="ed-page-title" style="max-width: 820px;">Let’s Engineer Circular Impact Together</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'CONNECT & COLLABORATE' }}</span>
+      <h1 class="ed-page-title" style="max-width: 820px;">{{ $page->title ?? 'Let’s Engineer Circular Impact Together' }}</h1>
       <p class="ed-page-lead" style="max-width: 760px;">
-        Whether you are an international buyer seeking certified Fair Trade upcycled fashion, a corporation planning zero-waste audits, or a funder exploring artisan livelihoods, our Delhi team is ready to assist.
+        {{ $page->lead_text ?? 'Whether you are an international buyer seeking certified Fair Trade upcycled fashion, a corporation planning zero-waste audits, or a funder exploring artisan livelihoods, our Delhi team is ready to assist.' }}
       </p>
 
       <!-- Reassurance Badges -->

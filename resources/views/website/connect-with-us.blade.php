@@ -10,19 +10,66 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> Connect With Us
       </nav>
-      <span class="ed-section-tag">COLLABORATION &amp; SOLIDARITY</span>
-      <h1 class="ed-page-title">Connect, Partner &amp; Support</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'COLLABORATION & SOLIDARITY' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Connect, Partner & Support' }}</h1>
       <p class="ed-page-lead">
-        Whether you want to partner on circular supply chains, volunteer your creative talents, make a tax-deductible contribution, or visit our Delhi atelier, there is a place for you in our movement.
+        {{ $page->lead_text ?? 'Whether you want to partner on circular supply chains, volunteer your creative talents, make a tax-deductible contribution, or visit our Delhi atelier, there is a place for you in our movement.' }}
       </p>
+      @if(!empty($page->content))
+        <div class="mt-4 p-4 bg-white rounded-3 border border-light-subtle shadow-sm text-secondary" style="line-height: 1.8;">
+          {!! $page->content !!}
+        </div>
+      @endif
     </div>
   </header>
 
-  <!-- 4 Action Pathway Cards -->
-  <section class="ed-content-section" style="background: #fff;">
+  <!-- Direct Contact Channels & Action Pathways -->
+  <section class="ed-content-section" style="background: #fff; padding-bottom: 30px;">
     <div class="container px-lg-4">
+      
+      <!-- Direct Contact Channels Strip -->
       <div class="row g-4 mb-5">
-        
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border border-light-subtle h-100">
+            <div class="bg-success bg-opacity-10 text-success rounded-circle p-2 fs-5" style="width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div>
+              <span class="text-muted small d-block">Official Email</span>
+              <a href="mailto:{{ $settings['contact_email'] ?? 'info@conserveindia.org' }}" class="fw-semibold text-dark text-decoration-none small">
+                {{ $settings['contact_email'] ?? 'info@conserveindia.org' }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border border-light-subtle h-100">
+            <div class="bg-success bg-opacity-10 text-success rounded-circle p-2 fs-5" style="width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div>
+              <span class="text-muted small d-block">Official Phone</span>
+              <a href="tel:{{ $settings['contact_phone'] ?? '+919810012345' }}" class="fw-semibold text-dark text-decoration-none small">
+                {{ $settings['contact_phone'] ?? '+91 98100 12345' }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border border-light-subtle h-100">
+            <div class="bg-success bg-opacity-10 text-success rounded-circle p-2 fs-5" style="width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div>
+              <span class="text-muted small d-block">Headquarters</span>
+              <span class="fw-semibold text-dark small">{{ $settings['contact_address'] ?? 'Conserve HRP, New Delhi, India' }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Pathway Cards -->
+      <div class="row g-4">
         <!-- Pathway 1: Contact -->
         <div class="col-md-4">
           <div class="p-4 rounded-3 border border-light-subtle h-100 bg-light d-flex flex-column justify-content-between text-center">
@@ -64,13 +111,13 @@
             <a href="#partner" class="btn btn-outline-success btn-sm w-100">Partner Details &rarr;</a>
           </div>
         </div>
-
       </div>
+
     </div>
   </section>
 
   <!-- Section: Partner With Us (#partner) -->
-  <section class="ed-content-section" id="partner" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+  <section class="ed-content-section" id="partner" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 75px 0;">
     <div class="container px-lg-4">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
@@ -147,8 +194,49 @@
     </div>
   </section>
 
+  <!-- Dynamic Section: Partner Testimonials -->
+  @if(isset($testimonials) && $testimonials->isNotEmpty())
+  <section class="ed-content-section" style="background: #ffffff; padding: 75px 0;">
+    <div class="container px-lg-4">
+      <div class="text-center mb-5">
+        <span class="ed-section-tag">PARTNER TRUST</span>
+        <h2 class="ed-section-title">What Our Collaborators Say</h2>
+        <p class="ed-section-desc mx-auto">Endorsements from organizations working with Conserve India on fair trade and ethical upcycling.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        @foreach($testimonials as $item)
+          <div class="col-md-6 col-lg-4">
+            <div class="bg-light rounded-3 p-4 border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="text-success fs-3"><i class="bi bi-quote"></i></div>
+                  @if($item->logo)
+                    <div style="height: 36px; max-width: 110px;">
+                      <img src="{{ str_starts_with($item->logo, 'http') ? $item->logo : asset('website/' . $item->logo) }}" class="h-100 w-auto object-fit-contain" alt="{{ $item->author }}">
+                    </div>
+                  @endif
+                </div>
+                <p class="text-secondary small fst-italic mb-3" style="line-height: 1.7;">
+                  &ldquo;{{ $item->quote }}&rdquo;
+                </p>
+              </div>
+              <div class="pt-3 border-top border-light-subtle">
+                <h4 class="h6 fw-bold mb-0" style="color: var(--primary-forest);">{{ $item->author }}</h4>
+                @if($item->designation)
+                  <span class="text-muted small" style="font-size: 12px;">{{ $item->designation }}</span>
+                @endif
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
+  @endif
+
   <!-- Section: Volunteer With Us (#volunteer) -->
-  <section class="ed-content-section" id="volunteer" style="background: #fff;">
+  <section class="ed-content-section" id="volunteer" style="background: #fbfaf6; border-top: 1px solid var(--border-subtle); padding: 75px 0;">
     <div class="container px-lg-4">
       <div class="row align-items-center g-5">
         <div class="col-lg-6 order-lg-2">
@@ -159,28 +247,28 @@
           </p>
           <div class="row g-3 mb-4">
             <div class="col-sm-6">
-              <div class="p-3 bg-light rounded-3 border border-light-subtle h-100">
+              <div class="p-3 bg-white rounded-3 border border-light-subtle h-100">
                 <div class="text-success mb-1 fs-5"><i class="bi bi-palette"></i></div>
                 <h5 class="fw-bold mb-1" style="font-size: 15px;">Design Mentorship</h5>
                 <p class="text-muted small mb-0">Help train youth and artisans in modern accessory patterns, cutting techniques &amp; color matching.</p>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="p-3 bg-light rounded-3 border border-light-subtle h-100">
+              <div class="p-3 bg-white rounded-3 border border-light-subtle h-100">
                 <div class="text-success mb-1 fs-5"><i class="bi bi-camera"></i></div>
                 <h5 class="fw-bold mb-1" style="font-size: 15px;">Storytelling &amp; Media</h5>
                 <p class="text-muted small mb-0">Document field stories, capture photography of artisan hands, and assist with digital outreach.</p>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="p-3 bg-light rounded-3 border border-light-subtle h-100">
+              <div class="p-3 bg-white rounded-3 border border-light-subtle h-100">
                 <div class="text-success mb-1 fs-5"><i class="bi bi-book"></i></div>
                 <h5 class="fw-bold mb-1" style="font-size: 15px;">Literacy &amp; Tutoring</h5>
                 <p class="text-muted small mb-0">Teach basic Hindi/English, digital literacy, and smartphone skills to women recyclers and their children.</p>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="p-3 bg-light rounded-3 border border-light-subtle h-100">
+              <div class="p-3 bg-white rounded-3 border border-light-subtle h-100">
                 <div class="text-success mb-1 fs-5"><i class="bi bi-heart-pulse"></i></div>
                 <h5 class="fw-bold mb-1" style="font-size: 15px;">Health &amp; Welfare Camps</h5>
                 <p class="text-muted small mb-0">Volunteer at community eye exams, tetanus immunization drives, and hygiene distribution days.</p>
@@ -190,7 +278,7 @@
           <a href="{{ url('/contact-us?topic=volunteer') }}" class="btn-primary-forest">Apply to Volunteer &rarr;</a>
         </div>
         <div class="col-lg-6 order-lg-1">
-          <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden;">
+          <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06);">
             <img src="{{ asset('website/assets/images/story-farming.jpg') }}" alt="Volunteers engaging in community education and training" class="ed-media-img">
           </div>
         </div>

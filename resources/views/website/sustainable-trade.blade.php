@@ -10,10 +10,10 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> <a href="{{ url('/#our-work') }}">Our Work</a> <span>/</span> Sustainable Trade
       </nav>
-      <span class="ed-section-tag">ETHICAL COMMERCE</span>
-      <h1 class="ed-page-title">Sustainable &amp; Ethical Trade</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'ETHICAL COMMERCE' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Sustainable & Ethical Trade' }}</h1>
       <p class="ed-page-lead">
-        Proving that international fashion and lifestyle commerce can operate with complete ecological integrity, transparent living wages, and human dignity across every tier of the supply chain.
+        {{ $page->lead_text ?? 'Proving that international fashion and lifestyle commerce can operate with complete ecological integrity, transparent living wages, and human dignity across every tier of the supply chain.' }}
       </p>
     </div>
   </header>

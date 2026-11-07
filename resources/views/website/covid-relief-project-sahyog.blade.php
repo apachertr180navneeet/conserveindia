@@ -10,10 +10,10 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> <a href="{{ url('/#our-work') }}">Our Work</a> <span>/</span> Project Sahyog
       </nav>
-      <span class="ed-section-tag">HUMANITARIAN ACTION</span>
-      <h1 class="ed-page-title">COVID-19 Relief Program: Project Sahyog</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'HUMANITARIAN ACTION' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'COVID-19 Relief Program: Project Sahyog' }}</h1>
       <p class="ed-page-lead">
-        Recognized among India's Top 50 Last-Mile COVID-19 Emergency Responders for mobilizing emergency food security, clean drinking water, and upcycled protective equipment across Delhi's most vulnerable settlements.
+        {{ $page->lead_text ?? 'Recognized among India\'s Top 50 Last-Mile COVID-19 Emergency Responders for mobilizing emergency food security, clean drinking water, and upcycled protective equipment across Delhi\'s most vulnerable settlements.' }}
       </p>
     </div>
   </header>

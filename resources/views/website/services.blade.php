@@ -10,11 +10,16 @@
       <nav class="ed-breadcrumbs" aria-label="Breadcrumb">
         <a href="{{ url('/') }}">Home</a> <span>/</span> Our Services
       </nav>
-      <span class="ed-section-tag">CIRCULAR CAPABILITIES</span>
-      <h1 class="ed-page-title">Services &amp; Advisory Solutions</h1>
+      <span class="ed-section-tag">{{ $page->subtitle ?? 'CIRCULAR CAPABILITIES' }}</span>
+      <h1 class="ed-page-title">{{ $page->title ?? 'Services & Advisory Solutions' }}</h1>
       <p class="ed-page-lead">
-        Partnering with corporations, academic institutions, municipal bodies, and eco-conscious travelers to deliver circular innovation, vocational education, and high-impact immersion experiences.
+        {{ $page->lead_text ?? 'Partnering with corporations, academic institutions, municipal bodies, and eco-conscious travelers to deliver circular innovation, vocational education, and high-impact immersion experiences.' }}
       </p>
+      @if(!empty($page->content))
+        <div class="mt-4 p-4 bg-white rounded-3 border border-light-subtle shadow-sm text-secondary" style="line-height: 1.8;">
+          {!! $page->content !!}
+        </div>
+      @endif
     </div>
   </header>
 
@@ -133,6 +138,51 @@
        STREAMLINED DETAIL SECTIONS (CLEAN, FOCUSED, NOT TEXT-HEAVY)
        ======================================================== -->
 
+  <!-- ========================================================
+       STREAMLINED DETAIL SECTIONS (DYNAMIC + FALLBACK)
+       ======================================================== -->
+
+  @if(isset($services) && $services->isNotEmpty())
+    <!-- Dynamic Service Details Loop from Database -->
+    @foreach($services as $idx => $srv)
+      @php
+        $isEven = ($idx % 2 === 1);
+        $bgStyle = $isEven ? 'background: #fbfaf6; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);' : 'background: #ffffff;';
+      @endphp
+      <section class="ed-content-section" id="service-{{ $srv->id }}" style="{{ $bgStyle }} padding: 75px 0;">
+        <div class="container px-lg-4">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 {{ $isEven ? 'order-lg-2' : '' }}">
+              <span class="ed-section-tag">SERVICE 0{{ $idx + 1 }} &middot; CAPABILITY</span>
+              <h2 class="ed-section-title">{{ $srv->title }}</h2>
+              <div class="text-secondary mb-4" style="line-height: 1.7; font-size: 15px;">
+                {!! nl2br(e($srv->description)) !!}
+              </div>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="{{ $srv->link ? (Str::startsWith($srv->link, ['http', '#']) ? $srv->link : url($srv->link)) : url('/connect-with-us#partner') }}" class="btn-primary-forest text-nowrap">
+                  {{ $srv->action_text ?: 'Engage With This Service' }} &rarr;
+                </a>
+                <a href="{{ url('/contact-us') }}" class="ed-btn-outline">
+                  Inquire Now
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 {{ $isEven ? 'order-lg-1' : '' }}">
+              <div class="ed-media-box" style="aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06); background: #e8eee9;">
+                @if($srv->image)
+                  <img src="{{ str_starts_with($srv->image, 'http') ? $srv->image : asset('website/' . $srv->image) }}" alt="{{ $srv->title }}" class="ed-media-img w-100 h-100 object-fit-cover" loading="lazy">
+                @else
+                  <div class="w-100 h-100 d-flex align-items-center justify-content-center text-muted">
+                    <i class="bi bi-grid-fill fs-1 text-success opacity-50"></i>
+                  </div>
+                @endif
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    @endforeach
+  @else
   <!-- Service 1: Consulting & Advisory -->
   <section class="ed-content-section" id="consulting" style="background: #ffffff; padding: 75px 0;">
     <div class="container px-lg-4">
@@ -293,4 +343,46 @@
       </div>
     </div>
   </section>
+  @endif
+
+  <!-- Dynamic Section: Partner Testimonials -->
+  @if(isset($testimonials) && $testimonials->isNotEmpty())
+  <section class="ed-content-section" style="background: #ffffff; border-top: 1px solid var(--border-subtle); padding: 75px 0;">
+    <div class="container px-lg-4">
+      <div class="text-center mb-5">
+        <span class="ed-section-tag">PROVEN IMPACT</span>
+        <h2 class="ed-section-title">What Enterprise &amp; Institutional Partners Say</h2>
+        <p class="ed-section-desc mx-auto">Verified endorsements from our corporate advisory, CSR, and export partners.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        @foreach($testimonials as $item)
+          <div class="col-md-6 col-lg-4">
+            <div class="bg-white rounded-3 p-4 border border-light-subtle h-100 shadow-sm d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="text-success fs-3"><i class="bi bi-quote"></i></div>
+                  @if($item->logo)
+                    <div style="height: 36px; max-width: 110px;">
+                      <img src="{{ str_starts_with($item->logo, 'http') ? $item->logo : asset('website/' . $item->logo) }}" class="h-100 w-auto object-fit-contain" alt="{{ $item->author }}">
+                    </div>
+                  @endif
+                </div>
+                <p class="text-secondary small fst-italic mb-3" style="line-height: 1.7;">
+                  &ldquo;{{ $item->quote }}&rdquo;
+                </p>
+              </div>
+              <div class="pt-3 border-top border-light-subtle">
+                <h4 class="h6 fw-bold mb-0" style="color: var(--primary-forest);">{{ $item->author }}</h4>
+                @if($item->designation)
+                  <span class="text-muted small" style="font-size: 12px;">{{ $item->designation }}</span>
+                @endif
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
+  @endif
 @endsection

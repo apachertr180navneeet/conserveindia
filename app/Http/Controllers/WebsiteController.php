@@ -12,12 +12,35 @@ use App\Models\Testimonial;
 use App\Models\NewsArticle;
 use App\Models\Inquiry;
 use App\Models\PageSeo;
+use App\Models\Page;
 
 class WebsiteController extends Controller
 {
     private function getSettings()
     {
         return Setting::all()->pluck('value', 'key');
+    }
+
+    private function getPage($pageKey, $defaultTitle = null, $defaultSubtitle = null, $defaultLead = null)
+    {
+        try {
+            $page = Page::where('page_key', $pageKey)->orWhere('slug', ltrim($pageKey, '/'))->first();
+            if ($page) {
+                return $page;
+            }
+        } catch (\Throwable $e) {}
+
+        return (object)[
+            'page_key' => $pageKey,
+            'page_name' => ucfirst(str_replace('-', ' ', $pageKey)),
+            'slug' => $pageKey,
+            'subtitle' => $defaultSubtitle,
+            'title' => $defaultTitle,
+            'lead_text' => $defaultLead,
+            'content' => null,
+            'banner_image' => null,
+            'is_active' => true,
+        ];
     }
 
     private function getSeo($pageKey, $defaultTitle = null, $defaultDesc = null)
@@ -46,103 +69,119 @@ class WebsiteController extends Controller
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('home');
+        $page = $this->getPage('home', 'Turning Waste Plastic into Dignified Livelihoods', 'CIRCULAR ECONOMY IN ACTION');
         $sliders = Slider::where('is_active', true)->orderBy('order')->get();
         $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
         $services = Service::where('is_active', true)->orderBy('order')->get();
         $testimonials = Testimonial::where('is_active', true)->orderBy('order')->get();
         $newsArticles = NewsArticle::where('is_active', true)->latest()->take(3)->get();
 
-        return view('website.home', compact('settings', 'seo', 'sliders', 'initiatives', 'services', 'testimonials', 'newsArticles'));
+        return view('website.home', compact('settings', 'seo', 'page', 'sliders', 'initiatives', 'services', 'testimonials', 'newsArticles'));
     }
 
     public function about()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('about-us', 'About Us — Conserve India | Our Mission, Founders & Heritage');
+        $page = $this->getPage('about-us', 'Pioneering Circularity Since 1997', 'ORGANIZATIONAL HERITAGE', 'Conserve India operates at the intersection of environmental conservation and social justice—diverting urban plastic waste while empowering marginalized waste pickers and refugee women with dignified, employable opportunities.');
         $testimonials = Testimonial::where('is_active', true)->orderBy('order')->get();
         $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
         $recentStories = NewsArticle::where('is_active', true)->latest()->take(3)->get();
 
-        return view('website.about-us', compact('settings', 'seo', 'testimonials', 'initiatives', 'recentStories'));
+        return view('website.about-us', compact('settings', 'seo', 'page', 'testimonials', 'initiatives', 'recentStories'));
     }
 
     public function services()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('services');
+        $page = $this->getPage('services', 'Services & Advisory Solutions', 'CIRCULAR CAPABILITIES', 'Partnering with corporations, academic institutions, municipal bodies, and eco-conscious travelers to deliver circular innovation, vocational education, and high-impact immersion experiences.');
         $services = Service::where('is_active', true)->orderBy('order')->get();
-        return view('website.services', compact('settings', 'seo', 'services'));
+        $testimonials = Testimonial::where('is_active', true)->orderBy('order')->get();
+        return view('website.services', compact('settings', 'seo', 'page', 'services', 'testimonials'));
     }
 
     public function ourWork()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('our-work');
+        $page = $this->getPage('our-work', 'Pioneering Circular Ecology & Social Justice', 'INITIATIVES & INTERVENTIONS', 'From patented plastic recycling technologies to empowering thousands of informal waste pickers and UNHCR refugee women, explore how we connect waste abatement with human dignity.');
         $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
-        return view('website.our-work', compact('settings', 'seo', 'initiatives'));
+        $testimonials = Testimonial::where('is_active', true)->orderBy('order')->get();
+        $recentStories = NewsArticle::where('is_active', true)->latest()->take(3)->get();
+        return view('website.our-work', compact('settings', 'seo', 'page', 'initiatives', 'testimonials', 'recentStories'));
     }
 
     public function capacityBuilding()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('capacity-building');
+        $page = $this->getPage('capacity-building', 'Empowering Grassroots Recyclers & Refugee Artisans', 'LIVELIHOOD RESTORATION', 'Transitioning informal ragpickers and UNHCR Afghan refugees into skilled craftspeople through certified vocational training, fair living wages, and health support.');
         $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
-        return view('website.capacity-building', compact('settings', 'seo', 'initiatives'));
+        return view('website.capacity-building', compact('settings', 'seo', 'page', 'initiatives'));
     }
 
     public function sustainableResearch()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('sustainable-research-development');
+        $page = $this->getPage('sustainable-research-development', 'Patented Handmade Recycled Plastic (HRP)', 'MATERIAL SCIENCE INNOVATION', 'Our proprietary thermal-compression technology turns post-consumer plastic bags into chemical-free, leather-like sustainable textiles.');
         $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
-        return view('website.sustainable-research-development', compact('settings', 'seo', 'initiatives'));
+        return view('website.sustainable-research-development', compact('settings', 'seo', 'page', 'initiatives'));
     }
 
     public function advocacy()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('advocacy-and-lobbying');
+        $page = $this->getPage('advocacy-and-lobbying', 'Advocating Systems-Level Environmental Reform', 'POLICY ADVOCACY & OUTREACH', 'Championing informal sector integration into municipal frameworks and corporate Extended Producer Responsibility (EPR) mandates.');
         $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
-        return view('website.advocacy-and-lobbying', compact('settings', 'seo', 'initiatives'));
+        return view('website.advocacy-and-lobbying', compact('settings', 'seo', 'page', 'initiatives'));
     }
 
     public function sustainableTrade()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('sustainable-trade');
+        $page = $this->getPage('sustainable-trade', 'Global Fair Trade & Ethical B2B Supply Chains', 'FAIR TRADE EXPORTS', 'Supplying certified eco-design products to Whole Foods Market nationwide and over 1,000 independent retailers across the US, UK, and Europe.');
         $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
-        return view('website.sustainable-trade', compact('settings', 'seo', 'initiatives'));
+        return view('website.sustainable-trade', compact('settings', 'seo', 'page', 'initiatives'));
     }
 
     public function covidRelief()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('covid-relief-project-sahyog');
-        return view('website.covid-relief-project-sahyog', compact('settings', 'seo'));
+        $page = $this->getPage('covid-relief-project-sahyog', 'Project Sahyog: Emergency Community Relief', 'CRISIS RESPONSE', 'Ranked in India\'s top 50 COVID-19 last-mile emergency responders, providing community kitchens, dry rations, and health support to waste-picking colonies.');
+        return view('website.covid-relief-project-sahyog', compact('settings', 'seo', 'page'));
     }
 
     public function latestUpdates()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('latest-updates');
+        $page = $this->getPage('latest-updates', 'Awards, Stories & Publications', 'NEWSROOM & ARCHIVE', 'Track our latest institutional milestones, field dispatches from artisan ateliers, and research publications shaping circular economy policies across India.');
         $newsArticles = NewsArticle::where('is_active', true)->latest()->paginate(9);
-        return view('website.latest-updates', compact('settings', 'seo', 'newsArticles'));
+        return view('website.latest-updates', compact('settings', 'seo', 'page', 'newsArticles'));
     }
 
     public function gallery()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('gallery');
+        $page = $this->getPage('gallery', 'Gallery of Milestones & Grassroots Action', 'PROJECT REPOSITORY', 'A visual showcase of the foundational initiatives shaping our journey—from patented material discoveries to cooperative waste collectors associations and refugee ateliers.');
         $projects = $this->getGalleryProjects();
-        return view('website.gallery', compact('settings', 'seo', 'projects'));
+        $initiatives = Initiative::where('is_active', true)->orderBy('order')->get();
+        return view('website.gallery', compact('settings', 'seo', 'page', 'projects', 'initiatives'));
     }
 
     public function greenStories()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('green-stories');
+        $page = $this->getPage('green-stories', 'Green Stories & Field Dispatches', 'DISPATCHES & ESSAYS', 'In-depth essays, artisan profiles, and circular design methodologies written from our New Delhi ateliers and grassroots communities.');
         $newsArticles = NewsArticle::where('is_active', true)->latest()->get();
-        return view('website.green-stories', compact('settings', 'seo', 'newsArticles'));
+        return view('website.green-stories', compact('settings', 'seo', 'page', 'newsArticles'));
     }
 
     public function storyDetail($slug)
@@ -180,14 +219,17 @@ class WebsiteController extends Controller
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('connect-with-us');
-        return view('website.connect-with-us', compact('settings', 'seo'));
+        $page = $this->getPage('connect-with-us', 'Connect, Partner & Support', 'COLLABORATION & SOLIDARITY', 'Whether you want to partner on circular supply chains, volunteer your creative talents, make a tax-deductible contribution, or visit our Delhi atelier, there is a place for you in our movement.');
+        $testimonials = Testimonial::where('is_active', true)->orderBy('order')->get();
+        return view('website.connect-with-us', compact('settings', 'seo', 'page', 'testimonials'));
     }
 
     public function contactUs()
     {
         $settings = $this->getSettings();
         $seo = $this->getSeo('contact-us');
-        return view('website.contact-us', compact('settings', 'seo'));
+        $page = $this->getPage('contact-us', 'Contact Conserve India', 'GET IN TOUCH', 'Inquire about corporate partnerships, wholesale orders, research collaborations, workshop visits, or media interviews.');
+        return view('website.contact-us', compact('settings', 'seo', 'page'));
     }
 
     public function submitInquiry(Request $request)

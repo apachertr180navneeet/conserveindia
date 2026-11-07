@@ -9,12 +9,19 @@ use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\NewsArticle;
 use App\Models\Inquiry;
+use App\Models\Page;
 
 class DashboardController extends Controller
 {
     public function index()
     {
+        $pageCount = 0;
+        try {
+            $pageCount = Page::count();
+        } catch (\Throwable $e) {}
+
         $stats = [
+            'pages' => $pageCount,
             'sliders' => Slider::count(),
             'initiatives' => Initiative::count(),
             'services' => Service::count(),
